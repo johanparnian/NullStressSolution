@@ -4,9 +4,10 @@ export default function CreateAdmin(props) {
 
     const [Name, setName] = useState("")
     const [School, setSchool] = useState("")
+    const [ClassName, setClassName] = useState("")
 
     const HandleCreateAdmin = async (event) => {
-        const admin = {Name, School}
+        const admin = {Name, School, ClassName}
 
         event.preventDefault()
         const response = await fetch ('https://localhost:7212/api/admins', { 
@@ -28,6 +29,10 @@ export default function CreateAdmin(props) {
                     <label>
                             Add school name:
                             <input type="text" value={School} onChange={event => setSchool(event.target.value)}></input>
+                    </label>
+                    <label>
+                            Add class name:
+                            <input type="text" value={ClassName} onChange={event => setClassName(event.target.value)}></input>
                     </label>
                     <br></br>
                             <button type="submit" onClick={HandleCreateAdmin}>Add data</button>
