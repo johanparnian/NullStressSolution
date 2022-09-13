@@ -5,8 +5,8 @@
         public int Id { get; set; }
         public string ClassName { get; set; }
 
-        public virtual ICollection<Admin>? Admins { get; set; }
-        public virtual ICollection<Student>? Students { get; set; }
+        public List<Admin>? Admins { get; set; }
+        public List<Student>? Students { get; set; }
 
     }
 }

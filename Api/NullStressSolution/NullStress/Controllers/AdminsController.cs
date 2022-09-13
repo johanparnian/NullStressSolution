@@ -24,21 +24,20 @@ namespace NullStress.Controllers
         [HttpGet("")]
         public async Task<ActionResult<IEnumerable<Admin>>> GetAdmin()
         {
-          if (_context.Admin == null)
-          {
-              return NotFound();
-          }
+            if (_context.Admin == null)
+            {
+                return NotFound();
+            }
             return await _context.Admin.ToListAsync();
         }
 
-        // GET: api/Admins/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Admin>> GetAdmin(int id)
         {
-          if (_context.Admin == null)
-          {
-              return NotFound();
-          }
+            if (_context.Admin == null)
+            {
+                return NotFound();
+            }
             var admin = await _context.Admin.FindAsync(id);
 
             if (admin == null)
@@ -81,11 +80,27 @@ namespace NullStress.Controllers
         [HttpPost]
         public async Task<ActionResult<Admin>> PostAdmin(Admin admin)
         {
-          if (_context.Admin == null)
-          {
-              return Problem("Entity set 'NullStressContext.Admin'  is null.");
-          }
-            _context.Admin.Add(admin);
+            if (_context.Admin == null)
+            {
+                return Problem("Entity set 'NullStressContext.Admin'  is null.");
+            }
+
+
+            SchoolClass schoolclass = new();
+            schoolclass.ClassName = admin.ClassName;
+
+            Admin adminCreated = new()
+            {
+                Name = admin.Name,
+                School = admin.School,
+                ClassName = admin.ClassName,
+                SchoolClasses = new()
+            };
+
+            adminCreated.SchoolClasses.Add(schoolclass);
+
+
+            _context.Admin.Add(adminCreated);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetAdmin", new { id = admin.Id }, admin);
