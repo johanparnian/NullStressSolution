@@ -8,16 +8,16 @@ export default function HeaderView() {
                 <a href="vg.no"></a>
             </div>
             <div>
-                <h1>Nullstress</h1>
-                <p>Here goes image Logfaces</p>
+                <h1>Hei fra header</h1>
+                {/* <p>Here goes image Logfaces</p> */}
             </div>
             <div>
-                <nav>
+                {/* <nav>
                     <a>Hjem</a>
                     <a>Administrer</a>
                     <a>Klasse</a>
                     <a>Statistikk</a>
-                </nav>
+                </nav> */}
             </div>
         </div>
     )
