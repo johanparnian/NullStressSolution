@@ -3,9 +3,9 @@ import Image from 'next/image'
 import AddStudent from '../Components/Admin/AddNewstudent'
 import HeaderView from '../Components/Admin/HeaderView'
 import Main from '../Components/Admin/Main'
-import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'
 import CreateAdmin from '../Components/CreateAdmin'
 import styles from '../styles/Home.module.css'
+import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'  
 
 export default function Home() {
   return (
