@@ -103,7 +103,7 @@ namespace NullStress.Controllers
             _context.Admin.Add(adminCreated);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetAdmin", new { id = admin.Id }, admin);
+            return CreatedAtAction("GetAdmin", new { id = adminCreated.Id }, adminCreated);
         }
 
         [HttpDelete("{id}")]
