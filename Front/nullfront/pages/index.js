@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import AddStudent from '../Components/Admin/AddNewstudent'
 import HeaderView from '../Components/Admin/HeaderView'
 import Main from '../Components/Admin/Main'
 import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'
@@ -19,6 +20,7 @@ export default function Home() {
             <HeaderView />
             <CreateAdmin />
             <ShowStudentsHomeScreen></ShowStudentsHomeScreen>
+            <AddStudent/>
 
 
           <div id="container2">
