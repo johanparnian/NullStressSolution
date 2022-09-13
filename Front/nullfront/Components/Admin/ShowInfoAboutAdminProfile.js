@@ -28,9 +28,7 @@ export default function ShowInfoAboutAdminProfile() {
 
     return (
         <div>
-            {admin.name},
-            {admin.school},
-            {admin.classname}.
+            Admin name: {admin.name}, Admin school: {admin.school}, Admin classname: {admin.classname}.
         </div>
     )
 }
