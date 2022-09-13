@@ -12,8 +12,8 @@ using NullStress.Data;
 namespace NullStress.Migrations
 {
     [DbContext(typeof(NullStressContext))]
-    [Migration("20220913092812_initial")]
-    partial class initial
+    [Migration("20220913122303_newschoolclass")]
+    partial class newschoolclass
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,7 +47,14 @@ namespace NullStress.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("ClassName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("School")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

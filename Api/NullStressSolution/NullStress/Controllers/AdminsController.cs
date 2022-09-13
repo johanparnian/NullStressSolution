@@ -86,18 +86,22 @@ namespace NullStress.Controllers
             }
 
 
-            SchoolClass schoolclass = new();
-            schoolclass.ClassName = admin.ClassName;
-
             Admin adminCreated = new()
             {
                 Name = admin.Name,
                 School = admin.School,
                 ClassName = admin.ClassName,
-                SchoolClasses = new()
             };
 
-            adminCreated.SchoolClasses.Add(schoolclass);
+            if (!String.IsNullOrEmpty(admin.ClassName))
+            {
+                SchoolClass schoolclass = new();
+                adminCreated.SchoolClasses = new();
+                schoolclass.SchoolClassName = admin.ClassName;
+                adminCreated.SchoolClasses.Add(schoolclass);
+            }
+
+
 
 
             _context.Admin.Add(adminCreated);

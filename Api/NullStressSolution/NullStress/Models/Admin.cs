@@ -9,7 +9,6 @@ namespace NullStress.Models
         public string School{ get; set; }
         public string? ClassName{ get; set; }
         
-
         public List<SchoolClass>? SchoolClasses { get; set; }
 
     }
