@@ -21,7 +21,6 @@ namespace NullStress.Controllers
             _context = context;
         }
 
-        // GET: api/SchoolClasses
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SchoolClass>>> GetSchoolClass()
         {
@@ -32,7 +31,6 @@ namespace NullStress.Controllers
             return await _context.SchoolClass.ToListAsync();
         }
 
-        // GET: api/SchoolClasses/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SchoolClass>> GetSchoolClass(int id)
         {
@@ -50,8 +48,6 @@ namespace NullStress.Controllers
             return schoolClass;
         }
 
-        // PUT: api/SchoolClasses/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSchoolClass(int id, SchoolClass schoolClass)
         {
@@ -81,8 +77,6 @@ namespace NullStress.Controllers
             return NoContent();
         }
 
-        // POST: api/SchoolClasses
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<SchoolClass>> PostSchoolClass(SchoolClass schoolClass)
         {
@@ -96,7 +90,6 @@ namespace NullStress.Controllers
             return CreatedAtAction("GetSchoolClass", new { id = schoolClass.Id }, schoolClass);
         }
 
-        // DELETE: api/SchoolClasses/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSchoolClass(int id)
         {

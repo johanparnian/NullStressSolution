@@ -10,7 +10,7 @@ using NullStress.Models;
 
 namespace NullStress.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/admins/")]
     [ApiController]
     public class AdminsController : ControllerBase
     {
@@ -21,8 +21,7 @@ namespace NullStress.Controllers
             _context = context;
         }
 
-        // GET: api/Admins
-        [HttpGet]
+        [HttpGet("")]
         public async Task<ActionResult<IEnumerable<Admin>>> GetAdmin()
         {
           if (_context.Admin == null)
@@ -50,8 +49,6 @@ namespace NullStress.Controllers
             return admin;
         }
 
-        // PUT: api/Admins/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAdmin(int id, Admin admin)
         {
@@ -81,8 +78,6 @@ namespace NullStress.Controllers
             return NoContent();
         }
 
-        // POST: api/Admins
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Admin>> PostAdmin(Admin admin)
         {
@@ -96,7 +91,6 @@ namespace NullStress.Controllers
             return CreatedAtAction("GetAdmin", new { id = admin.Id }, admin);
         }
 
-        // DELETE: api/Admins/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAdmin(int id)
         {
