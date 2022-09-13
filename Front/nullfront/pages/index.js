@@ -18,7 +18,7 @@ export default function Home() {
     
 
             <HeaderView />
-            <CreateAdmin></CreateAdmin>
+            <CreateAdmin />
 
 
           <div id="container2">
