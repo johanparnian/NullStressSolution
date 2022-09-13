@@ -6,8 +6,6 @@
         public string Name { get; set; }
 
         public List<Mood>? Moods { get; set; }
-
-        public virtual ICollection<StudentSchoolClass>? StudentSchoolClass { get; set; }
-
+        public virtual ICollection<SchoolClass>? SchoolClasses { get; set; }
     }
 }

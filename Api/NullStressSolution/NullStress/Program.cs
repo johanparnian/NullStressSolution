@@ -29,6 +29,7 @@ namespace NullStress
 
             app.UseHttpsRedirection();
 
+
             app.UseAuthorization();
 
 

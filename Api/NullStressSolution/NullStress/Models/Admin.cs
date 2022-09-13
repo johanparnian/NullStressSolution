@@ -4,9 +4,8 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string School { get; set; }
 
-        public virtual ICollection<AdminClass> AdminClass { get; set; }
+        public virtual ICollection<SchoolClass>? SchoolClasses { get; set; }
 
     }
 }
