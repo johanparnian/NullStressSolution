@@ -1,13 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import AddStudent from '../Components/Admin/AddNewstudent'
-import HeaderView from '../Components/Admin/HeaderView'
-import Main from '../Components/Admin/Main'
-import CreateAdmin from '../Components/CreateAdmin'
 import styles from '../styles/Home.module.css'
-import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'  
-import ShowInfoAboutAdminProfile from '../Components/Admin/ShowInfoAboutAdminProfile'
-
 
 export default function StudentIndex() {
   return (
@@ -19,7 +11,7 @@ export default function StudentIndex() {
       </Head>
       <main className={styles.main}>
 
-      Hello from student index page
+      Hello from studentindex.js
        
       </main>
 

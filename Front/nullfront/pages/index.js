@@ -1,24 +1,20 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import AddStudent from '../Components/Admin/AddNewstudent'
 import HeaderView from '../Components/Admin/HeaderView'
 import Main from '../Components/Admin/Main'
 import CreateAdmin from '../Components/CreateAdmin'
 import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'  
 import ShowInfoAboutAdminProfile from '../Components/Admin/ShowInfoAboutAdminProfile'
-import ReactDOM from "react-dom/client";
-import StudentIndex from './studentindex'
-import App from './app'
 import styles from '../styles/Home.module.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Link from 'react-router-dom';
+
+import SiteRoutes from '../Components/SiteRoutes'
 
 export default function Index() {
   return (
     <div className={styles.container}>
 
       <Head>
-        <title>Null Stress</title>
+        <title>APPNAME</title>
         <meta name="description" content="OUR_DESCRIPTION" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -32,30 +28,22 @@ export default function Index() {
 
             Add student: <AddStudent/>
 
-            Show info about admin<ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile>
+            Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile>
             
-            Links:
-
-            {/* Denne linken funker én gang, men krasjer siden etterpå... */}
-            {/* <Router>
-                <Link to="/studentindex">StudentIndex</Link>
-            </Router> */}
+            Link: 
+            {/* <Link to="/studentindex">StudentIndex</Link> */}
           
           <div id="container2">
               <Main />
           </div>
-
-          Main.
-
        
       </main>
 
       <footer>Hei fra footer
 
-
-
       </footer>
 
     </div>
+    
   )
 }
