@@ -21,7 +21,6 @@ namespace NullStress.Controllers
             _context = context;
         }
 
-        // GET: api/Moods
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Mood>>> GetMood()
         {
@@ -32,7 +31,6 @@ namespace NullStress.Controllers
             return await _context.Mood.ToListAsync();
         }
 
-        // GET: api/Moods/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Mood>> GetMood(int id)
         {
@@ -50,8 +48,6 @@ namespace NullStress.Controllers
             return mood;
         }
 
-        // PUT: api/Moods/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMood(int id, Mood mood)
         {
@@ -81,8 +77,6 @@ namespace NullStress.Controllers
             return NoContent();
         }
 
-        // POST: api/Moods
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Mood>> PostMood(Mood mood)
         {
@@ -96,7 +90,6 @@ namespace NullStress.Controllers
             return CreatedAtAction("GetMood", new { id = mood.Id }, mood);
         }
 
-        // DELETE: api/Moods/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMood(int id)
         {
