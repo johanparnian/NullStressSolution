@@ -1,3 +1,6 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using NullStress.Data;
 namespace NullStress
 {
     public class Program
@@ -5,6 +8,8 @@ namespace NullStress
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<NullStressContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("NullStressContext") ?? throw new InvalidOperationException("Connection string 'NullStressContext' not found.")));
 
             // Add services to the container.
 
