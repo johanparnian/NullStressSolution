@@ -3,9 +3,9 @@
 export default function HeaderView() {
 
     return (
-        <div>
-            <div>
-                <p><a>Min profil</a></p>
+        <div class="container_header">
+            <div class="profile_button">
+                <a href="vg.no"></a>
             </div>
             <div>
                 <h1>Nullstress</h1>
