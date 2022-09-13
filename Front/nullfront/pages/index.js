@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import HeaderView from '../Components/Admin/HeaderView'
 import Main from '../Components/Admin/Main'
+import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'
 import CreateAdmin from '../Components/createadmin'
 import styles from '../styles/Home.module.css'
 
@@ -15,10 +16,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-    
-
             <HeaderView />
             <CreateAdmin />
+            <ShowStudentsHomeScreen></ShowStudentsHomeScreen>
 
 
           <div id="container2">
