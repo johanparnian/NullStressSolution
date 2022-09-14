@@ -14,12 +14,19 @@ export default function AddStudent(){
             method: "POST", 
             body: JSON.stringify(student),
             headers: {
-                "content-Type" : "application/json"
-            }          
+                "content-Type" : "application/json"   
+            }           
         })
-        return response
-    }
 
+        if (response.ok) {
+            console.log("it worked!!")
+            return response
+        }
+        else
+        {
+            console.log("did not work..")
+        }  
+    }
     return (
             <form>
                 <label>
@@ -33,4 +40,3 @@ export default function AddStudent(){
 
 }
 
-//TO DO: Legge til schoolClass. Lage et input field for dette

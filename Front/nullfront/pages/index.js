@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import AddStudent from '../Components/Admin/AddNewstudent'
+import AddStudent from '../Components/Admin/CreateStudent'
 import HeaderView from '../Components/Admin/HeaderView'
 import Main from '../Components/Admin/Main'
 import CreateAdmin from '../Components/CreateAdmin'
@@ -30,7 +30,7 @@ export default function Index() {
 
             Add student: <AddStudent/>
 
-            Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile>
+            {/* Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile> */}
             
             Link: 
 
