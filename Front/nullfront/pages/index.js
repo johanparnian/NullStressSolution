@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import AddStudent from '../Components/Admin/CreateStudent'
 import Main from '../Components/Admin/Main'
-import CreateAdmin from '../Components/CreateAdmin'
+import CreateAdmin from '../Components/createadmin'
 import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'  
 import ShowInfoAboutAdminProfile from '../Components/Admin/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
@@ -24,9 +24,20 @@ export default function Index() {
 
       <main className={styles.main}>
         <HeaderMenu />
-            Hei fra index.js
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
 
-            
+            Hei fra index.js
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <AddClass></AddClass>
+            <br></br>
+            <CreateAdmin></CreateAdmin>
+            <AddStudentToClass/>
       </main>
 
 

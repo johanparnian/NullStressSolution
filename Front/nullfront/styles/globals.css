@@ -38,12 +38,12 @@ a {
   width: 100%;
   height: 20vmax;
   padding: 0px;
-  background-color: pink;
+  background-color: lightblue;
   margin: 0px;
 } 
 
 body {
-  background-color: beige;
+  background-color: aliceblue;
   margin: 0px;
   padding: 0px;
 
@@ -73,4 +73,23 @@ p {
 
 img {
   user-select: none;
+}
+img:hover {
+  height: 103px;
+  width: 103px;
+  border: 0px;
+  border-style:solid;
+  border-color:black
+}
+img:active {
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
