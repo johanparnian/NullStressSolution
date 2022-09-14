@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 export default function AddClass() {
-    const [ClassName, setClassName] = useState("")
+    const [schoolClassName, setSchoolClassName] = useState("")
 
 
-    async function HandleCreateStudent(event, ClassName) {
+    async function HandleCreateStudent(event, schoolClassName) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/Admins/${id}/mood/${ClassName}`, {
+        const response = await fetch(`https://localhost:7212/api/admins/1/SchoolClass/${schoolClassName}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
@@ -26,9 +26,9 @@ export default function AddClass() {
             <form>
                 <label>
                     Create class:
-                    <input value={ClassName} onChange={event => setClassName(event.target.value)} type="Text"></input>
+                    <input value={schoolClassName} onChange={event => setSchoolClassName(event.target.value)} type="Text"></input>
                 </label>
-                <button type="submit" onClick={HandleCreateStudent}>Add</button>
+                <button type="submit" onClick={e => HandleCreateStudent(e, schoolClassName)}>Add</button>
             </form>
         </div>
     )
