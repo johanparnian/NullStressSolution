@@ -8,7 +8,6 @@ export default function Minprofil() {
         <div>
             <HeaderMenu />
             <CreateAdmin />
-            <p>p</p>
             <ShowInfoAboutAdminProfile />
         </div>
     )
