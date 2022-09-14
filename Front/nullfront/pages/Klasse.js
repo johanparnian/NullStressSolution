@@ -10,7 +10,7 @@ export default function Klasse() {
         <div>
             <HeaderMenu />
             <AddGroup />  
-            <AddStudentToClass/>          
+                  
         </div>
     )
 }

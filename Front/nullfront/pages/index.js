@@ -37,6 +37,7 @@ export default function Index() {
             <AddClass></AddClass>
             <br></br>
             <CreateAdmin></CreateAdmin>
+            <AddStudentToClass/>
       </main>
 
 
