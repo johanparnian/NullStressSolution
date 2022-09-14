@@ -1,4 +1,5 @@
 
+// TODO: Sørge for at siden viser elev basert på student.id.
 
 export default function ShowOneStudent() {
     const getStudents = async () => {
@@ -29,9 +30,11 @@ export default function ShowOneStudent() {
     return (
         <div>
             Here are the student names:
-            <p key={student.id}>{student.name}</p>
+            <div>
+            {/* <p key={student.id}>{student.name}</p>
             <p key={student.id}>Her vil mood være</p>
-            <p key={student.id}>Ev. dato</p>            
+            <p key={student.id}>Ev. dato</p>             */}
+            </div>
         </div>
     )
 }
