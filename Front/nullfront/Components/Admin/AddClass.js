@@ -28,7 +28,8 @@ export default function AddClass() {
                     Create class:
                     <input value={schoolClassName} onChange={event => setSchoolClassName(event.target.value)} type="Text"></input>
                 </label>
-                <button type="submit" onClick={e => HandleCreateStudent(e, schoolClassName)}>Add</button>
+                
+                <button type="submit" onClick={HandleCreateStudent}>Add</button>
             </form>
         </div>
     )
