@@ -69,7 +69,7 @@ namespace NullStress.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Muud")
+                    b.Property<int?>("Muud")
                         .HasColumnType("int");
 
                     b.Property<int>("StudentId")
@@ -116,6 +116,9 @@ namespace NullStress.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TemporaryMood")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

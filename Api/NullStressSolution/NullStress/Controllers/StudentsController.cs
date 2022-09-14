@@ -48,15 +48,15 @@ namespace NullStress.Controllers
             return student;
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStudent(int id, Student student)
+        [HttpPut("{id}/mood/{moodId}")]
+        public async Task<IActionResult> PutStudent(int id, int moodId)
         {
-            if (id != student.Id)
+            var student = await _context.FindAsync<Student>(id);
+                         
+            student.Moods.Add(new Mood
             {
-                return BadRequest();
-            }
-
-            _context.Entry(student).State = EntityState.Modified;
+                Muud = moodId
+            });
 
             try
             {
@@ -84,6 +84,7 @@ namespace NullStress.Controllers
           {
               return Problem("Entity set 'NullStressContext.Student'  is null.");
           }
+            //student.Id = Guid.NewGuid();
 
             _context.Student.Add(student);
             await _context.SaveChangesAsync();

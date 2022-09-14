@@ -56,6 +56,8 @@ namespace NullStress.Controllers
                 return BadRequest();
             }
 
+            
+
             _context.Entry(mood).State = EntityState.Modified;
 
             try
