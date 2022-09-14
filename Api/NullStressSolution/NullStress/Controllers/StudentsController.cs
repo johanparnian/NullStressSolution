@@ -56,6 +56,11 @@ namespace NullStress.Controllers
                 return BadRequest();
             }
 
+            Mood mood = new();
+            mood.Muud = student.TemporaryMood;
+                         
+            student.Moods.Add(mood);
+
             _context.Entry(student).State = EntityState.Modified;
 
             try
