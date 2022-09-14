@@ -7,7 +7,7 @@ export default function AddClass() {
     async function HandleCreateStudent(event, schoolClassName) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/admins/1/SchoolClass/${schoolClassName}`, {
+        const response = await fetch(`https://localhost:7212/api/admins/${id}/SchoolClass/${schoolClassName}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
@@ -28,7 +28,8 @@ export default function AddClass() {
                     Create class:
                     <input value={schoolClassName} onChange={event => setSchoolClassName(event.target.value)} type="Text"></input>
                 </label>
-                <button type="submit" onClick={e => HandleCreateStudent(e, schoolClassName)}>Add</button>
+                
+                <button type="submit" onClick={HandleCreateStudent}>Add</button>
             </form>
         </div>
     )
