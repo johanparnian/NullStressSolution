@@ -69,11 +69,11 @@ namespace NullStress.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Muud")
+                    b.Property<int?>("Muud")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("datetime2");
@@ -104,9 +104,11 @@ namespace NullStress.Migrations
 
             modelBuilder.Entity("NullStress.Models.Student", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClassName")
                         .HasColumnType("nvarchar(max)");
@@ -114,6 +116,9 @@ namespace NullStress.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TemporaryMood")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -125,8 +130,8 @@ namespace NullStress.Migrations
                     b.Property<int>("SchoolClassesId")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentsId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentsId")
+                        .HasColumnType("int");
 
                     b.HasKey("SchoolClassesId", "StudentsId");
 

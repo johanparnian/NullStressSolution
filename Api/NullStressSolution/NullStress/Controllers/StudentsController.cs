@@ -48,20 +48,15 @@ namespace NullStress.Controllers
             return student;
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStudent(int id, Student student)
+        [HttpPut("{id}/mood/{moodId}")]
+        public async Task<IActionResult> PutStudent(int id, int moodId)
         {
-            if (id != student.Id)
-            {
-                return BadRequest();
-            }
-
-            Mood mood = new();
-            mood.Muud = student.TemporaryMood;
+            var student = await _context.FindAsync<Student>(id);
                          
-            student.Moods.Add(mood);
-
-            _context.Entry(student).State = EntityState.Modified;
+            student.Moods.Add(new Mood
+            {
+                Muud = moodId
+            });
 
             try
             {
