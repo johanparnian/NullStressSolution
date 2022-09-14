@@ -48,15 +48,16 @@ namespace NullStress.Controllers
             return admin;
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAdmin(int id, Admin admin)
-        {
-            if (id != admin.Id)
-            {
-                return BadRequest();
-            }
 
-            _context.Entry(admin).State = EntityState.Modified;
+        [HttpPut("{id}/admin/{schoolClassName}")]
+        public async Task<IActionResult> PutStudent(int id, string schoolClassName)
+        {
+            var Admin = await _context.FindAsync<Admin>(id);
+
+            Admin.SchoolClasses.Add(new SchoolClass
+            {
+                SchoolClassName = schoolClassName
+            });
 
             try
             {
@@ -65,7 +66,7 @@ namespace NullStress.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!AdminExists(id))
-                {
+                    {
                     return NotFound();
                 }
                 else
@@ -76,6 +77,7 @@ namespace NullStress.Controllers
 
             return NoContent();
         }
+
 
         [HttpPost]
         public async Task<ActionResult<Admin>> PostAdmin(Admin admin)
