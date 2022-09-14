@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-export default function AddClass() {
+export default function AddClass(props) {
     const [schoolClassName, setSchoolClassName] = useState("")
 
 
     async function HandleCreateStudent(event) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/admins/1/SchoolClass/${schoolClassName}`, {
+        const response = await fetch(`https://localhost:7212/api/admins/${props.id}/SchoolClass/${schoolClassName}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
