@@ -14,8 +14,6 @@ export default function HeaderMenu() {
                 <Link href={"/Statistikk"}>Statistikk</Link><br/>
                 <Link href={"/Minprofil"}>Min profil (admin)</Link><br/>
                 <Link href={"/studentindex"}>-->Studentindex</Link><br/>
-
-
             </nav>
             
         </div>
