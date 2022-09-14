@@ -75,5 +75,4 @@ export default function SendMood() {
         </div>
     </div>
     )
-
 }
