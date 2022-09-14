@@ -32,7 +32,6 @@ export default function Index() {
             Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile>
             
             Link: 
-            <AddGroup/>
 
             <Link href="/studentindex"><a>StudentIndex</a></Link>
           
@@ -40,6 +39,7 @@ export default function Index() {
               <Main />
           </div>
        
+          <AddGroup/>
       </main>
 
       <footer>Hei fra footer
