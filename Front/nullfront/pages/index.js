@@ -6,10 +6,12 @@ import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'
 import ShowInfoAboutAdminProfile from '../Components/Admin/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
 import AddGroup from '../Components/Admin/CreateGroup'
+import AddStudentToClass from '../Components/Admin/AddStudentToClass'
 
 
 import Link from 'next/link'
 import HeaderMenu from '../Components/Admin/HeaderMenu'
+
 
 export default function Index() {
   return (
@@ -30,6 +32,8 @@ export default function Index() {
             Show Student names: <ShowStudentsHomeScreen></ShowStudentsHomeScreen>
 
             Add student: <AddStudent/> */}
+
+            
 
             {/* Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile> */}
             

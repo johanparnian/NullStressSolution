@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.css'
 import React from 'react'
 import Image from "next/image";
 
+import SendMood from '../Components/Student/SendMood';
+
 
 export default function StudentIndex() {
   return (
@@ -15,30 +17,8 @@ export default function StudentIndex() {
 
       <main className={styles.main}>
 
-      <div className="emoji-container">
-      <div>Header</div>
-        <div className="emoji">
-        <img alt="image" src="1.png" height="100" width="100"
-        ></img>
-        </div>
-
-        <div className="emoji">
-        <img alt="image" src="2.png" height="100" width="100"></img>
-        </div>
-
-        <div className="emoji">
-        <img alt="image" src="3.png" height="100" width="100"></img>
-
-        </div>
-        <div className="emoji">
-        <img alt="image" src="4.png" height="100" width="100"></img>
-
-        </div>
-        <div className="emoji">
-        <img alt="image" src="5.png" height="100" width="100"></img>
-        </div>
-      </div>
-       
+      <SendMood></SendMood>
+      
       </main>
 
       <footer></footer>
