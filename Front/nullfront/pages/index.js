@@ -6,6 +6,7 @@ import CreateAdmin from '../Components/CreateAdmin'
 import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'  
 import ShowInfoAboutAdminProfile from '../Components/Admin/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
+import AddGroup from '../Components/Admin/CreateGroup'
 
 
 import Link from 'next/link'
@@ -38,7 +39,8 @@ export default function Index() {
           <div id="container2">
               <Main />
           </div>
-       
+          <br></br>
+       <AddGroup></AddGroup>
       </main>
 
       <footer>Hei fra footer

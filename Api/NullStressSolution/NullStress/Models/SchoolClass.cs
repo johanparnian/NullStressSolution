@@ -7,6 +7,5 @@
 
         public List<Admin>? Admins { get; set; }
         public List<Student>? Students { get; set; }
-
     }
 }

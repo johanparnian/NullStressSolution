@@ -84,6 +84,7 @@ namespace NullStress.Controllers
           {
               return Problem("Entity set 'NullStressContext.Student'  is null.");
           }
+
             _context.Student.Add(student);
             await _context.SaveChangesAsync();
 
