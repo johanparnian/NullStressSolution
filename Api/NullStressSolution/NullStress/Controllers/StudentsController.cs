@@ -98,7 +98,7 @@ namespace NullStress.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStudent(Int id)
+        public async Task<IActionResult> DeleteStudent(int id)
         {
             if (_context.Student == null)
             {
