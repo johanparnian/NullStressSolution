@@ -7,7 +7,7 @@ export default function AddClass() {
     async function HandleCreateStudent(event, schoolClassName) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/admins/${id}/SchoolClass/${schoolClassName}`, {
+        const response = await fetch(`https://localhost:7212/api/admins/1/SchoolClass/${schoolClassName}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })

@@ -4,7 +4,7 @@ export default function AddStudentToClass(){
 
     const [studentName, setStudentName] = useState("")
 
-    async function handleAddStudent(event, studentName){
+    async function handleAddStudent(){
 
 
         const response = await fetch (`https://localhost:7212/api/students/${id}/schoolclassName/${studentName}`, {
