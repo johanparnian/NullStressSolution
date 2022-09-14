@@ -4,10 +4,10 @@ export default function AddClass() {
     const [schoolClassName, setSchoolClassName] = useState("")
 
 
-    async function HandleCreateStudent(event, schoolClassName) {
+    async function HandleCreateStudent(event) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/admins/${id}/SchoolClass/${schoolClassName}`, {
+        const response = await fetch(`https://localhost:7212/api/admins/1/SchoolClass/${schoolClassName}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
