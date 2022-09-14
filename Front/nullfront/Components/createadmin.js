@@ -31,7 +31,7 @@ export default function CreateAdmin(props) {
                             <input type="text" value={School} onChange={event => setSchool(event.target.value)}></input>
                     </label>
                     <label>
-                            Add class name:
+                            Create new class:
                             <input type="text" value={ClassName} onChange={event => setClassName(event.target.value)}></input>
                     </label>
                     <br></br>
