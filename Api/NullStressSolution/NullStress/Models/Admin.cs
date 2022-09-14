@@ -8,8 +8,8 @@ namespace NullStress.Models
         public string Name { get; set; }
         public string School{ get; set; }
         public string? ClassName{ get; set; }
-        
-        public List<SchoolClass>? SchoolClasses { get; set; }
+
+        public List<SchoolClass>? SchoolClasses { get; set; } = new();
 
     }
 }

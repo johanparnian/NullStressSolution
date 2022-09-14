@@ -9,6 +9,6 @@
         public int? TemporaryMood { get; set; }
 
         public List<Mood>? Moods { get; set; } = new();
-        public List<SchoolClass>? SchoolClasses { get; set; }
+        public List<SchoolClass>? SchoolClasses { get; set; } = new();
     }
 }
