@@ -23,11 +23,10 @@ export default function AddGroup(){
     return (
             <form>
                 <label>
-                <p>Add group</p>
-                Group Name
+                Add a school class name:
                 <input value={SchoolClassName} onChange={event => setSchoolClassName(event.target.value)}type="Text"></input>
                 </label>
-                <button type="submit" onClick={HandleAddGroup}>Add group</button>
+                <button type="submit" onClick={HandleAddGroup}>Add</button>
             </form>
     )
 

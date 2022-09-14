@@ -7,8 +7,6 @@ import ShowInfoAboutAdminProfile from '../Components/Admin/ShowInfoAboutAdminPro
 import styles from '../styles/Home.module.css'
 import AddGroup from '../Components/Admin/CreateGroup'
 import AddStudentToClass from '../Components/Admin/AddStudentToClass'
-
-
 import Link from 'next/link'
 import HeaderMenu from '../Components/Admin/HeaderMenu'
 
@@ -25,32 +23,11 @@ export default function Index() {
 
       <main className={styles.main}>
         <HeaderMenu />
-            
-            
-            {/* Create admin: <CreateAdmin /> 
-
-            Show Student names: <ShowStudentsHomeScreen></ShowStudentsHomeScreen>
-
-            Add student: <AddStudent/> */}
-
-            
-
-            {/* Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile> */}
-            
-            {/* Link: 
-
-            <Link href="/studentindex"><a>StudentIndex</a></Link>
-          
-          <div id="container2">
-              <Main />
-          </div>
-          <br></br>
-       <AddGroup></AddGroup> */}
+            Hei fra index.js
       </main>
 
-      <footer>Hei fra footer
 
-      </footer>
+      <footer>Hei fra footer</footer>
 
     </div>
     

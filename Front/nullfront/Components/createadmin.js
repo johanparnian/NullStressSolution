@@ -22,12 +22,12 @@ export default function CreateAdmin(props) {
             <form>
                 <div>
                     <label>
-                            <p>Add teacher Name</p> 
+                            <p>Admin name</p> 
                             <input type="text" value={Name} onChange={event => setName(event.target.value)}></input>
                     </label>
                     <br></br>
                     <label>
-                            Add school name:
+                            School name
                             <input type="text" value={School} onChange={event => setSchool(event.target.value)}></input>
                     </label>
                     <label>
