@@ -9,6 +9,7 @@ import AddGroup from '../Components/Admin/CreateGroup'
 import AddStudentToClass from '../Components/Admin/AddStudentToClass'
 import Link from 'next/link'
 import HeaderMenu from '../Components/Admin/HeaderMenu'
+import AddClass from '../Components/Admin/AddClass'
 
 
 export default function Index() {

@@ -12,7 +12,7 @@ export default function HeaderMenu() {
                 <Link href={"/Nyelev"}>Ny elev</Link><br/>
                 <Link href={"/Klasse"}>Klasser</Link><br/>
                 <Link href={"/Statistikk"}>Statistikk</Link><br/>
-                <Link href={"/Minprofil"}>Minprofil</Link><br/>
+                <Link href={"/Minprofil"}>Min profil (admin)</Link><br/>
                 <Link href={"/studentindex"}>-->Studentindex</Link><br/>
 
 
