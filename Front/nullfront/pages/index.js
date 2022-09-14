@@ -7,7 +7,8 @@ import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'
 import ShowInfoAboutAdminProfile from '../Components/Admin/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
 
-import SiteRoutes from '../Components/SiteRoutes'
+
+import Link from 'next/link'
 
 export default function Index() {
   return (
@@ -31,7 +32,8 @@ export default function Index() {
             Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile>
             
             Link: 
-            {/* <Link to="/studentindex">StudentIndex</Link> */}
+
+            <Link href="/studentindex"><a>StudentIndex</a></Link>
           
           <div id="container2">
               <Main />
