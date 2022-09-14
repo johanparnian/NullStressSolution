@@ -3,8 +3,8 @@
 export default function HeaderView() {
 
     return (
-        <div class="container_header">
-            <div class="profile_button">
+        <div className="container_header">
+            <div className="profile_button">
                 <a href="vg.no"></a>
             </div>
             <div>

@@ -6,6 +6,7 @@ import Main from '../Components/Admin/Main'
 import CreateAdmin from '../Components/CreateAdmin'
 import styles from '../styles/Home.module.css'
 import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'  
+import AddGroup from '../Components/Admin/CreateGroup'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
             <CreateAdmin />
             <ShowStudentsHomeScreen></ShowStudentsHomeScreen>
             <AddStudent/>
+            <AddGroup/>
 
 
           <div id="container2">
