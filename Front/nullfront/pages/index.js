@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import AddStudent from '../Components/Admin/CreateStudent'
-import HeaderView from '../Components/Admin/HeaderView'
 import Main from '../Components/Admin/Main'
 import CreateAdmin from '../Components/CreateAdmin'
 import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'  
@@ -11,6 +10,7 @@ import AddStudentToClass from '../Components/Admin/AddStudentToClass'
 
 
 import Link from 'next/link'
+import HeaderMenu from '../Components/Admin/HeaderMenu'
 
 
 export default function Index() {
@@ -24,19 +24,20 @@ export default function Index() {
       </Head>
 
       <main className={styles.main}>
-            Header view: <HeaderView />
+        <HeaderMenu />
             
-            Create admin: <CreateAdmin /> 
+            
+            {/* Create admin: <CreateAdmin /> 
 
             Show Student names: <ShowStudentsHomeScreen></ShowStudentsHomeScreen>
 
-            Add student: <AddStudent/>
+            Add student: <AddStudent/> */}
 
             
 
             {/* Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile> */}
             
-            Link: 
+            {/* Link: 
 
             <Link href="/studentindex"><a>StudentIndex</a></Link>
           
@@ -44,7 +45,7 @@ export default function Index() {
               <Main />
           </div>
           <br></br>
-       <AddGroup></AddGroup>
+       <AddGroup></AddGroup> */}
       </main>
 
       <footer>Hei fra footer
