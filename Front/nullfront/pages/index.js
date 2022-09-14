@@ -26,7 +26,7 @@ export default function Index() {
         <HeaderMenu />
             Hei fra index.js
 
-            <AddClass></AddClass>
+            
       </main>
 
 
