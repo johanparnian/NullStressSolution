@@ -10,7 +10,7 @@ import AddStudentToClass from '../Components/Admin/AddStudentToClass'
 import Link from 'next/link'
 import HeaderMenu from '../Components/Admin/HeaderMenu'
 import AddClass from '../Components/Admin/AddClass'
-
+import ViewAdmins from '../Components/Admin/ShowAdmins'
 
 export default function Index() {
   return (
@@ -38,6 +38,9 @@ export default function Index() {
             <br></br>
             <CreateAdmin></CreateAdmin>
             <AddStudentToClass/>
+            <br></br>
+            <br></br>
+      <ViewAdmins></ViewAdmins>
       </main>
 
 
