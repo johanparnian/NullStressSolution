@@ -18,7 +18,8 @@ export default function StudentIndex() {
       <div className="emoji-container">
       <div>Header</div>
         <div className="emoji">
-        <img alt="image" src="1.png" height="100" width="100"></img>
+        <img alt="image" src="1.png" height="100" width="100"
+        ></img>
         </div>
 
         <div className="emoji">
