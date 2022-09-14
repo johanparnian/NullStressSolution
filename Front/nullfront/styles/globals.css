@@ -70,3 +70,7 @@ p {
 .emoji-container {
   text-align: center;
 }
+
+img {
+  user-select: none;
+}
