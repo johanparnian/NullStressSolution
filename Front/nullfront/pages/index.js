@@ -24,6 +24,8 @@ export default function Index() {
       <main className={styles.main}>
         <HeaderMenu />
             Hei fra index.js
+
+            
       </main>
 
 
