@@ -5,6 +5,8 @@
         public int Id { get; set; }
         public string Name { get; set; }
 
+        public string? ClassName { get; set; }
+
         public List<Mood>? Moods { get; set; }
         public List<SchoolClass>? SchoolClasses { get; set; }
     }
