@@ -32,7 +32,7 @@ namespace NullStress.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Student>> GetStudent(Guid id)
+        public async Task<ActionResult<Student>> GetStudent(int id)
         {
           if (_context.Student == null)
           {
@@ -49,7 +49,7 @@ namespace NullStress.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutStudent(Guid id, Student student)
+        public async Task<IActionResult> PutStudent(int id, Student student)
         {
             if (id != student.Id)
             {
@@ -89,7 +89,7 @@ namespace NullStress.Controllers
           {
               return Problem("Entity set 'NullStressContext.Student'  is null.");
           }
-            student.Id = Guid.NewGuid();
+            //student.Id = Guid.NewGuid();
 
             _context.Student.Add(student);
             await _context.SaveChangesAsync();
@@ -98,7 +98,7 @@ namespace NullStress.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStudent(Guid id)
+        public async Task<IActionResult> DeleteStudent(Int id)
         {
             if (_context.Student == null)
             {
@@ -116,7 +116,7 @@ namespace NullStress.Controllers
             return NoContent();
         }
 
-        private bool StudentExists(Guid id)
+        private bool StudentExists(int id)
         {
             return (_context.Student?.Any(e => e.Id == id)).GetValueOrDefault();
         }
