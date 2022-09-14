@@ -27,6 +27,7 @@ export default function SendMood() {
                     height="100" 
                     width="100"
                     onClick={(e) => HandleSendMood(e, 1)}
+                    
             ></img>
             </div>
   
@@ -75,5 +76,4 @@ export default function SendMood() {
         </div>
     </div>
     )
-
 }

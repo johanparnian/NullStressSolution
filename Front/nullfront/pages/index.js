@@ -1,16 +1,15 @@
 import Head from 'next/head'
 import AddStudent from '../Components/Admin/CreateStudent'
 import Main from '../Components/Admin/Main'
-import CreateAdmin from '../Components/CreateAdmin'
+import CreateAdmin from '../Components/createadmin'
 import ShowStudentsHomeScreen from '../Components/Admin/ShowStudentsHomeScreen'  
 import ShowInfoAboutAdminProfile from '../Components/Admin/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
 import AddGroup from '../Components/Admin/CreateGroup'
 import AddStudentToClass from '../Components/Admin/AddStudentToClass'
-
-
 import Link from 'next/link'
 import HeaderMenu from '../Components/Admin/HeaderMenu'
+import AddClass from '../Components/Admin/AddClass'
 
 
 export default function Index() {
@@ -25,32 +24,23 @@ export default function Index() {
 
       <main className={styles.main}>
         <HeaderMenu />
-            
-            
-            {/* Create admin: <CreateAdmin /> 
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
 
-            Show Student names: <ShowStudentsHomeScreen></ShowStudentsHomeScreen>
+            Hei fra index.js
+            <br></br>
+            <br></br>
+            <br></br>
 
-            Add student: <AddStudent/> */}
-
-            
-
-            {/* Show info about admin <ShowInfoAboutAdminProfile></ShowInfoAboutAdminProfile> */}
-            
-            {/* Link: 
-
-            <Link href="/studentindex"><a>StudentIndex</a></Link>
-          
-          <div id="container2">
-              <Main />
-          </div>
-          <br></br>
-       <AddGroup></AddGroup> */}
+            <AddClass></AddClass>
+            <br></br>
+            <CreateAdmin></CreateAdmin>
       </main>
 
-      <footer>Hei fra footer
 
-      </footer>
+      <footer>Hei fra footer</footer>
 
     </div>
     

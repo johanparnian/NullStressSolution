@@ -6,16 +6,16 @@ import React from 'react'
 export default function ShowInfoAboutAdminProfile() {
 
     const getAdminInfo = async () => {
-        const endpoint = "https://localhost:7212/api/admins/"
+        const endpoint = "https://localhost:7212/api/admins/1"
 
         const response = await fetch(endpoint)
 
         if (response.ok) {
-            console.log("it worked")
+            console.log("admin name GET worked!")
             return await response.json();
         }
         else {
-            console.log("didnt work")
+            console.log("ERROR: Admin name get.")
             console.log(response)
         }
     }
@@ -29,7 +29,7 @@ export default function ShowInfoAboutAdminProfile() {
 
     return (
         <div>
-            {admin.name}{admin.school}{admin.className}
+            Admin #1 heter <b>{admin.name}</b>. Fra skole: <b>{admin.school}</b>. Har klasse: <b>{admin.className}</b>
         </div>
     )
 }

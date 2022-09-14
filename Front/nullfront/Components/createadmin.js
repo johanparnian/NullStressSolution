@@ -22,20 +22,21 @@ export default function CreateAdmin(props) {
             <form>
                 <div>
                     <label>
-                            <p>Add teacher Name</p> 
+                            <p>Admin name</p> 
                             <input type="text" value={Name} onChange={event => setName(event.target.value)}></input>
                     </label>
                     <br></br>
                     <label>
-                            Add school name:
+                            <p>School name</p>
                             <input type="text" value={School} onChange={event => setSchool(event.target.value)}></input>
                     </label>
+                    <br></br>
                     <label>
-                            Create new class:
+                            <p>Create new class</p>
                             <input type="text" value={ClassName} onChange={event => setClassName(event.target.value)}></input>
                     </label>
                     <br></br>
-                            <button type="submit" onClick={HandleCreateAdmin}>Add data</button>
+                            <button type="submit" onClick={HandleCreateAdmin}>Add</button>
                 </div>
             </form>
     )}
