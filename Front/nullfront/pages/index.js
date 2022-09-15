@@ -32,7 +32,7 @@ export default function Index() {
         <HeaderIcons></HeaderIcons>
         <HeaderMenu />
 
-        <div class="angry-grid">
+        <div class="main-grid">
           <div id="item-0">Insert komponent som displayer klassenavn.</div>
           <div id="item-1"></div>
           <div id="item-2"></div>
