@@ -6,7 +6,7 @@ export default function HeaderMenu() {
         <div class="container_menu">
                 <ul>
                     <li><a class="active" Link href="/">Hjem</a></li>
-                    <li><a class="active" Link href="/kontrollpanel">Kontrollpanel</a></li>
+                    <li><a class="active" Link href="/Kontrollpanel">Kontrollpanel</a></li>
                 </ul>
         </div>
     )
