@@ -10,9 +10,7 @@ import Link from 'next/link'
 import AddClass from '../Components/Create/AddClass'
 import ViewAdmins from '../Components/Show/ShowAdmins'
 
-import HeaderTitle from '../Components/HeaderTitle'
-import HeaderMenu from '../Components/HeaderMenu'
-import HeaderIcons from '../Components/Header'
+import Header from '../Components/Header'
 
 
 
@@ -27,9 +25,7 @@ export default function Kontrollpanel() {
 
 
       <main className={styles.main}>
-        <HeaderTitle></HeaderTitle>
-        <HeaderIcons></HeaderIcons>
-        <HeaderMenu />
+        <Header />
 
         <div class="control-panel-grid">
             <div id="item-ctrl1">-</div>
