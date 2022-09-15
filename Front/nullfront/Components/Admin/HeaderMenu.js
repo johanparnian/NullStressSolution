@@ -5,15 +5,17 @@ export default function HeaderMenu() {
 
     return (
         <div className="container_header">
-            <h1>NULL STRESS</h1>
+            <div>
+                
+            </div>
+            <div class="header_title">
+                <h1>NULL STRESS</h1>
+            </div>
+            
 
             <nav>
-                <Link href={"/"}>Hjem</Link><br/>
-                <Link href={"/Nyelev"}>Ny elev</Link><br/>
-                <Link href={"/Klasse"}>Klasser</Link><br/>
-                <Link href={"/Statistikk"}>Statistikk</Link><br/>
-                <Link href={"/Minprofil"}>Min profil (admin)</Link><br/>
-                <Link href={"/studentindex"}>-->Studentindex</Link><br/>
+                <Link href={"/"}>Hjem</Link>
+                {/* <Link href={"/kontrollpanel"}>Kontrollpanel</Link> */}
             </nav>
             
         </div>
