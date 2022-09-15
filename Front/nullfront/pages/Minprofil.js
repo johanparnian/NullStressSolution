@@ -1,3 +1,4 @@
+import AddClass from "../Components/Admin/AddClass";
 import HeaderMenu from "../Components/Admin/HeaderMenu";
 import ShowInfoAboutAdminProfile from "../Components/Admin/ShowInfoAboutAdminProfile";
 import CreateAdmin from "../Components/createadmin";
@@ -9,6 +10,7 @@ export default function Minprofil() {
             <HeaderMenu />
             <CreateAdmin />
             <ShowInfoAboutAdminProfile />
+            <AddClass/>
         </div>
     )
 }
