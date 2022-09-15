@@ -7,13 +7,12 @@ import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProf
 import styles from '../styles/Home.module.css'
 import AddStudentToClass from '../Components/Create/AddStudentToClass'
 import Link from 'next/link'
-import HeaderMenu from '../Components/HeaderMenu'
 import AddClass from '../Components/Create/AddClass'
 import ViewAdmins from '../Components/Show/ShowAdmins'
 
-//import HeaderTitle from '../Components/Admin/HeaderTitle'
-//import HeaderMenu from '../Components/Admin/HeaderMenu'
-//import HeaderIcons from '../Components/Admin/HeaderIcons'
+import HeaderTitle from '../Components/HeaderTitle'
+import HeaderMenu from '../Components/HeaderMenu'
+import HeaderIcons from '../Components/HeaderIcons'
 
 //import ShowClasses from '../Components/Show/ShowClasses'
 
@@ -29,6 +28,8 @@ export default function Index() {
       </Head>
 
       <main className={styles.main}>
+        <HeaderTitle></HeaderTitle>
+        <HeaderIcons></HeaderIcons>
         <HeaderMenu />
 
         Hei fra index.js
