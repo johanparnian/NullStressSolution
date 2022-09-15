@@ -11,11 +11,11 @@ import HeaderMenu from '../Components/HeaderMenu'
 import AddClass from '../Components/Create/AddClass'
 import ViewAdmins from '../Components/Show/ShowAdmins'
 
-import HeaderTitle from '../Components/Admin/HeaderTitle'
-import HeaderMenu from '../Components/Admin/HeaderMenu'
-import HeaderIcons from '../Components/Admin/HeaderIcons'
+//import HeaderTitle from '../Components/Admin/HeaderTitle'
+//import HeaderMenu from '../Components/Admin/HeaderMenu'
+//import HeaderIcons from '../Components/Admin/HeaderIcons'
 
-import ShowClasses from '../Components/Show/ShowClasses'
+//import ShowClasses from '../Components/Show/ShowClasses'
 
 
 export default function Index() {
