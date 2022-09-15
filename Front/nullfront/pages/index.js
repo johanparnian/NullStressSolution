@@ -1,14 +1,11 @@
 import Head from 'next/head'
-import AddStudent from '../Components/CreateStudent'
-import Main from '../Components/Main'
-import CreateAdmin from '../Components/Create/createadmin'
-import ShowStudentsHomeScreen from '../Components/Show/ShowStudentsHomeScreen'
-import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProfile'
+
 import styles from '../styles/Home.module.css'
-import AddStudentToClass from '../Components/Create/AddStudentToClass'
-import Link from 'next/link'
-import AddClass from '../Components/Create/AddClass'
-import ViewAdmins from '../Components/Show/ShowAdmins'
+import HeaderMenu from '../Components/Admin/HeaderMenu'
+import ShowStudents from '../Components/Show/ShowStudents'
+import ShowAdmins from '../Components/Show/ShowAdmins'
+import CreateAdmin from '../Components/Create/createadmin'
+
 
 import Header from '../Components/Header'
 
@@ -25,8 +22,33 @@ export default function Index() {
       </Head>
 
       <main className={styles.main}>
-        <Header />
-        <Main />
+
+        <HeaderMenu />
+        
+        
+        <ShowStudents />
+
+        
+        {/* <StudenCard /> */}
+        {/* <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
+
+            Hei fra index.js
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <AddClass></AddClass>
+            <br></br>
+            <CreateAdmin></CreateAdmin>
+            <AddStudentToClass/>
+            <br></br>
+            <br></br>
+      <ViewAdmins></ViewAdmins> */}
+
       </main>
       <footer>Hei fra footer</footer>
     </div>

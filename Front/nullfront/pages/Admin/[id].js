@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import AddClass from '../../Components/Create/AddClass'
+
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
+
 
 const AdminView = () => {
     const router = useRouter()
