@@ -1,12 +1,37 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using NullStress.Data;
+
+using System;
+using System.Linq;
+using Twilio;
+using Twilio.Clients;
+using Twilio.Rest.Api.V2010.Account;
+
 namespace NullStress
 {
     public class Program
     {
+
+
         public static void Main(string[] args)
         {
+            void ConfigureServices(IServiceCollection services)
+            {
+                services.AddControllers();
+                services.AddHttpClient<ITwilioRestClient, TwilioClient>();
+            }
+            //https://code-maze.com/send-sms-aspnetcore/
+
+
+
+
+
+
+
+
+
+
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<NullStressContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("NullStressContext") ?? throw new InvalidOperationException("Connection string 'NullStressContext' not found.")));
@@ -41,6 +66,9 @@ namespace NullStress
             app.MapControllers();
 
             app.Run();
+
+
+
         }
     }
 }
