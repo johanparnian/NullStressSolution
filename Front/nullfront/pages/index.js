@@ -32,6 +32,8 @@ export default function Index() {
         <HeaderIcons></HeaderIcons>
         <HeaderMenu />
 
+
+        {/* This part will be moved to its own component, in time. */}
         <div class="main-grid">
           <div id="item-0">Insert komponent som displayer klassenavn.</div>
           <div id="item-1"></div>
@@ -46,15 +48,8 @@ export default function Index() {
           <br></br>
           <br></br>
         </div>
+        {/* End of component */}
 
-        {/* <br></br>
-
-            <AddClass></AddClass>
-            <br></br>
-            <CreateAdmin></CreateAdmin>
-            <AddStudentToClass/>
-            <br></br>
-      <ViewAdmins></ViewAdmins> */}
       </main>
 
       <footer>Hei fra footer</footer>
