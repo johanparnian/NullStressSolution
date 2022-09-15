@@ -28,13 +28,10 @@ export default function ShowStudents() {
     const getMoods = async () => {
         const endpoint = "https://localhost:7212/api/Moods"
 
-        const mood = await fetch(endpoint)
-        .select("muud")
-        .where({student})
-        // const response = await fetch(endpoint).catch(error => {
-        //     console.log(error)
-        //     throw error
-        // })
+        const response = await fetch(endpoint).catch(error => {
+            console.log(error)
+            throw error
+        })
 
         if (response.ok){
             return await response.json()
