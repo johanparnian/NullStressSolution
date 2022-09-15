@@ -25,7 +25,7 @@ export default function ShowClasses() {
 
     useEffect(() => {
         getClasses()
-            .then(classes => setClasses(classes))
+            .then(classes => setSchoolClasses(classes))
     }, [])
 
     return (

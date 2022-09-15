@@ -1,4 +1,4 @@
-import ShowAdmins from "../Components/Admin/ShowAdmins";
+import ShowAdmins from "../Components/Show/ShowAdmins";
 
 export default function AdminOverview() {
     return (
