@@ -1,25 +1,23 @@
 import { useRouter } from 'next/router'
 import AddClass from '../../Components/Create/AddClass'
+import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
 
 const AdminView = () => {
     const router = useRouter()
     const { id } = router.query
 
 
-  
+
     return (
         <div>
             <p>Admin ID: {id}</p>
+            <h1>Her vises adminen sin oversikt over klasser</h1>
+            <ShowSchoolClasses></ShowSchoolClasses>
+            <h1>Her legger Admin til nye klasser</h1>
             <AddClass id={id} />
-            <div>
-            
-            <h1>Her skal adminen sin oversikt over klasser vises</h1>
-            <h1>slik "home" var i figma - ved flere klasser kan elevoversikt implementeres med en state funksjons om sier hvilken klasse admin velger å vise på forsiden.</h1>
-
         </div>
 
-        </div>
     )
-  }
+}
 
-  export default AdminView;
+export default AdminView;

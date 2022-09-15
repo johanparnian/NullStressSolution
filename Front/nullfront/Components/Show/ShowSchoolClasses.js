@@ -32,7 +32,7 @@ export default function ShowSchoolClasses() {
             List of classes:
             <div key={schoolClasses.id}>
                 {schoolClasses.map((schoolClass) => (
-                    <a href={`Classes/${schoolClass.id}`}><li key={schoolClass.id}>{schoolClass.name}</li></a>
+                    <a href={`Classes/${schoolClass.id}`}><li key={schoolClass.id}>{schoolClass.schoolClassName}</li></a>
                     ))}
             </div>
         </div>
