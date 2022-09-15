@@ -12,7 +12,7 @@ import ViewAdmins from '../Components/Show/ShowAdmins'
 
 import HeaderTitle from '../Components/HeaderTitle'
 import HeaderMenu from '../Components/HeaderMenu'
-import HeaderIcons from '../Components/HeaderIcons'
+import HeaderIcons from '../Components/Header'
 
 
 

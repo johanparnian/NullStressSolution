@@ -10,12 +10,9 @@ import Link from 'next/link'
 import AddClass from '../Components/Create/AddClass'
 import ViewAdmins from '../Components/Show/ShowAdmins'
 
-import HeaderTitle from '../Components/HeaderTitle'
-import HeaderMenu from '../Components/HeaderMenu'
-import HeaderIcons from '../Components/HeaderIcons'
+import Header from '../Components/Header'
 
 //import ShowClasses from '../Components/Show/ShowClasses'
-
 
 export default function Index() {
   return (
@@ -28,9 +25,7 @@ export default function Index() {
       </Head>
 
       <main className={styles.main}>
-        <HeaderTitle></HeaderTitle>
-        <HeaderIcons></HeaderIcons>
-        <HeaderMenu />
+        <Header />
 
 
         {/* This part will be moved to its own component, in time. */}
@@ -49,12 +44,8 @@ export default function Index() {
           <br></br>
         </div>
         {/* End of component */}
-
       </main>
-
       <footer>Hei fra footer</footer>
-
     </div>
-
   )
 }

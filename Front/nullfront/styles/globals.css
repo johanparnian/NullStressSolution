@@ -1,7 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-
-
 
 body {
   background-color: #1A485C;
@@ -32,14 +29,11 @@ p {
   text-align: center;
 }
 
+
 img {
   user-select: none;
 }
-img:hover {
-  border: 0px;
-  border-style:solid;
-  border-color:black
-}
+
 img:active {
   animation: rotate 1s infinite;
 }
@@ -53,15 +47,10 @@ img:active {
   }
 }
 
-
-
-
-/*___________________________*/
-
 .container_header {
   display:flex;
   width: 100%;
-  height: 12vmax;
+  height: 10vmax;
   padding: 0px;
   padding-top: 0px;
   background-color: #081D26;
@@ -85,13 +74,10 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #081D26;
-
-
 }
 
 li {
   float: left;
-  
 }
 
 li a {
@@ -102,9 +88,6 @@ li a {
   text-decoration: none;
   font-size: 3vh;
   user-select: none;
-  
-
-  
 }
 
 li a:hover {
@@ -129,11 +112,6 @@ li a:hover {
   padding-bottom: 3vh;
 
 }
-
-
-
-
-
 
 /* START MAIN GRID CSS */
 .main-grid {
@@ -265,3 +243,4 @@ li a:hover {
   grid-column-end: 5;
   
 }
+/* END CONTROL PANEL GRID CSS */
