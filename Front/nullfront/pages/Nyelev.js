@@ -1,5 +1,5 @@
-import AddStudent from "../Components/Admin/CreateStudent";
-import HeaderMenu from "../Components/Admin/HeaderMenu";
+import AddStudent from "../Components/CreateStudent";
+import HeaderMenu from "../Components/HeaderMenu";
 
 
 

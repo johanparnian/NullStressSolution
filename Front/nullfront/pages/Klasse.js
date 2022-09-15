@@ -1,7 +1,7 @@
 
-import AddStudentToClass from "../Components/Admin/AddStudentToClass"
-import HeaderMenu from "../Components/Admin/HeaderMenu"
-import ShowStudents from "../Components/Admin/ShowStudents"
+import AddStudentToClass from "../Components/Create/AddStudentToClass"
+import HeaderMenu from "../Components/HeaderMenu"
+import ShowStudents from "../Components/Show/ShowStudents"
 
 
 export default function Klasse() {
