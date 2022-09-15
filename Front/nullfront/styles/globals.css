@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 
 
@@ -8,7 +8,7 @@ body {
   margin: 0px;
   padding: 0px;
   color: white;
-  font-family: 'Roboto';
+  font-family: 'Nunito';
 }
 
 p {
@@ -36,8 +36,6 @@ img {
   user-select: none;
 }
 img:hover {
-  height: 103px;
-  width: 103px;
   border: 0px;
   border-style:solid;
   border-color:black

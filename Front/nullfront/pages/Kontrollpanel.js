@@ -39,14 +39,7 @@ export default function Kontrollpanel() {
             <div id="item-ctrl5">Component: legg til ny student</div>
             <div id="item-ctrl6"></div>
         </div>
-
-
         </main>
-
-
-
-
-
         </div>
     )
 }
