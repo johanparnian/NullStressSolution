@@ -29,7 +29,7 @@ export default function Index() {
         <br></br>
 
             Hei fra index.js
-            <br></br>
+            {/* <br></br>
             <br></br>
             <br></br>
 
@@ -39,7 +39,7 @@ export default function Index() {
             <AddStudentToClass/>
             <br></br>
             <br></br>
-      <ViewAdmins></ViewAdmins>
+      <ViewAdmins></ViewAdmins> */}
       </main>
 
 
