@@ -1,12 +1,12 @@
 import HeaderMenu from "../Components/Admin/HeaderMenu";
-import ShowOneStudent from "../Components/Admin/ShowOneStudent";
+
 
 
 export default function Elevside() {
     return (
         <div>
             <HeaderMenu />
-            <ShowOneStudent />
+            <h3>Her kommer elevsiden</h3>
         </div>
     )
 }

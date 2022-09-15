@@ -1,16 +1,9 @@
 import Head from 'next/head'
-import AddStudent from '../Components/CreateStudent'
-import Main from '../Components/Admin/Main'
-import CreateAdmin from '../Components/Create/createadmin'
-import ShowStudentsHomeScreen from '../Components/Show/ShowStudentsHomeScreen'  
-import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
-import AddGroup from '../Components/CreateGroup'
-import AddStudentToClass from '../Components/Create/AddStudentToClass'
-import Link from 'next/link'
 import HeaderMenu from '../Components/Admin/HeaderMenu'
-import AddClass from '../Components/Create/AddClass'
-import ViewAdmins from '../Components/Show/ShowAdmins'
+import ShowStudents from '../Components/Show/ShowStudents'
+import ShowAdmins from '../Components/Show/ShowAdmins'
+import CreateAdmin from '../Components/Create/createadmin'
 
 export default function Index() {
   return (
@@ -24,10 +17,17 @@ export default function Index() {
 
       <main className={styles.main}>
         <HeaderMenu />
+        
+        
+        <ShowStudents />
+
+        
+        {/* <StudenCard /> */}
+        {/* <br></br>
         <br></br>
         <br></br>
         <br></br>
-        <br></br>
+        
 
             Hei fra index.js
             <br></br>
@@ -40,7 +40,7 @@ export default function Index() {
             <AddStudentToClass/>
             <br></br>
             <br></br>
-      <ViewAdmins></ViewAdmins>
+      <ViewAdmins></ViewAdmins> */}
       </main>
 
 

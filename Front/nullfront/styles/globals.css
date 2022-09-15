@@ -65,7 +65,7 @@ p {
   text-align: center;
 }
 
-img {
+/* img {
   user-select: none;
 }
 img:hover {
@@ -77,7 +77,7 @@ img:hover {
 }
 img:active {
   animation: rotate 1s infinite;
-}
+} */
 
 @keyframes rotate {
   0% {
@@ -111,4 +111,20 @@ h1 {
   text-align: center;
   padding-top: 9vmax;
   user-select: none;
+}
+
+.student-card {
+  flex-basis: 225px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.img-student-card {
+  height: 50px;
+  width: 50px;
 }
