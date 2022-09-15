@@ -29,7 +29,7 @@ export default function ShowStudentsHomeScreen() {
 
     return (
         <div>
-            Here are the student names:
+            Here are the students names:
             <div key={students.id}>
                 {students.map((student) => (
                     <li key={student.id}>{student.name}</li>
