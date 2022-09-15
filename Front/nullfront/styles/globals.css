@@ -113,6 +113,13 @@ li a:hover {
 
 }
 
+.navbar {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #081D26;
+}
+
 /* START MAIN GRID CSS */
 .main-grid {
   display: grid; 
