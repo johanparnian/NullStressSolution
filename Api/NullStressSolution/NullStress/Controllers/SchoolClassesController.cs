@@ -48,7 +48,7 @@ namespace NullStress.Controllers
             return schoolClass;
         }
 
-        [HttpPut("{id}/schoolclassName/{studentName}")]
+        [HttpPut("{id}/student/{name}")]
         public async Task<IActionResult> PutSchoolClass(int id, string studentName)
         {
             var schoolClass = await _context.FindAsync<SchoolClass>(id);
