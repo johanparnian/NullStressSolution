@@ -33,10 +33,10 @@ export default function Kontrollpanel() {
 
         <div class="control-panel-grid">
             <div id="item-ctrl1">-</div>
-            <div id="item-ctrl2">component: innlogget som + component: klassenavn.</div>
-            <div id="item-ctrl3">elever i klassen</div>
+            <div id="item-ctrl2">Component: innlogget som + component: klassenavn.</div>
+            <div id="item-ctrl3">Component: elever i klassen</div>
             <div id="item-ctrl4"></div>
-            <div id="item-ctrl5">legg til ny student</div>
+            <div id="item-ctrl5">Component: legg til ny student</div>
             <div id="item-ctrl6"></div>
         </div>
 
