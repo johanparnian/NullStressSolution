@@ -1,5 +1,5 @@
-import HeaderMenu from "../Components/Admin/HeaderMenu";
-import ShowOneStudent from "../Components/Admin/ShowOneStudent";
+import HeaderMenu from "../Components/HeaderMenu";
+import ShowOneStudent from "../Components/ShowOneStudent";
 
 
 export default function Elevside() {

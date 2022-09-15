@@ -3,8 +3,8 @@ import styles from '../styles/Home.module.css'
 import React from 'react'
 import Image from "next/image";
 
-import SendMood from '../Components/Student/SendMood';
-import HeaderMenu from '../Components/Admin/HeaderMenu';
+import SendMood from '../Components/Create/SendMood';
+import HeaderMenu from '../Components/HeaderMenu';
 
 
 export default function StudentIndex() {

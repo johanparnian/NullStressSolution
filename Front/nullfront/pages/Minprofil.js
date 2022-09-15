@@ -1,5 +1,5 @@
 import AddClass from "../Components/Create/AddClass";
-import HeaderMenu from "../Components/Admin/HeaderMenu";
+import HeaderMenu from "../Components/HeaderMenu";
 import ShowInfoAboutAdminProfile from "../Components/Show/ShowInfoAboutAdminProfile";
 import CreateAdmin from "../Components/Create/createadmin";
 

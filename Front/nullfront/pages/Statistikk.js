@@ -1,4 +1,4 @@
-import HeaderMenu from "../Components/Admin/HeaderMenu";
+import HeaderMenu from "../Components/HeaderMenu";
 
 
 export default function Statistikk() {
