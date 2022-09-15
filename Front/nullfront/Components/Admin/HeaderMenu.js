@@ -2,22 +2,30 @@ import Link from "next/link";
 
 
 export default function HeaderMenu() {
-
     return (
-        <div className="container_header">
-            <div>
-                
-            </div>
-            <div class="header_title">
-                <h1>NULL STRESS</h1>
-            </div>
-            
-
-            <nav>
-                <Link href={"/"}>Hjem</Link>
-                {/* <Link href={"/kontrollpanel"}>Kontrollpanel</Link> */}
-            </nav>
-            
+        <div class="container_menu">
+                <ul>
+                    <li><a class="active" Link href="/">Hjem</a></li>
+                    <li><a class="active" Link href="/kontrollpanel">Kontrollpanel</a></li>
+                </ul>
         </div>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+            {/* <nav>
+                <div id="nav-flex">
+                <Link href={"/"}>Hjem</Link>
+                <Link href={"/kontrollpanel"}>Kontrollpanel</Link>
+                </div>
+            </nav> */}
