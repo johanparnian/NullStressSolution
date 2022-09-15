@@ -12,7 +12,7 @@ const ClassView = () => {
     return (
         <div>
             <p>Klasse ID: {id}</p>
-            <h1>Her vises adminen sin oversikt over Studentene i denne klassen</h1>
+            <h1>Oversikt over elever i klassen</h1>
             <ShowStudents></ShowStudents>
 
             <h1>Her legger Admin til nye studenter i denne klassen</h1>
