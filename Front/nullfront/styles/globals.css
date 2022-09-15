@@ -88,6 +88,7 @@ li a {
   text-decoration: none;
   font-size: 3vh;
   user-select: none;
+  border-radius: 12px;
 }
 
 li a:hover {
