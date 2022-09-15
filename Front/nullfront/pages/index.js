@@ -32,7 +32,13 @@ export default function Index() {
         <HeaderIcons></HeaderIcons>
         <HeaderMenu />
 
-        Hei fra index.js
+        <div class="angry-grid">
+          <div id="item-0">Insert komponent som displayer klassenavn.</div>
+          <div id="item-1"></div>
+          <div id="item-2"></div>
+          <div id="item-3"></div>
+          <div id="item-4">Insert komponent som mapper cards av elevene i klassen.</div>
+        </div>
 
         <div>
           <br></br>
