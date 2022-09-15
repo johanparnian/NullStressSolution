@@ -28,19 +28,17 @@ export default function Index() {
 
         <div>
           <br></br>
-          <a href='http://localhost:3000/'>Admin Dashboard</a>
+          <a href='http://localhost:3000/Admin/1'>Admin Dashboard (future admin login button) </a>
+          <br></br>
           <br></br>
         </div>
 
         {/* <br></br>
-            <br></br>
-            <br></br>
 
             <AddClass></AddClass>
             <br></br>
             <CreateAdmin></CreateAdmin>
             <AddStudentToClass/>
-            <br></br>
             <br></br>
       <ViewAdmins></ViewAdmins> */}
       </main>

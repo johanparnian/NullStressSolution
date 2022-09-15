@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router'
-import AddClass from '../../Components/Create/AddClass'
+import AddStudentToClass from '../../Components/Create/AddStudentToClass'
 
-const AdminView = () => {
+
+const ClassView = () => {
     const router = useRouter()
     const { id } = router.query
 
@@ -9,8 +10,8 @@ const AdminView = () => {
   
     return (
         <div>
-            <p>Admin ID: {id}</p>
-            <AddClass id={id} />
+            <p>Klasse ID: {id}</p>
+            <AddStudentToClass id={id} />
             <div>
             
             <h1>Her skal adminen sin oversikt over klasser vises</h1>
@@ -22,4 +23,4 @@ const AdminView = () => {
     )
   }
 
-  export default AdminView;
+  export default ClassView;
