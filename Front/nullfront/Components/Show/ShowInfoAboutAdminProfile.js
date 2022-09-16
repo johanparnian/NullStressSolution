@@ -29,9 +29,9 @@ export default function ShowInfoAboutAdminProfile() {
 
     return (
         <div>
-            {/* <p>Innlogget som: {admin.name}</p>
+            <p>Innlogget som: {admin.name}</p>
             <p>Tilhørende skole: {admin.school}</p>
-            <p>Tilhørende klasse: {admin.classname}</p> */}
+            <p>Tilhørende klasse: {admin.ClassName}</p>
         </div>
     )
 }
