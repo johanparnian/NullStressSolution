@@ -30,13 +30,14 @@ p {
 }
 
 
-img {
+/* img {
+
   user-select: none;
 }
 
 img:active {
   animation: rotate 1s infinite;
-}
+} */
 
 @keyframes rotate {
   0% {
@@ -89,6 +90,23 @@ li a {
   font-size: 3vh;
   user-select: none;
   border-radius: 12px;
+}
+
+
+.student-card {
+  flex-basis: 225px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.img-student-card {
+  height: 50px;
+  width: 50px;
 }
 
 li a:hover {
@@ -252,3 +270,4 @@ li a:hover {
   
 }
 /* END CONTROL PANEL GRID CSS */
+
