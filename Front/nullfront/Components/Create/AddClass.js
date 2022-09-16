@@ -3,7 +3,6 @@ import { useState } from "react";
 export default function AddClass(props) {
     const [schoolClassName, setSchoolClassName] = useState("")
 
-
     async function HandleCreateStudent(event) {
         event.preventDefault()
 

@@ -46,8 +46,7 @@ export default function Index() {
             <br></br>
             <br></br>
       <ViewAdmins></ViewAdmins> */}
-
-
+      <CreateAdmin></CreateAdmin>
       </main>
       <footer>Hei fra footer</footer>
     </div>
