@@ -63,11 +63,6 @@ export default function CreateStudentAndSendSMS() {
         else console.log("error in SMS get")
     }
 
-    // async function SomeFunc() {
-    //     await HandleAddStudent();
-    //     await HandleSendSMS();
-    // }
-
     return (
             <form>
                 <label>
