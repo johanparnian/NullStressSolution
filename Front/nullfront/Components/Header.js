@@ -49,10 +49,11 @@ export default function Header() {
                                 />
 
                         </div>
-                        <div class="navbar">
+                        <div className="navbar">
                                 <ul>
-                                        <li><a class="active" Link href="/">Hjem</a></li>
-                                        <li><a class="active" Link href="/Kontrollpanel">Kontrollpanel</a></li>
+                                        {/* skal det være Link her, dette er kanskje ikke riktige typer link eller routing??? */}
+                                        <li><a className="active" href="/">Hjem</a></li>
+                                        <li><a className="active" href="/Kontrollpanel">Kontrollpanel</a></li>
                                 </ul>
                         </div>
                 </div>

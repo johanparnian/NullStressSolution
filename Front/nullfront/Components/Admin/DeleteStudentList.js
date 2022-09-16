@@ -42,7 +42,7 @@ export default function DeleteEditStudentList() {
 
   return (
     <div>
-      Here are the students in your class:
+      <p>Here are the students in your class:</p>
       <div key={students.id}>
         {students.map((student) => (
           <li key={student.id}>

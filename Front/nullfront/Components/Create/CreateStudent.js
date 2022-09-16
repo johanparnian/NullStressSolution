@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-export default function AddStudent(){
+export default function CreateStudent(){
 
     const [name, setName] = useState("")
    

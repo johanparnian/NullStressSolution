@@ -4,7 +4,7 @@ import React from 'react'
 import Image from "next/image";
 
 import SendMood from '../Components/Create/SendMood';
-import HeaderMenu from '../Components/HeaderMenu';
+import CreateStudentAlert from '../Components/Create/SendStudentAlert';
 
 
 export default function StudentIndex() {
@@ -17,8 +17,11 @@ export default function StudentIndex() {
       </Head>
 
       <main className={styles.main}>
-      <SendMood></SendMood>
-      
+        <SendMood></SendMood>
+        <CreateStudentAlert></CreateStudentAlert>
+
+
+
       </main>
 
       <footer></footer>

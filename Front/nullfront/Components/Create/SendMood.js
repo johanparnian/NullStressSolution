@@ -3,9 +3,9 @@ export default function SendMood() {
     async function HandleSendMood(event, moodId) {
         event.preventDefault()
 
-        const response = await fetch (`https://localhost:7212/api/students/1/mood/${moodId}`, {
+        const response = await fetch(`https://localhost:7212/api/students/1/mood/${moodId}`, {
             method: "PUT",
-            headers: { 'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
         })
 
         if (response.ok) {
@@ -20,60 +20,66 @@ export default function SendMood() {
     return (
         <div className="emoji-container">
             <div className="emoji">
-            <img
+                
+                <img
                     draggable="false"
-                    alt="image" 
-                    src="1.png" 
-                    height="100" 
+                    alt="image"
+                    src="1.png"
+                    height="100"
                     width="100"
+                    class="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 1)}
-                    
-            ></img>
+
+                ></img>
             </div>
-  
+
             <div className="emoji">
-            <img
+                <img
                     draggable="false"
-                    alt="image" 
-                    src="2.png" 
-                    height="100" 
+                    alt="image"
+                    src="2.png"
+                    height="100"
                     width="100"
+                    class="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 2)}
-            ></img>
+                ></img>
             </div>
 
             <div className="emoji">
-            <img
+                <img
                     draggable="false"
-                    alt="image" 
-                    src="3.png" 
-                    height="100" 
+                    alt="image"
+                    src="3.png"
+                    height="100"
                     width="100"
+                    class="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 3)}
-            ></img>
+                ></img>
             </div>
 
             <div className="emoji">
-            <img
+                <img
                     draggable="false"
-                    alt="image" 
-                    src="4.png" 
-                    height="100" 
+                    alt="image"
+                    src="4.png"
+                    height="100"
                     width="100"
+                    class="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 4)}
-            ></img>
+                ></img>
             </div>
 
             <div className="emoji">
-            <img
+                <img
                     draggable="false"
-                    alt="image" 
-                    src="5.png" 
-                    height="100" 
+                    alt="image"
+                    src="5.png"
+                    height="100"
                     width="100"
+                    class="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 5)}
-            ></img>
+                ></img>
+            </div>
         </div>
-    </div>
     )
 }
