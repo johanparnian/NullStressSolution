@@ -32,7 +32,6 @@ export default function ShowAdmins() {
             List of admins:
             <div key={admins.id}>
                 {admins.map((admin) => (
-                    
                     <a href={`Admin/${admin.id}`}><li key={admin.id}>{admin.name}</li></a>
                     
                     ))}

@@ -77,6 +77,32 @@ namespace NullStress.Controllers
             return NoContent();
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PuStudent(int id, Student student)
+        {
+            Student updatedStudent = await _context.FindAsync<Student>(id);
+
+            updatedStudent.Name = student.Name;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!StudentExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
         [HttpPost]
         public async Task<ActionResult<Student>> PostStudent(Student student)
         {
