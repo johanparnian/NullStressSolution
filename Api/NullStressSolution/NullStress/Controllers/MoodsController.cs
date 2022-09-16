@@ -31,13 +31,32 @@ namespace NullStress.Controllers
             return await _context.Mood.ToListAsync();
         }
 
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Mood>> GetMood(int id)
+        //{
+        //    if (_context.Mood == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var mood = await _context.Mood
+        //        .Where(i => i.StudentId == id)
+        //        .ToListAsync();
+
+        //    if (mood == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return Ok(mood);
+        //}
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Mood>> GetMood(int id)
         {
-          if (_context.Mood == null)
-          {
-              return NotFound();
-          }
+            if (_context.Mood == null)
+            {
+                return NotFound();
+            }
             var mood = await _context.Mood.FindAsync(id);
 
             if (mood == null)

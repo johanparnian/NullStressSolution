@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NullStress.Migrations
 {
-    public partial class initalclass : Migration
+    public partial class Noenytt : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
