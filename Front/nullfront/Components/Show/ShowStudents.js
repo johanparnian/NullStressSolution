@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import StudentView from "../../pages/Admin/Classes/Student/[id]";
+
 
 export default function ShowStudents() {
     const getStudents = async () => {
@@ -21,7 +23,7 @@ export default function ShowStudents() {
         }
     }
 
-    const [students, setstudents] = useState([])
+    const [students, setStudents] = useState([])
 
      useEffect(() => {
          getStudents().then(students => setStudents(students))
@@ -32,8 +34,11 @@ export default function ShowStudents() {
             List of students
             <div key={students.id}>
                 {students.map((student) => (
-                    <a href={`Students/${student.id}`}><li key={student.id}>{student.name}</li></a>
+                    <div className="student-card">
+                    <a href={`Students/${student.id}`}><p key={student.id}>{student.name}</p></a>
+                    {/* <StudentView /> */}
                     
+                </div>
                     ))}
             </div>
         </div>
