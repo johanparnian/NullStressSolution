@@ -5,17 +5,13 @@ export default function CreateStudentAndSendSMS() {
 
     const [From, setFrom] = useState("+18145643389")
 
-    //THis for sms.
     const [name, setName] = useState("")
     let [To, setTo] = useState("")
     const [link, setLink] = useState("_LINKPACEHOLDER_")
 
-    //This for adding.
     const [phoneNumber, setPhoneNumber] = useState("")
 
     To = phoneNumber;
-
-    //const [message, setMessage] = useState(newUserMessage)
    
     async function HandleAddStudent(event) {
        const student = {name, phoneNumber, link}
@@ -38,7 +34,7 @@ export default function CreateStudentAndSendSMS() {
         }  
     }
 
-    const HandleSendSMS = async (event) => {
+    const HandleSendSMS = async () => {
 
         const Message = `Hei ${name}! Du har fått en bruker på nullstress.no. Link: ${link}`
         const sms = { To, From, Message }
