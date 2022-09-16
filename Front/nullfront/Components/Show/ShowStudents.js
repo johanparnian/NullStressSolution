@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import StudentView from "../../pages/Admin/Classes/Student/[id]";
+// import StudentView from "../../pages/Admin/Classes/Student/[id]";
 
 
 export default function ShowStudents() {
