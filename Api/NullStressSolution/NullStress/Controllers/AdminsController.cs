@@ -92,7 +92,7 @@ namespace NullStress.Controllers
             {
                 Name = admin.Name,
                 School = admin.School,
-                ClassName = admin.ClassName,
+                ClassName = admin.ClassName
             };
 
             if (!String.IsNullOrEmpty(admin.ClassName))
