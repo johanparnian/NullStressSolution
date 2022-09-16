@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import Link from "next/link";
 
 export default function ShowMoods() {
     const getMoods = async () => {
@@ -38,3 +37,4 @@ export default function ShowMoods() {
             </div>
         </div>
     )}
+                

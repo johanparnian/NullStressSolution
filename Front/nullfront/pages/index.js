@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import CreateAdmin from '../Components/Create/createadmin'
 import styles from '../styles/Home.module.css'
-import CreateAdmin from '../Components/Create/createadmin'
-
 import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Header'
 import SendSMS from '../Components/Create/SendSMS'
@@ -27,29 +25,7 @@ export default function Index() {
 
         <ShowStudents />
         <SendSMS></SendSMS>
-        
-
-        
-        {/* <StudenCard /> */}
-        {/* <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        
-
-            Hei fra index.js
-            <br></br>
-            <br></br>
-            <br></br>
-
-            <AddClass></AddClass>
-            <br></br>
-            <CreateAdmin></CreateAdmin>
-            <AddStudentToClass/>
-            <br></br>
-            <br></br>
-      <ViewAdmins></ViewAdmins> */}
-      <CreateAdmin></CreateAdmin>
+        <CreateAdmin />
       </main>
       <footer>Hei fra footer</footer>
     </div>
