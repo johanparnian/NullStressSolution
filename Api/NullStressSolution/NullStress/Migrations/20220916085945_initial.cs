@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NullStress.Migrations
 {
-    public partial class inital : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,8 +44,7 @@ namespace NullStress.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ClassName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TemporaryMood = table.Column<int>(type: "int", nullable: true)
+                    Needshelp = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
