@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
+import CreateAdmin from '../Components/Create/createadmin'
 
 import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Header'

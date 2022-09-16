@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import CreateStudent from '../Components/CreateStudent'
+import CreateStudent from '../Components/Create/CreateStudent'
 import Main from '../Components/Main'
+// import Main from '../Components/Show/Main'
 import createAdmin from '../Components/Create/createadmin'
-import ShowStudentsHomeScreen from '../Components/Show/ShowStudentsHomeScreen'
+// import ShowStudentsHomeScreen from '../Components/Show/ShowStudentsHomeScreen'
 import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
 import AddStudentToClass from '../Components/Create/AddStudentToClass'
@@ -11,6 +12,7 @@ import AddClass from '../Components/Create/AddClass'
 import ViewAdmins from '../Components/Show/ShowAdmins'
 
 import Header from '../Components/Header'
+import DeleteEditStudentList from '../Components/Admin/DeleteStudentList'
 
 
 
@@ -37,6 +39,8 @@ export default function Kontrollpanel() {
             <div id="item-ctrl5">Component: legg til ny student</div>
             <div id="item-ctrl6"></div>
         </div>
+
+        <DeleteEditStudentList/>
         </main>
         </div>
     )
