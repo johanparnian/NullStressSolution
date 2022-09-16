@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
-
-
 import Header from '../Components/Header'
 
 

@@ -1,22 +1,18 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import Link from "next/link";
 
 export default function ShowStudents() {
-    
-    const [students, setStudents] = useState([])
-    
+    const getStudents = async () => {
 
-    const getStudents = async () => {       
-
-        const endpoint = "https://localhost:7212/api/students"
+        const endpoint = `https://localhost:7212/api/Students
+`
 
         const response = await fetch(endpoint).catch(error => {
             console.log(error)
             throw error
         })
 
-        if (response.ok){
+        if (response.ok) {
             return await response.json()
         }
 
@@ -25,19 +21,7 @@ export default function ShowStudents() {
         }
     }
 
-    const getMoods = async () => {
-        const endpoint = "https://localhost:7212/api/Moods"
-
-        const response = await fetch(endpoint).catch(error => {
-            console.log(error)
-            throw error
-        })
-
-        if (response.ok){
-            return await response.json()
-        }
-   
-
+    const [students, setstudents] = useState([])
 
      useEffect(() => {
          getStudents().then(students => setStudents(students))
@@ -45,22 +29,12 @@ export default function ShowStudents() {
 
     return (
         <div>
-            Here are the student names:
-            <div>                           
+            List of students
+            <div key={students.id}>
                 {students.map((student) => (
-                    <Link href={"/Elevside"}>
-                        <div className="student-card">
-                            <h3 key={student.id}>{student.name}</h3>
-                            <p>Foreløpig vises alle mood. Kommer ikke videre her, før vi får til kobling av view av elev til en spesifik id. </p>
-                            {/* {moods.map((mood) => (
-                                <div>
-                                    <p key={mood.student}>{mood.muud}</p>                                    
-                                </div>
-                            ))} */}
-                        </div>
-                    </Link>
-                ))}
-                
+                    <a href={`Students/${student.id}`}><li key={student.id}>{student.name}</li></a>
+                    
+                    ))}
             </div>
         </div>
     )}
