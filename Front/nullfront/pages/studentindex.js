@@ -4,7 +4,6 @@ import React from 'react'
 import Image from "next/image";
 
 import SendMood from '../Components/Create/SendMood';
-import HeaderMenu from '../Components/HeaderMenu';
 
 
 export default function StudentIndex() {
@@ -17,8 +16,18 @@ export default function StudentIndex() {
       </Head>
 
       <main className={styles.main}>
-      <SendMood></SendMood>
-      
+        <SendMood></SendMood>
+
+
+        <div class="snakkebutton">
+          <button class="button-82-pushable" role="button">
+            <span class="button-82-shadow"></span>
+            <span class="button-82-edge"></span>
+            <span class="button-82-front text">
+              Jeg trenger noen å snakke med!
+            </span>
+          </button>
+        </div>
       </main>
 
       <footer></footer>
