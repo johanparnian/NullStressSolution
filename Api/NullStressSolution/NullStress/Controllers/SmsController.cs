@@ -30,7 +30,7 @@ namespace NullStress.Controllers
             
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult SendSms(SmsMessage model)
         {
             var message = MessageResource.Create(
