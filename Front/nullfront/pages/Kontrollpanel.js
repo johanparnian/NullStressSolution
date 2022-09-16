@@ -2,7 +2,7 @@ import Head from 'next/head'
 import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProfile'
 import styles from '../styles/Home.module.css'
 import Header from '../Components/Header'
-import DeleteEditStudentList from '../Components/Admin/DeleteStudentList'
+import DeleteEditStudentList from '../Components/Admin/DeleteEditStudentList'
 import CreateStudentAndSendSMS from '../Components/Create/CreateStudentAndSendSMS'
 
 

@@ -9,7 +9,7 @@ export default function DeleteEditStudentList() {
     students.forEach((student) => {
       if (student.id !== id) {
         newStudents.push(student);
-      }
+      } 
     });
     setStudents(newStudents);
   }
