@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import CreateAdmin from '../Components/Create/createadmin'
 import styles from '../styles/Home.module.css'
 
 import ShowStudents from '../Components/Show/ShowStudents'
