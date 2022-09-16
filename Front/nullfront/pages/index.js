@@ -6,6 +6,7 @@ import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Header'
 
 
+
 //import ShowClasses from '../Components/Show/ShowClasses'
 
 export default function Index() {
@@ -45,6 +46,7 @@ export default function Index() {
             <br></br>
             <br></br>
       <ViewAdmins></ViewAdmins> */}
+
 
       </main>
       <footer>Hei fra footer</footer>
