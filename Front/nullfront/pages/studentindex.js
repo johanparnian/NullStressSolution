@@ -17,8 +17,6 @@ export default function StudentIndex() {
       </Head>
 
       <main className={styles.main}>
-        {/* Lagt til midlertidig, for lettere navigering under produksjon. */}
-      <HeaderMenu />
       <SendMood></SendMood>
       
       </main>

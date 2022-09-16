@@ -29,8 +29,9 @@ export default function ShowInfoAboutAdminProfile() {
 
     return (
         <div>
-            <p>Her skal info om admin stå</p>
-            {/* Admin #1 heter <b>{admin.name}</b>. Fra skole: <b>{admin.school}</b>. Har klasse: <b>{admin.className}</b> */}
+            <p>Innlogget som: {admin.name}</p>
+            <p>Tilhørende skole: {admin.school}</p>
+            <p>Tilhørende klasse: {admin.classname}</p>
         </div>
     )
 }
