@@ -1,13 +1,12 @@
 import { useState } from "react";
 
-export default function AddStudentToClass(){
+export default function AddStudentToClass(props){
+    const [name, setName] = useState("")
 
-    const [studentName, setStudentName] = useState("")
+    async function HandleAddStudent(event){
+        event.preventDefault()
 
-    async function handleAddStudent(){
-
-
-        const response = await fetch (`https://localhost:7212/api/students/${id}/schoolclassName/${studentName}`, {
+        const response = await fetch (`https://localhost:7212/api/schoolclasses/${props.id}/students/${name}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json'},
         })
@@ -22,14 +21,16 @@ export default function AddStudentToClass(){
     }
 
     return(
-        <form>
+        <div>
+            <form>
                 <label>
-                <p>Add student to class</p>
-                Student name:
-                <input value={studentName} onChange={event => setStudentName(event.target.value)}type="Text"></input>
+                    Add student:
+                    <input value={name} onChange={event => setName(event.target.value)} type="Text"></input>
                 </label>
-                <button type="submit" onClick={handleAddStudent}>Add student</button>
+                
+                <button type="submit" onClick={HandleAddStudent}>Add</button>
             </form>
+        </div>
 
 
 

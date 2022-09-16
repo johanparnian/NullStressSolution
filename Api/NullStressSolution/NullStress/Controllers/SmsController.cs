@@ -30,7 +30,7 @@ namespace NullStress.Controllers
             
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult SendSms(SmsMessage model)
         {
             var message = MessageResource.Create(
@@ -41,6 +41,15 @@ namespace NullStress.Controllers
                 );
 
             return Ok("Success");
+            //GET to "https://localhost:7212/sms"
+            //Sample Query:
+
+            //{
+            //            "to": "+4790173862",
+            //            "from": "+18145643389",
+            //            "message": "ping"
+            //          }
         }
+
     }
 }

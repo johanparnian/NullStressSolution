@@ -4,7 +4,7 @@ import React from 'react'
 export default function ShowSchoolClasses() {
     const getClasses = async () => {
 
-        const endpoint = "https://localhost:7212/api/schoolclasses"
+        const endpoint = `https://localhost:7212/api/schoolclasses`
 
         const response = await fetch(endpoint).catch(error => {
             console.log(error)
@@ -31,8 +31,9 @@ export default function ShowSchoolClasses() {
         <div>
             List of classes:
             <div key={schoolClasses.id}>
-                {schoolClasses.map((schoolClass) => (
-                    <a href={`Classes/${schoolClass.id}`}><li key={schoolClass.id}>{schoolClass.schoolClassName}</li></a>
+                {schoolClasses.map((classes) => (
+                    <a href={`Classes/${classes.id}`}><li key={classes.id}>{classes.schoolClassName}</li></a>
+                    
                     ))}
             </div>
         </div>
