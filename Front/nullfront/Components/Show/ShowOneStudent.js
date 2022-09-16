@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import Link from "next/link";
+import StudentView from "../../pages/Admin/Classes/Student/[id]";
+import ShowMoods from "./ShowMoods";
 
 
-export default function ShowStudents() {
+export default function ShowOneStudent() {
     const getStudents = async () => {
 
         const endpoint = `https://localhost:7212/api/Students
@@ -32,14 +33,9 @@ export default function ShowStudents() {
     return (
         <div>
             List of students
-            <div key={students.id} >
-                {students.map((student) => (
-                    // <Link href="/Elevside">
-                        <div className="student-card">
-                            <a href={`Elevside/${student.id}`}><p key={student.id}>{student.name}</p></a>                                              
-                        </div>
-                    // </Link>
-                    ))}
+            <div key={students.id}>
+                
+                    <ShowMoods />                                
             </div>
         </div>
     )}

@@ -3,9 +3,21 @@ import { useState } from "react"
 
 export default function SendSMS() {
 
-    const [to, setTo] = useState("+4790173862")
+
+
+
+
+
+
+
+
+    const newUserMessage = "Hei! Du har fått en bruker på nullstress.no." + 
+                            "Gå inn på ditt brukerområde her: " + 
+                            "LINK"
+
+    const [to, setTo] = useState("+47")
     const [from, setFrom] = useState("+18145643389")
-    const [message, setMessage] = useState("ping")
+    const [message, setMessage] = useState(newUserMessage)
 
     const HandleSendSMS = async (event) => {
         const sms = { to, from, message }
@@ -36,11 +48,6 @@ export default function SendSMS() {
                     </label>
                     <br></br>
                     <label>
-                        <p>From</p>
-                        <input type="text" value={from} onChange={event => setFrom(event.target.value)}></input>
-                    </label>
-                    <br></br>
-                    <label>
                         <p>Message</p>
                         <input type="text" value={message} onChange={event => setMessage(event.target.value)}></input>
                     </label>
@@ -51,6 +58,36 @@ export default function SendSMS() {
         </div>
     )
 }
+
+
+
+
+// // async function HandleSetPhoneNumber(event) {
+// //     const student = {phoneNumber}
+    
+// //      event.preventDefault()
+// //      const response = await fetch("https://localhost:7212/api/students", {
+// //          method: "POST", 
+// //          body: JSON.stringify(student),
+// //          headers: {
+// //              "content-Type" : "application/json"   
+// //          }           
+// //      })
+
+// //      if (response.ok) {
+// //          console.log("it worked!!")
+// //          return response
+// //      }
+// //      else
+// //      {
+// //          console.log("did not work..")
+// //      }  
+// //  }
+
+
+
+
+
 
 // //GET to "https://localhost:7212/sms"
 // //Sample Query:
