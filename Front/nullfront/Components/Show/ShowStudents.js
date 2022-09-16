@@ -21,7 +21,7 @@ export default function ShowStudents() {
         }
     }
 
-    const [students, setstudents] = useState([])
+    const [students, setStudents] = useState([])
 
      useEffect(() => {
          getStudents().then(students => setStudents(students))
