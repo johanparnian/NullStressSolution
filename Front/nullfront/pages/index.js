@@ -1,10 +1,11 @@
 import Head from 'next/head'
-
+import CreateAdmin from '../Components/Create/createadmin'
 import styles from '../styles/Home.module.css'
 import CreateAdmin from '../Components/Create/createadmin'
 
 import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Header'
+import SendSMS from '../Components/Create/SendSMS'
 
 
 
@@ -23,9 +24,10 @@ export default function Index() {
       <main className={styles.main}>
 
         <Header />
-        
-        
+
         <ShowStudents />
+        <SendSMS></SendSMS>
+        
 
         
         {/* <StudenCard /> */}

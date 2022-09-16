@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import ShowMood from '../../../../Components/Show/ShowMood'
 
 
 const StudentView = () => {
@@ -9,7 +10,8 @@ const StudentView = () => {
   
     return (
         <div>
-            <p>Student ID: {id}</p>                       
+            <p>Student ID: {id}</p>    
+             <ShowMood />                   
         </div>
     )
   }

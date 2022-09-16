@@ -23,10 +23,9 @@ export default function ShowStudents() {
 
     const [students, setstudents] = useState([])
 
-    useEffect(() => {
-        getStudents()
-            .then(student => setstudents(student))
-    }, [])
+     useEffect(() => {
+         getStudents().then(students => setStudents(students))
+     }, [])
 
     return (
         <div>

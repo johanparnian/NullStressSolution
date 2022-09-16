@@ -1,11 +1,47 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+#container2 {
+  background-color: pink;
+  border-style: solid;
+  border-width: 3px;
+  width: 100px;
+  height: 100px;
+}*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
 
 body {
-  background-color: #1A485C;
+  background-color: aliceblue;
   margin: 0px;
   padding: 0px;
-  color: red;
-  font-family: 'Nunito';
+
+  font-family: 'Roboto';
 }
 
 p {
@@ -29,15 +65,19 @@ p {
   text-align: center;
 }
 
-
-/* img {
-
+img {
   user-select: none;
 }
-
+img:hover {
+  height: 103px;
+  width: 103px;
+  border: 0px;
+  border-style:solid;
+  border-color:black
+}
 img:active {
   animation: rotate 1s infinite;
-} */
+}
 
 @keyframes rotate {
   0% {
@@ -48,50 +88,30 @@ img:active {
   }
 }
 
+
+
+
+
+
 .container_header {
-  display:flex;
   width: 100%;
-  height: 10vmax;
+  height: 20vmax;
   padding: 0px;
   padding-top: 0px;
-  background-color: #081D26;
+  background-color: lightblue;
   margin: 0px;
-  align-items: center;
-  justify-content: center;
-  
 } 
+
+.header_title {
+  height: 10vmax;
+}
 
 h1 {
   margin: 0;
   text-align: center;
+  padding-top: 9vmax;
   user-select: none;
-  color:white;
-  font-size: 5vh;
 }
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #081D26;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 3vh;
-  user-select: none;
-  border-radius: 12px;
-}
-
 
 .student-card {
   flex-basis: 225px;
@@ -108,166 +128,3 @@ li a {
   height: 50px;
   width: 50px;
 }
-
-li a:hover {
-  background-color: #1A485C;
-}
-
-.container_menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #081D26;
-  border-color: white;
-  border-bottom: solid;
-  border-width: 1px;
-}
-
-.header_icons {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #081D26;
-  padding-bottom: 3vh;
-
-}
-
-.navbar {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #081D26;
-}
-
-/* START MAIN GRID CSS */
-.main-grid {
-  display: grid; 
-
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  
-  gap: 0px;
-  height: 100%;
-}
-#item-0 {
-
-  background-color: #a7bcc9; 
-  grid-row-start: 1;
-  grid-column-start: 1;
-
-  grid-row-end: 2;
-  grid-column-end: 2;
-}
-#item-1 {
-
-  background-color: #9cf7d6; 
-  grid-row-start: 1;
-  grid-column-start: 2;
-
-  grid-row-end: 2;
-  grid-column-end: 5;
-}
-#item-2 {
-
-  background-color: #dedf9d; 
-  grid-row-start: 2;
-  grid-column-start: 1;
-
-  grid-row-end: 4;
-  grid-column-end: 2;
-}
-#item-3 {
-
-  background-color: #cd7d7a; 
-  grid-row-start: 2;
-  grid-column-start: 4;
-
-  grid-row-end: 4;
-  grid-column-end: 5;
-}
-#item-4 {
-
-  background-color: #787d99; 
-  grid-row-start: 2;
-  grid-column-start: 2;
-
-  grid-row-end: 4;
-  grid-column-end: 4;
-}
-/* END MAIN GRID CSS */
-
-/* START CONTROL PANEL GRID CSS */
-.control-panel-grid {
-  display: grid; 
-
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  
-  gap: 0px;
-  height: 100%;
-
-  
-}
- 
-#item-ctrl1 {
-
-  background-color: #EFDBBF; 
-  grid-row-start: 1;
-  grid-column-start: 1;
-
-  grid-row-end: 4;
-  grid-column-end: 2;
-  
-}
-#item-ctrl2 {
-
-  background-color: #97C76B; 
-  grid-row-start: 1;
-  grid-column-start: 2;
-
-  grid-row-end: 2;
-  grid-column-end: 3;
-  
-}
-#item-ctrl3 {
-
-  background-color: #AAD5DB; 
-  grid-row-start: 2;
-  grid-column-start: 2;
-
-  grid-row-end: 4;
-  grid-column-end: 3;
-  
-}
-#item-ctrl4 {
-
-  background-color: #AFBDA6; 
-  grid-row-start: 1;
-  grid-column-start: 3;
-
-  grid-row-end: 2;
-  grid-column-end: 4;
-  
-}
-#item-ctrl5 {
-
-  background-color: #97DE75; 
-  grid-row-start: 2;
-  grid-column-start: 3;
-
-  grid-row-end: 4;
-  grid-column-end: 4;
-  
-}
-#item-ctrl6 {
-
-  background-color: #B65556; 
-  grid-row-start: 1;
-  grid-column-start: 4;
-
-  grid-row-end: 4;
-  grid-column-end: 5;
-  
-}
-/* END CONTROL PANEL GRID CSS */
-
