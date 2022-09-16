@@ -23,7 +23,7 @@ export default function Index() {
         <Header />
 
         <ShowStudents />
-        <SendSMS></SendSMS>
+
         {/* <CreateAdmin /> */}
       </main>
       <footer>Hei fra footer</footer>

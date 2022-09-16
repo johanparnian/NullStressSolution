@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Header from '../Components/Header'
 import DeleteEditStudentList from '../Components/Admin/DeleteStudentList'
 import CreateStudent from '../Components/Create/CreateStudent'
+import SendSMS from '../Components/Create/SendSMS'
 
 
 
@@ -28,6 +29,7 @@ export default function Kontrollpanel() {
             <div id="item-ctrl4"></div>
             <div id="item-ctrl5"><CreateStudent /></div>
             <div id="item-ctrl6"></div>
+            <SendSMS />
         </div>
 
         
