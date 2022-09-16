@@ -41,6 +41,7 @@ export default function Index() {
             <AddStudentToClass/>
             <br></br>
       <ViewAdmins></ViewAdmins> */}
+      <CreateAdmin></CreateAdmin>
       </main>
 
 
