@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ShowStudents() {
     
     const [students, setStudents] = useState([])
-    const [moods, setMoods] = useState([])
+    
 
     const getStudents = async () => {       
 
@@ -36,16 +36,11 @@ export default function ShowStudents() {
         if (response.ok){
             return await response.json()
         }
-
-        else {
-            console.log(response)
-        }
-    }
+   
 
 
      useEffect(() => {
          getStudents().then(students => setStudents(students))
-         getMoods().then(moods => setMoods(moods) )
      }, [])
 
     return (
@@ -57,15 +52,15 @@ export default function ShowStudents() {
                         <div className="student-card">
                             <h3 key={student.id}>{student.name}</h3>
                             <p>Foreløpig vises alle mood. Kommer ikke videre her, før vi får til kobling av view av elev til en spesifik id. </p>
-                            {moods.map((mood) => (
+                            {/* {moods.map((mood) => (
                                 <div>
-                                    <p key={mood.student}>{mood.muud}</p>
-                                    {/* <img className="img-student-card" href="1.png" />                                     */}
+                                    <p key={mood.student}>{mood.muud}</p>                                    
                                 </div>
-                            ))}
+                            ))} */}
                         </div>
                     </Link>
                 ))}
+                
             </div>
         </div>
     )}
