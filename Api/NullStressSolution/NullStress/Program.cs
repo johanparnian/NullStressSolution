@@ -16,27 +16,15 @@ namespace NullStress
 
         public static void Main(string[] args)
         {
-            void ConfigureServices(IServiceCollection services)
-            {
-                services.AddControllers();
-                services.AddHttpClient<ITwilioRestClient, TwilioClient>();
-            }
-            //https://code-maze.com/send-sms-aspnetcore/
-
-
-
-
-
-
-
-
-
+            ////https://code-maze.com/send-sms-aspnetcore/
 
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<NullStressContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("NullStressContext") ?? throw new InvalidOperationException("Connection string 'NullStressContext' not found.")));
 
             // Add services to the container.
+            builder.Services.AddHttpClient<ITwilioRestClient, TwilioClient>();
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
