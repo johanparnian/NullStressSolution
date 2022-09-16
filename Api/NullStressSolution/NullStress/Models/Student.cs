@@ -5,6 +5,8 @@
         public int Id { get; set; }
         public string Name { get; set; }
 
+        public bool Needshelp { get; set; } = false;
+
         public List<Mood>? Moods { get; set; } = new();
         public List<SchoolClass>? SchoolClasses { get; set; } = new();
     }
