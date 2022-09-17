@@ -15,6 +15,12 @@ export default function CreateStudentAndSendSMS() {
    
     async function HandleAddStudent(event) {
        const student = {name, phoneNumber, link}
+
+        
+
+       if (phoneNumber.length !== 11) {
+        return alert("Feil format på telefonnummeret...")
+       }
         
         event.preventDefault()
         const response = await fetch("https://localhost:7212/api/students", {
@@ -35,6 +41,8 @@ export default function CreateStudentAndSendSMS() {
     }
 
     const HandleSendSMS = async () => {
+
+        To.split(" ").join("")
 
         const Message = `Hei ${name}! Du har fått en bruker på nullstress.no. Link: ${link}`
         const sms = { To, From, Message }
@@ -64,14 +72,13 @@ export default function CreateStudentAndSendSMS() {
                 <label>
                 <p>Add student</p>
                 Student name:
-                <input value={name} onChange={event => setName(event.target.value)} type="Text"></input>
+                <input value={name} placeholder="Navn" onChange={event => setName(event.target.value)} type="Text"></input>
             </label>
             <label>
                 Phone Number:
-                <input value={To} onChange={event => setPhoneNumber(event.target.value)} type="Text"></input>
+                <input value={To} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)} type="Text"></input>
             </label>
-            <button type="submit" className="button" onClick={HandleAddStudent}>Add student</button>
-            {/* <button type="submit" onClick={HandleSendSMS}>Send SMS</button> */}
+            <button type="submit" onClick={HandleAddStudent}>Add student</button>
         </form>
     )
 }

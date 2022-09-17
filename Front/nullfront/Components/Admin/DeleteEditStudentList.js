@@ -50,24 +50,24 @@ export default function DeleteEditStudentList() {
 
             <img src="user.png"
               height="30"
-              >
+            >
             </img> &ensp;
             {student.name}<br></br>
 
 
-           <img src="telephone-call.png"
+            <img src="telephone-call.png"
               height="30"
               text-align="center">
-            </img> &ensp; 
+            </img> &ensp;
             {student.phoneNumber}<br></br>
 
 
             <img src="link.png"
               height="30"
               position="center">
-            </img> &ensp; 
+            </img> &ensp;
             {student.link}
-            
+
             <DeleteAndEditStudent
               name={student.name}
               id={student.id}

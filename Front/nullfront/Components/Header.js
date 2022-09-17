@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 export default function Header() {
         return (
                 <div>
@@ -9,7 +8,7 @@ export default function Header() {
                                         <h1>Null Stress</h1>
                                 </div>
 
-                                <div classname="headerimages">
+                                <div className="headerimages">
 
                                         <img
                                                 draggable="false"
@@ -53,7 +52,7 @@ export default function Header() {
 
                                 </div>
                         </div>
-                        <div class="navbar">
+                        <div className="navbar">
                                 <ul>
                                         {/* skal det være Link her, dette er kanskje ikke riktige typer link eller routing??? */}
                                         <li><a className="active" href="/">Hjem</a></li>

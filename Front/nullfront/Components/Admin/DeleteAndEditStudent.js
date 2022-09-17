@@ -38,6 +38,7 @@ export default function DeleteAndEditStudent(props) {
       deleteStudent()
     }
     else return false;
+
   }
 
   return (

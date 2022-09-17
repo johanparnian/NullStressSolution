@@ -9,27 +9,25 @@ import CreateStudentAndSendSMS from '../Components/Create/CreateStudentAndSendSM
 export default function Kontrollpanel() {
     return (
         <div className={styles.container}>
-        <Head>
-        <title>KONTROLLPANEL.</title>
-        <meta name="description" content="OUR_DESCRIPTION" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+            <Head>
+                <title>KONTROLLPANEL.</title>
+                <meta name="description" content="OUR_DESCRIPTION" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
 
-      <main className={styles.main}>
-        <Header />
+            <main className={styles.main}>
+                <Header />
 
-        <div className="control-panel-grid">
-            <div id="item-ctrl1"></div>
-            <div id="admin-info"><ShowInfoAboutAdminProfile /></div>
-            <div id="student-crud"><DeleteEditStudentList/></div>
-            <div id="item-ctrl4"></div>
-            <div id="item-ctrl5"><CreateStudentAndSendSMS /></div>
-            <div id="item-ctrl6"></div>
-        </div>
-
-        
-        </main>
+                <div className="control-panel-grid">
+                    <div id="item-ctrl1"></div>
+                    <div id="admin-info"><ShowInfoAboutAdminProfile /></div>
+                    <div id="student-crud"><DeleteEditStudentList /></div>
+                    <div id="item-ctrl4"></div>
+                    <div id="item-ctrl5"><CreateStudentAndSendSMS /></div>
+                    <div id="item-ctrl6"></div>
+                </div>
+            </main>
         </div>
     )
 }

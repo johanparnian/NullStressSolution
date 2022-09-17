@@ -4,6 +4,7 @@ import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Header'
 import SendSMS from '../Components/Create/SendSMS'
 import CreateAdmin from '../Components/Create/createadmin'
+import Main from '../Components/Main'
 
 
 
@@ -23,13 +24,9 @@ export default function Index() {
       <main className={styles.main}>
 
         <Header />
-
         
 
-
-
-
-
+        
 
 
 
@@ -42,6 +39,12 @@ export default function Index() {
 
         <ShowStudents />
 
+
+
+
+
+
+        <Main />
 
         
 
