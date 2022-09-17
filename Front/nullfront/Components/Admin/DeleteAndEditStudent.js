@@ -33,6 +33,13 @@ export default function DeleteAndEditStudent(props) {
     }
   }
 
+  function AreYouSure() {
+    if (confirm('Er du sikker på at du vil slette eleven?')) {
+      deleteStudent()
+    }
+    else return false;
+  }
+
   return (
     <div>
       <input
@@ -42,7 +49,8 @@ export default function DeleteAndEditStudent(props) {
       <button type="submit" onClick={() => updateStudent(name)}>
         Lagre
       </button>
-      <button src="user.png" onClick={() => deleteStudent()}>Slett elev</button>
+      <button src="user.png" onClick={() => AreYouSure()}>Slett elev</button>
     </div>
   )
 }
+
