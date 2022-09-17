@@ -70,7 +70,7 @@ export default function CreateStudentAndSendSMS() {
                 Phone Number:
                 <input value={To} onChange={event => setPhoneNumber(event.target.value)} type="Text"></input>
             </label>
-            <button type="submit" onClick={HandleAddStudent}>Add student</button>
+            <button type="submit" className="button" onClick={HandleAddStudent}>Add student</button>
             {/* <button type="submit" onClick={HandleSendSMS}>Send SMS</button> */}
         </form>
     )

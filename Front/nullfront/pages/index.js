@@ -24,7 +24,28 @@ export default function Index() {
 
         <Header />
 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
         <ShowStudents />
+
+
+        
+
+        
 
         {/* <CreateAdmin /> */}
       </main>
