@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 body {
-  background-color: #1A485C;
-  margin: 0px;
+  background-color: black;
+  margin: 20px;
   padding: 0px;
-  color: wheat;
+  color: white;
   font-family: 'Nunito';
+  font-size: 20px;
 }
 
 input {
@@ -45,7 +46,6 @@ button {
 
 button:hover {
   background-color: lightblue;
-
 }
 
 
@@ -62,20 +62,7 @@ ul {
   background-color: #081D26;
 }
 
-li {
-  float: left;
-}
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 3vh;
-  user-select: none;
-  border-radius: 12px;
-}
 
 
 .student-card {
@@ -94,9 +81,7 @@ li a {
   width: 50px;
 }
 
-li a:hover {
-  background-color: #1A485C;
-}
+
 
 .container_menu {
   display: flex;
@@ -134,3 +119,110 @@ li a:hover {
 
 
 
+
+
+
+.control-panel-grid {
+  display: grid; 
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 0.7fr 2fr 2fr 0.7fr;
+  
+  gap: 0px;
+  height: 100%;
+
+  
+}
+ 
+#item-ctrl1 {
+  border: 1px solid;
+
+  grid-row-start: 1;
+  grid-column-start: 1;
+
+  grid-row-end: 4;
+  grid-column-end: 2;
+  
+}
+#item-ctrl2 {
+  border: 1px solid;
+
+  grid-row-start: 1;
+  grid-column-start: 2;
+
+  grid-row-end: 2;
+  grid-column-end: 3;
+  
+}
+#item-ctrl3 {
+  border: 1px solid;
+
+  grid-row-start: 2;
+  grid-column-start: 2;
+
+  grid-row-end: 4;
+  grid-column-end: 3;
+  
+}
+#item-ctrl4 {
+  border: 1px solid;
+
+  grid-row-start: 1;
+  grid-column-start: 3;
+
+  grid-row-end: 2;
+  grid-column-end: 4;
+  
+}
+#item-ctrl5 {
+  border: 1px solid;
+
+  grid-row-start: 2;
+  grid-column-start: 3;
+
+  grid-row-end: 4;
+  grid-column-end: 4;
+  
+}
+#item-ctrl6 {
+
+  grid-row-start: 1;
+  grid-column-start: 4;
+
+  grid-row-end: 4;
+  grid-column-end: 5;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dette kontrollerer nav-bar knappene */
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0px 50px;
+  text-decoration: none;
+  font-size: 3vh;
+  user-select: none;
+  border-radius: 8px;
+}
+
+li a:hover {
+  background-color: #1A485C;
+}

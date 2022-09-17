@@ -20,7 +20,7 @@ export default function Kontrollpanel() {
         <Header />
 
         <div className="control-panel-grid">
-            <div id="item-ctrl1">-</div>
+            <div id="item-ctrl1"></div>
             <div id="item-ctrl2"><ShowInfoAboutAdminProfile /></div>
             <div id="item-ctrl3"><DeleteEditStudentList/></div>
             <div id="item-ctrl4"></div>
