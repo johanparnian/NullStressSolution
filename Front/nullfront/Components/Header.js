@@ -5,7 +5,7 @@ export default function Header() {
         return (
                 <div>
                         <div className="container_header">
-                                <h1>NULL STRESS</h1>
+                                <h1>Null Stress</h1>
                         </div>
                         <div className="header_icons">
                                 <img
