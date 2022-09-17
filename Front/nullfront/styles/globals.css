@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
+img {
+  vertical-align: middle;
+}
+
 body {
   background-color: black;
   margin: 20px;
@@ -10,24 +14,27 @@ body {
 }
 
 input {
-  width: 90%;
+  width: 40%;
   padding: 10px 15px;
   margin: 8px 0;
   box-sizing: border-box;
-  border-radius: 4px;
-  border-bottom: 2px solid aliceblue;
-  background-color: aliceblue;
+  border-radius: 400px;
+  border: 1px solid black;
+  background-color: white;
   color: black;
   font-family: 'Nunito'
 }
 
+input {outline:none;}
+
 input[type=text]:focus {
-  background-color: lightblue;
+
 }
+
 
 button {
   background-color: white;
-  border: 2px solid lightblue;
+  border: 2px solid black;
 
   color: black;
   padding: 10px 10px;
@@ -40,7 +47,6 @@ button {
   transition-duration: 0.4s;
   overflow: hidden;
   margin-left: 5px;
-
   /* cursor: not-allowed; */
 }
 
@@ -131,11 +137,11 @@ ul {
   gap: 0px;
   height: 100%;
 
+  background-color: #1A485C;
   
 }
  
 #item-ctrl1 {
-  border: 1px solid;
 
   grid-row-start: 1;
   grid-column-start: 1;
@@ -144,34 +150,44 @@ ul {
   grid-column-end: 2;
   
 }
-#item-ctrl2 {
-  border: 1px solid;
-
+#admin-info {
   grid-row-start: 1;
   grid-column-start: 2;
 
   grid-row-end: 2;
   grid-column-end: 3;
+
+  padding: 30px;
+  margin: 10px;
+  border-radius: 20px;
+  
+  background-color: #081D26;
   
 }
-#item-ctrl3 {
-  border: 1px solid;
+#student-crud {
 
   grid-row-start: 2;
   grid-column-start: 2;
 
   grid-row-end: 4;
   grid-column-end: 3;
+
+  padding: 30px;
+  margin: 10px;
+  border-radius: 20px;
+  
+  background-color: #081D26;
   
 }
 #item-ctrl4 {
-  border: 1px solid;
 
   grid-row-start: 1;
   grid-column-start: 3;
 
   grid-row-end: 2;
   grid-column-end: 4;
+
+  padding: 30px;
   
 }
 #item-ctrl5 {
@@ -182,6 +198,8 @@ ul {
 
   grid-row-end: 4;
   grid-column-end: 4;
+
+  padding: 30px;
   
 }
 #item-ctrl6 {
@@ -191,6 +209,8 @@ ul {
 
   grid-row-end: 4;
   grid-column-end: 5;
+
+  padding: 30px;
   
 }
 

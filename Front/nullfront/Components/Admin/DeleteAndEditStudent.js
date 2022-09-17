@@ -36,13 +36,13 @@ export default function DeleteAndEditStudent(props) {
   return (
     <div>
       <input
-        placeholder="Skriv inn elevens nye navn"
+        placeholder="Rediger navn..."
         onChange={(event) => setName(event.target.value)}
       />
       <button type="submit" onClick={() => updateStudent(name)}>
-        Edit
+        Lagre
       </button>
-      <button onClick={() => deleteStudent()}>Delete</button>
+      <button src="user.png" onClick={() => deleteStudent()}>Slett elev</button>
     </div>
   )
 }

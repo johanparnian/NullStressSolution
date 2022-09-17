@@ -21,8 +21,8 @@ export default function Kontrollpanel() {
 
         <div className="control-panel-grid">
             <div id="item-ctrl1"></div>
-            <div id="item-ctrl2"><ShowInfoAboutAdminProfile /></div>
-            <div id="item-ctrl3"><DeleteEditStudentList/></div>
+            <div id="admin-info"><ShowInfoAboutAdminProfile /></div>
+            <div id="student-crud"><DeleteEditStudentList/></div>
             <div id="item-ctrl4"></div>
             <div id="item-ctrl5"><CreateStudentAndSendSMS /></div>
             <div id="item-ctrl6"></div>

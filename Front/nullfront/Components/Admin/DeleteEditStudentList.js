@@ -9,7 +9,7 @@ export default function DeleteEditStudentList() {
     students.forEach((student) => {
       if (student.id !== id) {
         newStudents.push(student);
-      } 
+      }
     });
     setStudents(newStudents);
   }
@@ -42,20 +42,39 @@ export default function DeleteEditStudentList() {
 
   return (
     <div>
-      <p>Here are the students in your class:</p>
+      <p>Elever i klassen</p>
+      <br></br>
       <div key={students.id}>
         {students.map((student) => (
-          <li key={student.id}>
+          <p key={student.id}>
+
+            <img src="user.png"
+              height="30"
+              >
+            </img> &ensp;
             {student.name}<br></br>
+
+
+           <img src="telephone-call.png"
+              height="30"
+              text-align="center">
+            </img> &ensp; 
             {student.phoneNumber}<br></br>
+
+
+            <img src="link.png"
+              height="30"
+              position="center">
+            </img> &ensp; 
             {student.link}
+            
             <DeleteAndEditStudent
               name={student.name}
               id={student.id}
               updateStudentFromList={updateStudentFromList}
               deleteStudentFromList={deleteStudentFromList}
             />
-          </li>
+          </p>
         ))}
       </div>
     </div>
