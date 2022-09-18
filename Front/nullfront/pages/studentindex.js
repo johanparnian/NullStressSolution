@@ -17,8 +17,12 @@ export default function StudentIndex() {
       </Head>
 
       <main className={styles.main}>
+
+        <div>
         <SendMood></SendMood>
         <CreateStudentAlert></CreateStudentAlert>
+        </div>
+
 
 
 

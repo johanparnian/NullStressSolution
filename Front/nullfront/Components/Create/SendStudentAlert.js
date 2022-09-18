@@ -30,6 +30,9 @@ export default function SendStudentAlert() {
           </span>
         </button>
       </div>
+      <div className="snakkebutton">
+        Knappen gir direkte beskjed til læreren din
+      </div>
     </>
   )
 }
