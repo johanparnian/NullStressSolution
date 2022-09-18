@@ -1,48 +1,86 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
+@media only screen and (max-width: 1000px) {
+  #white {
+    display: none;
+  }
+}
+
+.emoji-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -150px;
+}
+
+.snakkebutton {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  padding-top: 180px;
+  /* Denne senker all content så det begynner under  */
+}
+
+p {
+  font-family: "Nunito";
+  color: whitesmoke;
+}
+
+h1 {
+  color: whitesmoke;
+  font-family: "Nunito";
+}
+
+h2 {
+  color: whitesmoke;
+}
+
+a {
+  font-family: "Nunito";
+}
+
+.col {
+  display: flex;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #212529;
+}
+
 img {
   vertical-align: middle;
 }
 
-body {
-  background-color: white;
-  margin: 20px;
-  padding: 0px;
-  color: white;
-  font-family: 'Nunito';
-  font-size: 20px;
-}
-
 input {
-  width: 40%;
-  padding: 10px 15px;
+  width: 50%;
+  padding: 5px 10px;
   margin: 8px 0;
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 5px;
   border: 1px solid black;
   background-color: white;
   color: black;
   font-family: 'Nunito'
 }
 
-input {outline:none;}
-
-input[type=text]:focus {
-
+input {
+  outline: none;
 }
+
+input[type=text]:focus {}
 
 
 button {
   background-color: white;
-  border: 2px solid black;
 
+  border: 1px solid black;
   color: black;
-  padding: 10px 10px;
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
-  border-radius: 4px;
   cursor: pointer;
   transition-duration: 0.4s;
   overflow: hidden;
@@ -50,26 +88,14 @@ button {
   /* cursor: not-allowed; */
 }
 
+#deletebutton:hover {
+  background-color: red;
+}
+
 button:hover {
-  background-color: lightblue;
-}
-
-
-p {
-  margin: 0px;
-  padding: 0px;
-}
-
-ul {
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-color: #081D26;
+  color: white;
 }
-
-
 
 
 .student-card {
@@ -110,170 +136,3 @@ ul {
   padding-bottom: 20px;
   background-color: white;
 }
-
-.img-student-card {
-  height: 50px;
-  width: 50px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.control-panel-grid {
-  display: grid; 
-
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 0.7fr 2fr 2fr 0.7fr;
-  
-  gap: 0px;
-  height: 100%;
-
-  background-color: #1A485C;
-
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  margin-top: 5px;
-  
-}
- 
-#item-ctrl1 {
-
-  grid-row-start: 1;
-  grid-column-start: 1;
-
-  grid-row-end: 4;
-  grid-column-end: 2;
-  
-}
-#admin-info {
-  grid-row-start: 1;
-  grid-column-start: 2;
-
-  grid-row-end: 2;
-  grid-column-end: 3;
-
-  padding: 30px;
-  margin: 10px;
-  border-radius: 20px;
-  
-  background-color: #081D26;
-  
-}
-#student-crud {
-
-  grid-row-start: 2;
-  grid-column-start: 2;
-
-  grid-row-end: 4;
-  grid-column-end: 3;
-
-  padding: 30px;
-  margin: 10px;
-  border-radius: 20px;
-  
-  background-color: #081D26;
-  
-}
-#item-ctrl4 {
-
-  grid-row-start: 1;
-  grid-column-start: 3;
-
-  grid-row-end: 2;
-  grid-column-end: 4;
-
-  padding: 30px;
-  
-}
-#item-ctrl5 {
-  border: 1px solid;
-
-  grid-row-start: 2;
-  grid-column-start: 3;
-
-  grid-row-end: 4;
-  grid-column-end: 4;
-
-  padding: 30px;
-  
-}
-#item-ctrl6 {
-
-  grid-row-start: 1;
-  grid-column-start: 4;
-
-  grid-row-end: 4;
-  grid-column-end: 5;
-
-  padding: 30px;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Dette kontrollerer nav-bar knappene */
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 0px 50px;
-  text-decoration: none;
-  font-size: 3vh;
-  user-select: none;
-  border-radius: 8px;
-}
-
-li a:hover {
-  background-color: #1A485C;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

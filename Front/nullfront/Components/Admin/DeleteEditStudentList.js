@@ -43,7 +43,6 @@ export default function DeleteEditStudentList() {
   return (
     <div>
       <p>Elever i klassen</p>
-      <br></br>
       <div key={students.id}>
         {students.map((student) => (
           <p key={student.id}>
@@ -67,6 +66,7 @@ export default function DeleteEditStudentList() {
               position="center">
             </img> &ensp;
             {student.link}
+            <p></p>
 
             <DeleteAndEditStudent
               name={student.name}

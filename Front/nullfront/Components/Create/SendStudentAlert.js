@@ -18,17 +18,13 @@ export default function SendStudentAlert() {
 
   return (
     <>
-      <div class="snakkebutton">
-        <button 
-          class="button-82-pushable" 
+      <div className="snakkebutton">
+        <button
+          id="deletebutton" 
+          className="button-82-pushable" 
           role="button"
           onClick={HandleSendStudentAlert}>
-            {/* (wantshelp) => HandleSendStudentAlert(wantshelp, true) */}
-          <span class="button-82-shadow"></span>
-          <span class="button-82-edge"></span>
-          <span class="button-82-front text">
             Jeg trenger noen å snakke med! 
-          </span>
         </button>
       </div>
     </>

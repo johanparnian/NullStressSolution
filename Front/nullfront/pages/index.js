@@ -15,6 +15,7 @@ export default function Index() {
   return (
     <div className={styles.container}>
 
+
       <Head>
         <title>HJEM.</title>
         <meta name="description" content="OUR_DESCRIPTION" />
@@ -24,9 +25,6 @@ export default function Index() {
       <main className={styles.main}>
 
         <Header />
-        
-
-        
 
 
 
@@ -35,7 +33,10 @@ export default function Index() {
 
 
 
-        
+
+
+
+
 
         <ShowStudents />
 
@@ -46,9 +47,9 @@ export default function Index() {
 
         <Main />
 
-        
 
-        
+
+
 
         {/* <CreateAdmin /> */}
       </main>
