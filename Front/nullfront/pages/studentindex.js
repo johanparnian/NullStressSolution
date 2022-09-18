@@ -3,8 +3,8 @@ import styles from '../styles/Home.module.css'
 import React from 'react'
 import Image from "next/image";
 
-import SendMood from '../Components/Student/SendMood';
-import HeaderMenu from '../Components/Admin/HeaderMenu';
+import SendMood from '../Components/Create/SendMood';
+import CreateStudentAlert from '../Components/Create/SendStudentAlert';
 
 
 export default function StudentIndex() {
@@ -17,10 +17,11 @@ export default function StudentIndex() {
       </Head>
 
       <main className={styles.main}>
-        {/* Lagt til midlertidig, for lettere navigering under produksjon. */}
-      <HeaderMenu />
-      <SendMood></SendMood>
-      
+        <SendMood></SendMood>
+        <CreateStudentAlert></CreateStudentAlert>
+
+
+
       </main>
 
       <footer></footer>

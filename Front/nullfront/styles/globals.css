@@ -1,95 +1,279 @@
-/* html,
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+img {
+  vertical-align: middle;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: white;
+  margin: 20px;
+  padding: 0px;
+  color: white;
+  font-family: 'Nunito';
+  font-size: 20px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+input {
+  width: 40%;
+  padding: 10px 15px;
+  margin: 8px 0;
   box-sizing: border-box;
+  border-radius: 15px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-family: 'Nunito'
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+input {outline:none;}
+
+input[type=text]:focus {
+
 }
 
-#container2 {
-  background-color: pink;
-  border-style: solid;
-  border-width: 3px;
-  width: 100px;
-  height: 100px;
-}*/
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-.container_header {
-  width: 100%;
-  height: 20vmax;
-  padding: 0px;
+button {
+  background-color: white;
+  border: 2px solid black;
+
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  margin-left: 5px;
+  /* cursor: not-allowed; */
+}
+
+button:hover {
   background-color: lightblue;
-  margin: 0px;
-} 
-
-body {
-  background-color: aliceblue;
-  margin: 0px;
-  padding: 0px;
-
-  font-family: 'Roboto';
 }
+
 
 p {
   margin: 0px;
   padding: 0px;
 }
 
-.input-field {
+ul {
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #081D26;
+}
+
+
+
+
+.student-card {
+  flex-basis: 225px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
   display: flex;
-  height: 100px;
+  flex-direction: column;
+  padding: 13px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.img-student-card {
+  height: 50px;
   width: 50px;
 }
 
-.emoji {
-  width: 100%;
-  height: 100px;
+
+
+.container_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #081D26;
+  border-color: white;
+  border-bottom: solid;
+  border-width: 1px;
+}
+
+.student-card {
+  flex-basis: 225px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.img-student-card {
+  height: 50px;
+  width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.control-panel-grid {
+  display: grid; 
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 0.7fr 2fr 2fr 0.7fr;
+  
+  gap: 0px;
+  height: 100%;
+
+  background-color: #1A485C;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   margin-top: 5px;
+  
+}
+ 
+#item-ctrl1 {
+
+  grid-row-start: 1;
+  grid-column-start: 1;
+
+  grid-row-end: 4;
+  grid-column-end: 2;
+  
+}
+#admin-info {
+  grid-row-start: 1;
+  grid-column-start: 2;
+
+  grid-row-end: 2;
+  grid-column-end: 3;
+
+  padding: 30px;
+  margin: 10px;
+  border-radius: 20px;
+  
+  background-color: #081D26;
+  
+}
+#student-crud {
+
+  grid-row-start: 2;
+  grid-column-start: 2;
+
+  grid-row-end: 4;
+  grid-column-end: 3;
+
+  padding: 30px;
+  margin: 10px;
+  border-radius: 20px;
+  
+  background-color: #081D26;
+  
+}
+#item-ctrl4 {
+
+  grid-row-start: 1;
+  grid-column-start: 3;
+
+  grid-row-end: 2;
+  grid-column-end: 4;
+
+  padding: 30px;
+  
+}
+#item-ctrl5 {
+  border: 1px solid;
+
+  grid-row-start: 2;
+  grid-column-start: 3;
+
+  grid-row-end: 4;
+  grid-column-end: 4;
+
+  padding: 30px;
+  
+}
+#item-ctrl6 {
+
+  grid-row-start: 1;
+  grid-column-start: 4;
+
+  grid-row-end: 4;
+  grid-column-end: 5;
+
+  padding: 30px;
+  
 }
 
-.emoji-container {
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dette kontrollerer nav-bar knappene */
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
   text-align: center;
-}
-
-img {
+  padding: 0px 50px;
+  text-decoration: none;
+  font-size: 3vh;
   user-select: none;
-}
-img:hover {
-  height: 103px;
-  width: 103px;
-  border: 0px;
-  border-style:solid;
-  border-color:black
-}
-img:active {
-  animation: rotate 1s infinite;
+  border-radius: 8px;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg)
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+li a:hover {
+  background-color: #1A485C;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

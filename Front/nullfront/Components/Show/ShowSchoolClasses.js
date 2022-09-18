@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import Link from "next/link";
 
-export default function ShowClasses() {
+export default function ShowSchoolClasses() {
     const getClasses = async () => {
 
-        const endpoint = "https://localhost:7212/api/schoolclasses"
+        const endpoint = `https://localhost:7212/api/schoolclasses`
 
         const response = await fetch(endpoint).catch(error => {
             console.log(error)
@@ -31,10 +30,9 @@ export default function ShowClasses() {
     return (
         <div>
             List of classes:
-            <div key={schoolClass.id}>
-                {schoolClasses.map((schoolClass) => (
-                    
-                    <a href={schoolClass.id}><li key={schoolClass.id}>{schoolClass.name}</li></a>
+            <div key={schoolClasses.id}>
+                {schoolClasses.map((classes) => (
+                    <a href={`Classes/${classes.id}`}><li key={classes.id}>{classes.schoolClassName}</li></a>
                     
                     ))}
             </div>

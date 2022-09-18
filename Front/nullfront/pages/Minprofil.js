@@ -1,16 +1,22 @@
-import AddClass from "../Components/Admin/AddClass";
-import HeaderMenu from "../Components/Admin/HeaderMenu";
-import ShowInfoAboutAdminProfile from "../Components/Admin/ShowInfoAboutAdminProfile";
-import CreateAdmin from "../Components/createadmin";
+import AddClass from "../Components/Create/AddClass";
+import HeaderMenu from "../Components/HeaderMenu";
+import ShowInfoAboutAdminProfile from "../Components/Show/ShowInfoAboutAdminProfile";
+import CreateAdmin from "../Components/Create/createadmin";
 
 
 export default function Minprofil() {
     return (
         <div>
-            <HeaderMenu />
-            <CreateAdmin />
-            <ShowInfoAboutAdminProfile />
-            <AddClass/>
+
         </div>
+
+
+
+        // <div>
+        //     <HeaderMenu />
+        //     <CreateAdmin />
+        //     <ShowInfoAboutAdminProfile />
+        //     <AddClass/>
+        // </div>
     )
 }
