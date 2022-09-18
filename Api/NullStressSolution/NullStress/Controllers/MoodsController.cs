@@ -21,14 +21,42 @@ namespace NullStress.Controllers
             _context = context;
         }
 
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<Mood>>> GetMood()
+        //{
+        //  if (_context.Mood == null)
+        //  {
+        //      return NotFound();
+        //  }
+        //    return await _context.Mood.ToListAsync();
+        //}
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Mood>>> GetMood()
+        public async Task<IActionResult> GetStudentMood()
         {
-          if (_context.Mood == null)
-          {
-              return NotFound();
-          }
-            return await _context.Mood.ToListAsync();
+            if (_context.Student == null)
+            {
+                return NotFound();
+            }
+            //return await _context.Student.ToListAsync();
+
+            var stuff = await
+                (from s in _context.Student
+                 join m in _context.Mood on s.Id equals m.StudentId into gj
+                 from m in gj.DefaultIfEmpty()
+                 select new
+                 {
+                     Student = s,
+                     Mood = m
+                 }).ToListAsync();
+
+            var response = stuff.ToLookup(x => x.Student).Select(x => new
+            {
+                StudentId = x.Key.Id,
+                Moods = x.Where(y => y.Mood != null).Select(y => y.Mood.Muud)
+            });
+
+            return Ok(response);
         }
 
         //[HttpGet("{id}")]

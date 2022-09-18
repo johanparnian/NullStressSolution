@@ -21,33 +21,43 @@ namespace NullStress.Controllers
             _context = context;
         }
 
+
         [HttpGet]
-        public async Task<IActionResult> GetStudent()
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
-          if (_context.Student == null)
-          {
-              return NotFound();
-          }
-            //return await _context.Student.ToListAsync();
-
-            var stuff = await
-                (from s in _context.Student
-                 join m in _context.Mood on s.Id equals m.StudentId into gj
-                 from m in gj.DefaultIfEmpty()
-                select new
-                {
-                    Student = s,
-                    Mood = m
-                }).ToListAsync();
-
-            var response = stuff.ToLookup(x => x.Student).Select(x => new
+            if (_context.Mood == null)
             {
-                StudentId = x.Key.Id,
-                Moods = x.Where(y => y.Mood != null).Select(y => y.Mood.Muud)
-            });
-
-            return Ok(response);
+                return NotFound();
+            }
+            return await _context.Student.ToListAsync();
         }
+        //[HttpGet]
+        //public async Task<IActionResult> GetStudentMood()
+        //{
+        //    if (_context.Student == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    //return await _context.Student.ToListAsync();
+
+        //    var stuff = await
+        //        (from s in _context.Student
+        //         join m in _context.Mood on s.Id equals m.StudentId into gj
+        //         from m in gj.DefaultIfEmpty()
+        //         select new
+        //         {
+        //             Student = s,
+        //             Mood = m
+        //         }).ToListAsync();
+
+        //    var response = stuff.ToLookup(x => x.Student).Select(x => new
+        //    {
+        //        StudentId = x.Key.Id,
+        //        Moods = x.Where(y => y.Mood != null).Select(y => y.Mood.Muud)
+        //    });
+
+        //    return Ok(response);
+        //}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
