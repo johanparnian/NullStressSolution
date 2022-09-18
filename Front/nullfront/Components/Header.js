@@ -11,7 +11,10 @@ export default function Header() {
                                 <div class="container justify-content-center">
                                         <div class="row">
                                                 <div>
-                                                        <a class="navbar-brand"><h1>Null Stress</h1></a>
+                                                <a class="navbar-brand">
+                                                                <div className="title">Null Stress</div>
+                                                                <div className="questionmark">?</div>
+                                                        </a>
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"

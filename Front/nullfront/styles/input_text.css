@@ -12,6 +12,9 @@ input {
   
   input {
     outline: none;
+    background-color: whitesmoke;
   }
   
-  input[type=text]:focus {}
+  input[type=text]:focus {
+    background-color: blue;
+  }
