@@ -1,3 +1,11 @@
+@import '../styles/input_text.css';
+@import '../styles/grid.css';
+@import '../styles/buttons_askforhelp.css';
+@import '../styles/buttons_emoji.css';
+@import '../styles/buttons_normal.css';
+@import '../styles/input_text.css';
+@import '../styles/student_cards.css';
+
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 @media only screen and (max-width: 1000px) {
@@ -6,133 +14,28 @@
   }
 }
 
-.emoji-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: -150px;
-}
-
-.snakkebutton {
-  display: flex;
-  flex-direction: column;
-}
-
 body {
   padding-top: 180px;
+  background-color: #1A485C !important;
   /* Denne senker all content så det begynner under  */
 }
 
 p {
   font-family: "Nunito";
-  color: whitesmoke;
-}
-
-h1 {
-  color: whitesmoke;
-  font-family: "Nunito";
+  color: white;
+  font-size: 14;
 }
 
 h2 {
-  color: whitesmoke;
+  color: white;
+  font-family: "Nunito";
+  user-select: none;
+}
+
+h2 {
+  color: grey;
 }
 
 a {
   font-family: "Nunito";
-}
-
-.col {
-  display: flex;
-  border-radius: 5px;
-  margin: 10px;
-  background-color: #212529;
-}
-
-img {
-  vertical-align: middle;
-}
-
-input {
-  width: 50%;
-  padding: 5px 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid black;
-  background-color: white;
-  color: black;
-  font-family: 'Nunito'
-}
-
-input {
-  outline: none;
-}
-
-input[type=text]:focus {}
-
-
-button {
-  background-color: white;
-
-  border: 1px solid black;
-  color: black;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  overflow: hidden;
-  margin-left: 5px;
-  /* cursor: not-allowed; */
-}
-
-#deletebutton:hover {
-  background-color: red;
-}
-
-button:hover {
-  background-color: #081D26;
-  color: white;
-}
-
-
-.student-card {
-  flex-basis: 225px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 13px;
-  padding-bottom: 20px;
-  background-color: white;
-}
-
-.img-student-card {
-  height: 50px;
-  width: 50px;
-}
-
-
-
-.container_menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #081D26;
-  border-color: white;
-  border-bottom: solid;
-  border-width: 1px;
-}
-
-.student-card {
-  flex-basis: 225px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 13px;
-  padding-bottom: 20px;
-  background-color: white;
 }

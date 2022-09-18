@@ -18,7 +18,8 @@ export default function SendMood() {
     }
 
     return (
-        <div className="emoji-container">
+        <div className="emoji-knapper">
+            <h2>Hvordan har du det i dag?</h2>
             <div className="emoji">
                 
                 <img

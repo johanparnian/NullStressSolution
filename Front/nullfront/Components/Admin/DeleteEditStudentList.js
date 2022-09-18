@@ -1,6 +1,8 @@
 import DeleteAndEditStudent from "./DeleteAndEditStudent";
 import { useEffect, useState } from "react";
 
+const studentIconSize = 20;
+
 export default function DeleteEditStudentList() {
   const [students, setStudents] = useState([]);
 
@@ -48,21 +50,21 @@ export default function DeleteEditStudentList() {
           <p key={student.id}>
 
             <img src="user.png"
-              height="30"
+              height={studentIconSize}
             >
             </img> &ensp;
             {student.name}<br></br>
 
 
             <img src="telephone-call.png"
-              height="30"
+              height={studentIconSize}
               text-align="center">
             </img> &ensp;
             {student.phoneNumber}<br></br>
 
 
             <img src="link.png"
-              height="30"
+              height={studentIconSize}
               position="center">
             </img> &ensp;
             {student.link}

@@ -22,14 +22,14 @@ export default function Kontrollpanel() {
             <div class="container">
 
 
-                <div class="row gap-2">
+                <div class="row">
                 <div class="col-1" id="white"></div>
                     <div class="col"><ShowInfoAboutAdminProfile /></div>
                     <div class="col">Legg til ny klasse</div>
                     <div class="col-1" id="white"></div>
                 </div>
 
-                <div class="row gap-2">
+                <div class="row">
                 <div class="col-1" id="white"></div>
                     <div class="col"><DeleteEditStudentList></DeleteEditStudentList></div>
                     <div class="col"><CreateStudentAndSendSMS></CreateStudentAndSendSMS></div>
@@ -37,7 +37,9 @@ export default function Kontrollpanel() {
                 </div>
 
                 <div class="row">
+                    <div class="col-1" id="white"><h2></h2></div>
                     <div class="col"><h2>Footer</h2></div>
+                    <div class="col-1" id="white"><h2></h2></div>
                 </div>
             </div>
 

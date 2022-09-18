@@ -2,10 +2,12 @@ import Link from "next/link";
 
 const headerImageSize = 60;
 
+const headerColorHexCode = 143847
+
 export default function Header() {
         return (
                 <div>
-                        <nav class="navbar navbar-expand fixed-top bg-dark navbar-dark">
+                        <nav class="navbar navbar-expand fixed-top navbar-dark">
                                 <div class="container justify-content-center">
                                         <div class="row">
                                                 <div>
@@ -41,13 +43,9 @@ export default function Header() {
                                                                 height={headerImageSize}
                                                         />
                                                         <ul class="navbar-nav mx-auto">
-                                                                <li class="nav-item">
-                                                                        <a class="nav-link mx-4" href="/">Hjem</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                        <a class="nav-link mx-4" href="Kontrollpanel">Kontrollpanel</a>
-                                                                </li>
-                                                                {/* skal det være Link her, dette er kanskje ikke riktige typer link eller routing??? */}
+                                                                <Link class="nav-item" href="/"><a class="nav-link mx-5">Forside</a></Link>
+                                                                <Link class="nav-item" href="Kontrollpanel"><a class="nav-link mx-4">Kontrollpanel</a></Link>
+
                                                         </ul>
                                                 </div>
                                         </div>

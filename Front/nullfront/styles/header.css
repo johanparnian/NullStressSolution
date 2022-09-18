@@ -1,0 +1,12 @@
+.navbar {
+    border-bottom: 2px solid #143847;
+    background-color: #081D26;
+}
+
+.nav-link {
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: #1A485C;
+}
