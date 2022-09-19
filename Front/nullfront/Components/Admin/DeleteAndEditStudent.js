@@ -34,11 +34,10 @@ export default function DeleteAndEditStudent(props) {
   }
 
   function AreYouSure() {
-    if (confirm('Er du sikker på at du vil slette eleven?')) {
+    if (confirm('Er du helt sikker på at du vil slette eleven?')) {
       deleteStudent()
     }
     else return false;
-
   }
 
   return (
@@ -47,11 +46,15 @@ export default function DeleteAndEditStudent(props) {
         placeholder="Rediger navn..."
         onChange={(event) => setName(event.target.value)}
       />
+      &ensp;
       <button type="submit" onClick={() => updateStudent(name)}>
         Lagre
       </button>
-      <button src="user.png" onClick={() => AreYouSure()}>Slett elev</button>
+      &ensp;
+      <button src="user.png" id="deletebutton" onClick={() => AreYouSure()}>Slett</button>
+      <hr></hr>
     </div>
+    
   )
 }
 

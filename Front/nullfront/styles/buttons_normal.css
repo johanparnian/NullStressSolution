@@ -1,0 +1,29 @@
+button {
+    background-color: white;
+  
+    border: 1px solid white;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    overflow: hidden;
+    margin-left: 5px;
+
+    /* cursor: not-allowed; */
+  }
+  
+  #deletebutton:hover {
+    background-color: red;
+    border-color: cyan;
+    
+  }
+  
+  button:hover {
+    background-color: #1A485C;
+    color: white;
+  }
+

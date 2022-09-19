@@ -1,4 +1,4 @@
-export default function SendMood() {
+export default function CreateMood() {
 
     async function HandleSendMood(event, moodId) {
         event.preventDefault()
@@ -7,6 +7,7 @@ export default function SendMood() {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
+        
 
         if (response.ok) {
             console.log("ok")
@@ -18,7 +19,13 @@ export default function SendMood() {
     }
 
     return (
-        <div className="emoji-container">
+        <div className="emoji-knapper">
+            <h2>Hvordan har du det i dag?</h2>
+            <div className="snakkebutton">
+            Trykk på det som stemmer best for deg!
+
+            </div>
+            
             <div className="emoji">
                 
                 <img

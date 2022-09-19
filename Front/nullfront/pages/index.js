@@ -1,19 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ShowStudents from '../Components/Show/ShowStudents'
-import Header from '../Components/Header'
-import SendSMS from '../Components/Create/SendSMS'
-import CreateAdmin from '../Components/Create/createadmin'
-import Main from '../Components/Main'
-
-
-
+import Header from '../Components/Show/Header'
+import Main from '../Components/arkiv/Main'
 
 //import ShowClasses from '../Components/Show/ShowClasses'
 
 export default function Index() {
   return (
     <div className={styles.container}>
+
 
       <Head>
         <title>HJEM.</title>
@@ -24,9 +20,6 @@ export default function Index() {
       <main className={styles.main}>
 
         <Header />
-        
-
-        
 
 
 
@@ -35,7 +28,10 @@ export default function Index() {
 
 
 
-        
+
+
+
+
 
         <ShowStudents />
 
@@ -46,9 +42,9 @@ export default function Index() {
 
         <Main />
 
-        
 
-        
+
+
 
         {/* <CreateAdmin /> */}
       </main>

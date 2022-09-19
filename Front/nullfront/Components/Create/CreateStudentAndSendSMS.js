@@ -69,16 +69,12 @@ export default function CreateStudentAndSendSMS() {
 
     return (
             <form>
-                <label>
-                <p>Add student</p>
-                Student name:
+                <p>Ny elev</p>
                 <input value={name} placeholder="Navn" onChange={event => setName(event.target.value)} type="Text"></input>
-            </label>
-            <label>
-                Phone Number:
+                &ensp;
                 <input value={To} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)} type="Text"></input>
-            </label>
-            <button type="submit" onClick={HandleAddStudent}>Add student</button>
+                &ensp;
+            <button type="submit" onClick={HandleAddStudent}>Lagre og send SMS</button>
         </form>
     )
 }
