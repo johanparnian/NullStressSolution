@@ -18,7 +18,7 @@ export default function Kontrollpanel() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
+            {/* <main className={styles.main}>
                 <Header />
                 <div class="container">
 
@@ -48,7 +48,8 @@ export default function Kontrollpanel() {
                 
                 <ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile></ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile>
 
-            </main>
+            </main> */}
+            <ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile></ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile>
         </div>
     )
 }

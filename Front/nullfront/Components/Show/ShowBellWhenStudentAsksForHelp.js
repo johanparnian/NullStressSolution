@@ -5,7 +5,7 @@ import ShowStudents from "./ShowStudents";
 export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile() {
 
     const getStudentInfo = async () => {
-        const endpoint = "https://localhost:7212/api/students/1"
+        const endpoint = "https://localhost:7212/api/students/2"
 
         const response = await fetch(endpoint)
 
@@ -14,7 +14,7 @@ export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile(
             return await response.json();
         }
         else {
-            return console.error();
+            throw console.error("No such student found!");
         }
     }
 
@@ -72,7 +72,7 @@ export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile(
     async function HandleRemoveHelpWantedFlag(event, props) {
         event.preventDefault()
     
-        const response = await fetch(`https://localhost:7212/api/students/${2}/removehelprequest`, {
+        const response = await fetch(`https://localhost:7212/api/students/${1}/removehelprequest`, {
             //denne må oppdateres med riktig ID når studentview rendres for hver student!
           method: "GET",
           headers: { 'Content-Type': 'application/json' }
@@ -81,7 +81,9 @@ export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile(
         if (response.ok) {
           console.log("OK To remove help wanted flag")
         }
-        else console.log("nooo!")
+        else {
+            return 
+        }
       }
 
     return (
