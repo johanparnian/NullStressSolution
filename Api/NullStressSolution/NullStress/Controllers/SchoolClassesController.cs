@@ -104,15 +104,17 @@ namespace NullStress.Controllers
         //    return schoolClass;
         //}
 
-        [HttpPut("{id}/students/{name}")]
-        public async Task<IActionResult> PutSchoolClass(int id, string name)
+        [HttpPut("{id}/students/{name}/{phoneNumber}/{link}")]
+        public async Task<IActionResult> PutSchoolClass(int id, string name, string phoneNumber, string link)
         {
             var schoolClass = await _context.FindAsync<SchoolClass>(id);
 
             schoolClass.Students.Add(new Student
             {
-                Name = name
-            });
+                Name = name,
+                PhoneNumber = phoneNumber,
+                Link = link
+            }); ;
 
             try
             {
