@@ -22,14 +22,18 @@ const ClassView = () => {
             console.log(error)
             throw error
         })
-    }, [id])
+    }, [id, schoolClasses]);
 
     return (
+        
         <div>
             <Header />
             <p>SchoolClass ID: {id}</p>
             <h1>Adminen sin oversikt over studenter</h1>
+
+
             <ShowStudents students={schoolClasses.students}/>
+
             <h1>Her legger Admin til nye studenter</h1>
             <AddStudentToClass id={id} />
         </div>

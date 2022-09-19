@@ -22,8 +22,10 @@ export default function Index() {
       <main className={styles.main}>
 
         <Header />             
-        <ShowAdmins />
-        <CreateAdmin />
+
+
+        {/* <ShowStudents /> */}
+        {/* <CreateAdmin /> */}
       </main>
       <footer>Hei fra footer</footer>
     </div>

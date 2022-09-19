@@ -30,11 +30,11 @@ export default function Kontrollpanel() {
                         <div className="col-1" id="white"></div>
                     </div>
 
-                    <div className="row">
-                        <div className="col-1" id="white"></div>
-                        <div className="col"><DeleteEditStudentList></DeleteEditStudentList></div>
-                        <div className="col"><CreateStudentAndSendSMS></CreateStudentAndSendSMS></div>
-                        <div className="col-1" id="white"></div>
+                    <div class="row">
+                        <div class="col-1" id="white"></div>
+                        <div class="col"><DeleteEditStudentList/></div>
+                        <div class="col"><CreateStudentAndSendSMS/></div>
+                        <div class="col-1" id="white"></div>
                     </div>
 
                     <div className="row">
