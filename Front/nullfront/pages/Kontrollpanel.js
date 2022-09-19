@@ -25,7 +25,7 @@ export default function Kontrollpanel() {
 
                     <div className="row">
                         <div className="col-1" id="white"></div>
-                        {/* <div class="col"><ShowInfoAboutAdminProfile /></div> */}
+                        <div className="col"><ShowInfoAboutAdminProfile /></div>
                         <div className="col">Legg til ny klasse</div>
                         <div className="col-1" id="white"></div>
                     </div>

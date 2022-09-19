@@ -34,7 +34,7 @@ export default function CreateMood() {
                     src="/1.png"
                     height="100"
                     width="100"
-                    class="button-82-pushable"
+                    className="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 1)}
 
                 ></img>
@@ -59,7 +59,7 @@ export default function CreateMood() {
                     src="/3.png"
                     height="100"
                     width="100"
-                    class="button-82-pushable"
+                    className="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 3)}
                 ></img>
             </div>
@@ -83,7 +83,7 @@ export default function CreateMood() {
                     src="/5.png"
                     height="100"
                     width="100"
-                    class="button-82-pushable"
+                    className="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 5)}
                 ></img>
             </div>
