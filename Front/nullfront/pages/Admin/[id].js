@@ -40,6 +40,7 @@ const AdminView = () => {
 
         <main>
             <Header />
+            <p>Her er en test for de som skal synke</p>
             <div className="container">
         
 
