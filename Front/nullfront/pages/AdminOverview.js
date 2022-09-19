@@ -1,4 +1,4 @@
-import ShowAdmins from "../Components/arkiv/ShowAdmins";
+import ShowAdmins from "../Components/Show/ShowAdmins";
 import CreateAdmin from "../Components/Create/createadmin";
 
 export default function AdminOverview() {

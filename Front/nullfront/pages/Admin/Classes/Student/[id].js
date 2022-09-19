@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
+import Header from '../../../../Components/Show/Header'
 import ShowMoods from '../../../../Components/Show/ShowMoods'
 
 
@@ -25,7 +26,8 @@ const MoodView = () => {
 
     return (
         <div>
-            <p>Mood ID: {id}</p>
+            <Header />
+            <p>Student ID: {id}</p>
             <h1>Eleven sine moods</h1>
             <ShowMoods moods = {student.moods}/>
         </div>

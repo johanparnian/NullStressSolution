@@ -8,6 +8,7 @@ import DeleteEditStudentList from '../../Components/Admin/DeleteEditStudentList'
 import CreateStudentAndSendSMS from '../../Components/Create/CreateStudentAndSendSMS'
 
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
+import ShowStudents from '../../Components/Show/ShowStudents'
 
 
 const AdminView = () => {
@@ -42,7 +43,7 @@ const AdminView = () => {
         <main>
             <Header />
             <div className="container">
-
+        
 
                 <div class="row">
                     <div className="col-1" id="white"></div>
@@ -51,7 +52,7 @@ const AdminView = () => {
                     <div className="col-1" id="white"></div>
                 </div>
 
-                <div className="row">
+                <div className="row">                    
                     <div className="col-1" id="white"></div>
                     <div className="col"><DeleteEditStudentList></DeleteEditStudentList></div>
                     <div className="col"><CreateStudentAndSendSMS></CreateStudentAndSendSMS></div>
