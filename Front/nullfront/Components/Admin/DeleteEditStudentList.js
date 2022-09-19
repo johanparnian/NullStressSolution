@@ -68,7 +68,6 @@ export default function DeleteEditStudentList() {
               position="center">
             </img> &ensp;
             {student.link}
-            <p></p>
 
             <DeleteAndEditStudent
               name={student.name}

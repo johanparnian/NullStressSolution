@@ -44,7 +44,7 @@ export default function DeleteAndEditStudent(props) {
   }
 
   return (
-    <div>
+    <>
       <input
         placeholder="Rediger navn..."
         onChange={(event) => setName(event.target.value)}
@@ -55,8 +55,7 @@ export default function DeleteAndEditStudent(props) {
       </button>
       &ensp;
       <button src="/user.png" id="deletebutton" onClick={() => AreYouSure()}>Slett</button>
-      <hr></hr>
-    </div>
+    </>
   )
 }
 

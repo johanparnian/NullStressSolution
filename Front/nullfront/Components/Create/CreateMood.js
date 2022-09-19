@@ -47,7 +47,7 @@ export default function CreateMood() {
                     src="/2.png"
                     height="100"
                     width="100"
-                    class="button-82-pushable"
+                    className="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 2)}
                 ></img>
             </div>
