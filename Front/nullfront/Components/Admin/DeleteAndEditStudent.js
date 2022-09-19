@@ -31,6 +31,9 @@ export default function DeleteAndEditStudent(props) {
       props.deleteStudentFromList(props.id);
       return response;
     }
+    else {
+      throw console.error("No such student found!");
+  }
   }
 
   function AreYouSure() {

@@ -8,8 +8,8 @@ export default function Header() {
         return (
                 <div>
                         <nav class="navbar navbar-expand fixed-top navbar-dark">
-                                <div class="container justify-content-center">
-                                        <div class="row">
+                                <div className="container justify-content-center">
+                                        <div className="row">
                                                 <div>
                                                 <a class="navbar-brand">
                                                                 <div className="title">Null Stress</div>
