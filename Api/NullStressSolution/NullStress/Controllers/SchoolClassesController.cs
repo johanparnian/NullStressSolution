@@ -10,7 +10,7 @@ using NullStress.Models;
 
 namespace NullStress.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/schoolclasses")]
     [ApiController]
     public class SchoolClassesController : ControllerBase
     {
@@ -24,38 +24,94 @@ namespace NullStress.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SchoolClass>>> GetSchoolClass()
         {
-          if (_context.SchoolClass == null)
-          {
-              return NotFound();
-          }
+            if (_context.SchoolClass == null)
+            {
+                return NotFound();
+            }
             return await _context.SchoolClass.ToListAsync();
         }
 
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<SchoolClass>> GetSchoolClass(int id)
+        public async Task<ActionResult<IEnumerable<SchoolClass>>> GetSchoolClass(int id)
         {
-          if (_context.SchoolClass == null)
-          {
-              return NotFound();
-          }
-            var schoolClass = await _context.SchoolClass.FindAsync(id);
+            if (_context.SchoolClass == null)
+            {
+                return NotFound();
+            }
+
+            var schoolClass = await _context.SchoolClass
+                .Include(a => a.Students)
+                .Select(x => new
+                {
+                    x.Id,
+                    x.SchoolClassName,
+                    Students = x.Students.Select(y => new
+                    {
+                        y.Id,
+                        y.Name
+                    })
+                })
+                .SingleAsync(a => a.Id == id);
 
             if (schoolClass == null)
             {
                 return NotFound();
             }
 
-            return schoolClass;
+            return Ok(schoolClass);
         }
 
-        [HttpPut("{id}/schoolclassName/{studentName}")]
-        public async Task<IActionResult> PutSchoolClass(int id, string studentName)
+
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<IEnumerable<Student>>> GetSchoolClass(int id)
+        //{
+        //    if (_context.SchoolClass == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var schoolClass = await _context.SchoolClass.FindAsync(id);
+
+        //    if (schoolClass.Students == null)
+        //    {
+        //        return NotFound();
+        //    }    
+            
+        //    if (schoolClass == null)
+        //    {
+        //        return NotFound();
+        //    } 
+            
+
+        //    return schoolClass.Students;
+        //}
+
+        //Kopi for senere statistikkbruk
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<SchoolClass>> GetSchoolClass(int id)
+        //{
+        //  if (_context.SchoolClass == null)
+        //  {
+        //      return NotFound();
+        //  }
+        //    var schoolClass = await _context.SchoolClass.FindAsync(id);
+
+        //    if (schoolClass == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return schoolClass;
+        //}
+
+        [HttpPut("{id}/students/{name}")]
+        public async Task<IActionResult> PutSchoolClass(int id, string name)
         {
             var schoolClass = await _context.FindAsync<SchoolClass>(id);
 
             schoolClass.Students.Add(new Student
             {
-                Name = studentName
+                Name = name
             });
 
             try
@@ -80,10 +136,10 @@ namespace NullStress.Controllers
         [HttpPost]
         public async Task<ActionResult<SchoolClass>> PostSchoolClass(SchoolClass schoolClass)
         {
-          if (_context.SchoolClass == null)
-          {
-              return Problem("Entity set 'NullStressContext.SchoolClass'  is null.");
-          }
+            if (_context.SchoolClass == null)
+            {
+                return Problem("Entity set 'NullStressContext.SchoolClass'  is null.");
+            }
             _context.SchoolClass.Add(schoolClass);
             await _context.SaveChangesAsync();
 
