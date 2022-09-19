@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Header from '../Components/Header'
+import Header from '../Components/Show/Header'
 
 import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProfile'
 import DeleteEditStudentList from '../Components/Admin/DeleteEditStudentList'
@@ -15,7 +15,6 @@ export default function Kontrollpanel() {
                 <meta name="description" content="OUR_DESCRIPTION" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header />
 
             <main className={styles.main}>
 

@@ -1,13 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ShowStudents from '../Components/Show/ShowStudents'
-import Header from '../Components/Header'
-import SendSMS from '../Components/Create/SendSMS'
-import CreateAdmin from '../Components/Create/createadmin'
-import Main from '../Components/Main'
-
-
-
+import Header from '../Components/Show/Header'
+import Main from '../Components/arkiv/Main'
 
 //import ShowClasses from '../Components/Show/ShowClasses'
 

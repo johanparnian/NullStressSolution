@@ -3,11 +3,11 @@ import styles from '../styles/Home.module.css'
 import React from 'react'
 import Image from "next/image";
 
-import SendMood from '../Components/Create/SendMood';
+import SendMood from '../Components/Create/CreateMood';
 import CreateStudentAlert from '../Components/Create/SendStudentAlert';
 
 
-export default function StudentIndex() {
+export default function Userview() {
   return (
     <div className={styles.container}>
       <Head>

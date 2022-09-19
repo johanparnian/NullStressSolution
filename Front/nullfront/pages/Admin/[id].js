@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import AddClass from '../../Components/Create/AddClass'
+import CreateClass from '../../Components/Create/CreateClass'
 
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
 
@@ -16,7 +16,7 @@ const AdminView = () => {
             <h1>Adminen sin oversikt over klasser</h1>
             <ShowSchoolClasses></ShowSchoolClasses>
             <h1>Her legger Admin til nye klasser</h1>
-            <AddClass id={id} />
+            <CreateClass id={id} />
         </div>
 
     )

@@ -46,8 +46,8 @@ export default function Header() {
                                                                 height={headerImageSize}
                                                         />
                                                         <ul class="navbar-nav mx-auto">
-                                                                <Link class="nav-item" href="/"><a class="nav-link mx-5">Forside</a></Link>
-                                                                <Link class="nav-item" href="Kontrollpanel"><a class="nav-link mx-4">Kontrollpanel</a></Link>
+                                                                <Link className="nav-item" href="/"><a className="nav-link mx-5">Forside</a></Link>
+                                                                <Link className="nav-item" href="Kontrollpanel"><a className="nav-link mx-4">Kontrollpanel</a></Link>
 
                                                         </ul>
                                                 </div>

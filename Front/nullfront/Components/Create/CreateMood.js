@@ -1,4 +1,4 @@
-export default function SendMood() {
+export default function CreateMood() {
 
     async function HandleSendMood(event, moodId) {
         event.preventDefault()
