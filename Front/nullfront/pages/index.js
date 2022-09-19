@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Show/Header'
-import AddStudentToClass from '../Components/Create/AddStudentToClass'
-import BarChart from '../Components/Show/BarChart'
+import ShowAdmins from '../Components/Show/ShowAdmins'
+import CreateAdmin from '../Components/Create/createadmin'
 
 
 
@@ -23,14 +22,8 @@ export default function Index() {
       <main className={styles.main}>
 
         <Header />             
-
-        <ShowStudents />
-
-        {/* <BarChart /> */}
-
-
-
-        {/* <CreateAdmin /> */}
+        <ShowAdmins />
+        <CreateAdmin />
       </main>
       <footer>Hei fra footer</footer>
     </div>

@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import AddStudentToClass from '../../../Components/Create/AddStudentToClass'
+import Header from '../../../Components/Show/Header'
 import ShowStudents from '../../../Components/Show/ShowStudents'
 
 
@@ -25,6 +26,7 @@ const ClassView = () => {
 
     return (
         <div>
+            <Header />
             <p>SchoolClass ID: {id}</p>
             <h1>Adminen sin oversikt over studenter</h1>
             <ShowStudents students={schoolClasses.students}/>
