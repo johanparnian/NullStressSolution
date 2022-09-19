@@ -13,6 +13,9 @@ export default function CreateStudentAndSendSMS() {
 
     To = phoneNumber;
    
+
+
+    
     async function HandleAddStudent(event) {
        const student = {name, phoneNumber, link}
 
@@ -21,10 +24,6 @@ export default function CreateStudentAndSendSMS() {
        if (phoneNumber.length !== 11) {
         return alert("Feil format på telefonnummeret...")
        }
-
-    //    if (phoneNumber.includes("ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå")) {
-    //     return alert("asd")
-    //    }
         
         event.preventDefault()
         const response = await fetch("https://localhost:7212/api/students", {
