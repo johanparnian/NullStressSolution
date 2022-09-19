@@ -30,6 +30,8 @@ const MoodView = () => {
             <p>Student ID: {id}</p>
             <h1>Eleven sine moods</h1>
             <ShowMoods moods = {student.moods}/>
+
+            
         </div>
 
     )
