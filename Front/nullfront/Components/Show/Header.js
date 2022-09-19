@@ -7,11 +7,11 @@ const headerColorHexCode = 143847
 export default function Header() {
         return (
                 <div>
-                        <nav class="navbar navbar-expand fixed-top navbar-dark">
+                        <nav className="navbar navbar-expand fixed-top navbar-dark">
                                 <div className="container justify-content-center">
                                         <div className="row">
                                                 <div>
-                                                <a class="navbar-brand">
+                                                <a className="navbar-brand">
                                                                 <div className="title">Null Stress</div>
                                                                 <div className="questionmark">?</div>
                                                         </a>
@@ -45,7 +45,7 @@ export default function Header() {
                                                                 src="/5.png"
                                                                 height={headerImageSize}
                                                         />
-                                                        <ul class="navbar-nav mx-auto">
+                                                        <ul className="navbar-nav mx-auto">
                                                                 <Link className="nav-item" href="/"><a className="nav-link mx-5">Forside</a></Link>
                                                                 <Link className="nav-item" href="Kontrollpanel"><a className="nav-link mx-4">Kontrollpanel</a></Link>
 
