@@ -1,13 +1,16 @@
+import Header from "../Components/Header";
+import ShowMoods from "../Components/Show/ShowMoods";
 
-import HeaderMenu from "../Components/Admin/HeaderMenu";
+
 
 
 
 export default function Elevside() {
     return (
         <div>
-            <HeaderMenu />
+            <Header />
             <h3>Her kommer elevsiden</h3>
+            
         </div>
     )
 }

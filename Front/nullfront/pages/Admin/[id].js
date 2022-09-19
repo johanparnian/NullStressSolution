@@ -29,7 +29,7 @@ const AdminView = () => {
             <h1>Adminen sin oversikt over klasser</h1>
             <ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses>
             <h1>Her legger Admin til nye klasser</h1>
-            <AddClass id={id} />
+            <CreateClass id={id} />
         </div>
 
     )

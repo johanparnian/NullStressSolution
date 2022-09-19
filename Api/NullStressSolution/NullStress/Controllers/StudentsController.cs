@@ -21,15 +21,43 @@ namespace NullStress.Controllers
             _context = context;
         }
 
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Student>>> GetStudent()
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
-          if (_context.Student == null)
-          {
-              return NotFound();
-          }
+            if (_context.Mood == null)
+            {
+                return NotFound();
+            }
             return await _context.Student.ToListAsync();
         }
+        //[HttpGet]
+        //public async Task<IActionResult> GetStudentMood()
+        //{
+        //    if (_context.Student == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    //return await _context.Student.ToListAsync();
+
+        //    var stuff = await
+        //        (from s in _context.Student
+        //         join m in _context.Mood on s.Id equals m.StudentId into gj
+        //         from m in gj.DefaultIfEmpty()
+        //         select new
+        //         {
+        //             Student = s,
+        //             Mood = m
+        //         }).ToListAsync();
+
+        //    var response = stuff.ToLookup(x => x.Student).Select(x => new
+        //    {
+        //        StudentId = x.Key.Id,
+        //        Moods = x.Where(y => y.Mood != null).Select(y => y.Mood.Muud)
+        //    });
+
+        //    return Ok(response);
+        //}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
@@ -47,6 +75,7 @@ namespace NullStress.Controllers
 
             return student;
         }
+
 
         [HttpPut("{id}/mood/{moodId}")]
         public async Task<IActionResult> PutStudent(int id, int moodId)
@@ -102,6 +131,39 @@ namespace NullStress.Controllers
 
             return NoContent();
         }
+
+        //FLAGS STUDENT FOR WANTING HELP.
+        [HttpGet("{id}/wantshelp")]
+        public async Task<ActionResult<Student>> GetStudentWantForHelp(int id)
+        {
+            if (_context.Student == null)
+            {
+                return NotFound();
+            }
+
+            Student updatedStudent = await _context.FindAsync<Student>(id);
+
+            updatedStudent.Needshelp = true;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!StudentExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<Student>> PostStudent(Student student)

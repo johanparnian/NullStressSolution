@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import Link from "next/link";
 
 export default function ShowMoods() {
     const getMoods = async () => {
@@ -33,8 +32,10 @@ export default function ShowMoods() {
             List of moods
             <div key={moods.id}>
                 {moods.map((mood) => (
-                    <a href={`Students/${mood.id}`}><li key={mood.id}>{mood.muud}</li></a>
+                    // <a href={`Students/${mood.id}`}><p key={mood.id}>{mood.muud}</p></a>
+                    <p>{mood.muud}</p>
                     ))}
             </div>
         </div>
     )}
+                

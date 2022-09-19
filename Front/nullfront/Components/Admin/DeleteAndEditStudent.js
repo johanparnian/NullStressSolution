@@ -33,16 +33,28 @@ export default function DeleteAndEditStudent(props) {
     }
   }
 
+  function AreYouSure() {
+    if (confirm('Er du helt sikker på at du vil slette eleven?')) {
+      deleteStudent()
+    }
+    else return false;
+  }
+
   return (
     <div>
       <input
-        placeholder="Skriv inn elevens nye navn"
+        placeholder="Rediger navn..."
         onChange={(event) => setName(event.target.value)}
       />
+      &ensp;
       <button type="submit" onClick={() => updateStudent(name)}>
-        Edit
+        Lagre
       </button>
-      <button onClick={() => deleteStudent()}>Delete</button>
+      &ensp;
+      <button src="user.png" id="deletebutton" onClick={() => AreYouSure()}>Slett</button>
+      <hr></hr>
     </div>
+    
   )
 }
+

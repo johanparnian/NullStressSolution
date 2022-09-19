@@ -11,12 +11,12 @@ const ClassView = () => {
   
     return (
         <div>
-            <p>Klasse ID: {id}</p>
-            <h1>Oversikt over elever i klassen</h1>
-            <ShowStudents></ShowStudents>
 
+            <AddStudentToClass/>
+            <p>Klasse ID: {id}</p>
+            <h1>Oversikt over humører til studenten </h1>
+                <ShowStudents/>
             <h1>Her legger Admin til nye studenter i denne klassen</h1>
-            <AddStudentToClass id={id} />
         </div>
     )
   }

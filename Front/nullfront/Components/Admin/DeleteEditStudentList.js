@@ -1,6 +1,8 @@
 import DeleteAndEditStudent from "./DeleteAndEditStudent";
 import { useEffect, useState } from "react";
 
+const studentIconSize = 20;
+
 export default function DeleteEditStudentList() {
   const [students, setStudents] = useState([]);
 
@@ -42,18 +44,39 @@ export default function DeleteEditStudentList() {
 
   return (
     <div>
-      Here are the students in your class:
+      <p>Elever i klassen</p>
       <div key={students.id}>
         {students.map((student) => (
-          <li key={student.id}>
-            {student.name}
+          <p key={student.id}>
+
+            <img src="user.png"
+              height={studentIconSize}
+            >
+            </img> &ensp;
+            {student.name}<br></br>
+
+
+            <img src="telephone-call.png"
+              height={studentIconSize}
+              text-align="center">
+            </img> &ensp;
+            {student.phoneNumber}<br></br>
+
+
+            <img src="link.png"
+              height={studentIconSize}
+              position="center">
+            </img> &ensp;
+            {student.link}
+            <p></p>
+
             <DeleteAndEditStudent
               name={student.name}
               id={student.id}
               updateStudentFromList={updateStudentFromList}
               deleteStudentFromList={deleteStudentFromList}
             />
-          </li>
+          </p>
         ))}
       </div>
     </div>
