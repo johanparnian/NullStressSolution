@@ -6,6 +6,8 @@ import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProf
 import DeleteEditStudentList from '../Components/Admin/DeleteEditStudentList'
 import CreateStudentAndSendSMS from '../Components/Create/CreateStudentAndSendSMS'
 
+import ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile from '../Components/Show/ShowBellWhenStudentAsksForHelp'
+
 
 export default function Kontrollpanel() {
     return (
@@ -43,7 +45,7 @@ export default function Kontrollpanel() {
                 </div>
 
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-
+                
 
 
             </main>
