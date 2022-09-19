@@ -70,6 +70,13 @@ export default function CreateStudentAndSendSMS() {
         else console.log("error in SMS get")
     }
 
+
+
+
+
+
+    
+
     return (
             <form>
                 <p>Ny elev</p>
