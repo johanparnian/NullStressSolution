@@ -1,24 +1,38 @@
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 import AddStudentToClass from '../../../Components/Create/AddStudentToClass'
 import ShowStudents from '../../../Components/Show/ShowStudents'
+
 
 
 const ClassView = () => {
     const router = useRouter()
     const { id } = router.query
 
+    const [schoolClasses, setSchoolClasses] = useState({})
 
-  
+    useEffect(() => {
+        const endpoint = `https://localhost:7212/api/schoolclasses/${id}`
+
+        fetch(endpoint)
+        .then(response => response.json())
+        .then(data => setSchoolClasses(data))
+        .catch(error => {
+            console.log(error)
+            throw error
+        })
+    }, [id])
+
     return (
         <div>
-
-            <AddStudentToClass/>
-            <p>Klasse ID: {id}</p>
-            <h1>Oversikt over humører til studenten </h1>
-                <ShowStudents/>
-            <h1>Her legger Admin til nye studenter i denne klassen</h1>
+            <p>SchoolClass ID: {id}</p>
+            <h1>Adminen sin oversikt over studenter</h1>
+            <ShowStudents students={schoolClasses.students}/>
+            <h1>Her legger Admin til nye studenter</h1>
+            <AddStudentToClass id={id} />
         </div>
-    )
-  }
 
-  export default ClassView;
+    )
+}
+
+export default ClassView;

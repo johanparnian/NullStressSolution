@@ -37,18 +37,6 @@ export default function Index() {
 
 
         <ShowStudents />
-
-
-
-
-
-
-        <Main />
-
-
-
-
-
         {/* <CreateAdmin /> */}
       </main>
       <footer>Hei fra footer</footer>
