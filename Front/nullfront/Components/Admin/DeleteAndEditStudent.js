@@ -57,7 +57,6 @@ export default function DeleteAndEditStudent(props) {
       <button src="/user.png" id="deletebutton" onClick={() => AreYouSure()}>Slett</button>
       <hr></hr>
     </div>
-    
   )
 }
 
