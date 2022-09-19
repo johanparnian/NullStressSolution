@@ -18,31 +18,31 @@ export default function Header() {
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="1.png"
+                                                                src="/1.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="2.png"
+                                                                src="/2.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="3.png"
+                                                                src="/3.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="4.png"
+                                                                src="/4.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="5.png"
+                                                                src="/5.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <ul class="navbar-nav mx-auto">

@@ -46,7 +46,7 @@ export default function Kontrollpanel() {
 
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 
-
+                <ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile></ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile>
 
             </main>
         </div>

@@ -51,7 +51,7 @@ export default function DeleteAndEditStudent(props) {
         Lagre
       </button>
       &ensp;
-      <button src="user.png" id="deletebutton" onClick={() => AreYouSure()}>Slett</button>
+      <button src="/user.png" id="deletebutton" onClick={() => AreYouSure()}>Slett</button>
       <hr></hr>
     </div>
     

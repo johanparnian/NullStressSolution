@@ -31,7 +31,7 @@ export default function CreateMood() {
                 <img
                     draggable="false"
                     alt="image"
-                    src="1.png"
+                    src="/1.png"
                     height="100"
                     width="100"
                     class="button-82-pushable"
@@ -44,7 +44,7 @@ export default function CreateMood() {
                 <img
                     draggable="false"
                     alt="image"
-                    src="2.png"
+                    src="/2.png"
                     height="100"
                     width="100"
                     class="button-82-pushable"
@@ -56,7 +56,7 @@ export default function CreateMood() {
                 <img
                     draggable="false"
                     alt="image"
-                    src="3.png"
+                    src="/3.png"
                     height="100"
                     width="100"
                     class="button-82-pushable"
@@ -68,7 +68,7 @@ export default function CreateMood() {
                 <img
                     draggable="false"
                     alt="image"
-                    src="4.png"
+                    src="/4.png"
                     height="100"
                     width="100"
                     class="button-82-pushable"
@@ -80,7 +80,7 @@ export default function CreateMood() {
                 <img
                     draggable="false"
                     alt="image"
-                    src="5.png"
+                    src="/5.png"
                     height="100"
                     width="100"
                     class="button-82-pushable"

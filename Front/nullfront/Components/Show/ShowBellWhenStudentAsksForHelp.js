@@ -5,7 +5,7 @@ import ShowStudents from "./ShowStudents";
 export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile() {
 
     const getStudentInfo = async () => {
-        const endpoint = "https://localhost:7212/api/students/2"
+        const endpoint = "https://localhost:7212/api/students/1"
 
         const response = await fetch(endpoint)
 
@@ -41,7 +41,7 @@ export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile(
                 <img
                    draggable="false"
                    alt="image"
-                   src="bell_red.png"
+                   src="/bell_red.png"
                    height="40"
                    width="40"
                    
@@ -57,7 +57,7 @@ export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile(
                 <img
                    draggable="false"
                    alt="image"
-                   src="bell_black.png"
+                   src="/bell_black.png"
                    height="40"
                    width="40"
                ></img>
