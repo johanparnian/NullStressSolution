@@ -1,40 +1,47 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import Link from "next/link";
 
-export default function ShowStudents() {
-    const getStudents = async () => {
-        
-        const endpoint = "https://localhost:7212/api/students"
 
-        const response = await fetch(endpoint).catch(error => {
-            console.log(error)
-            throw error
-        })
+export default function ShowStudents(props) {
+    //     const getStudents = async () => {
 
-        if (response.ok){
-            return await response.json()
-        }
+    //         const endpoint = `https://localhost:7212/api/Students
+    // `
 
-        else {
-            console.log(response)
-        }
+    //         const response = await fetch(endpoint).catch(error => {
+    //             console.log(error)
+    //             throw error
+    //         })
+
+    //         if (response.ok) {
+    //             return await response.json()
+    //         }
+
+    //         else {
+    //             console.log(response)
+    //         }
+    //     }
+
+    //     const [students, setStudents] = useState([])
+
+    //      useEffect(() => {
+    //          getStudents().then(students => setStudents(students))
+    //      }, [])
+
+    console.log(props.students)
+
+    if (!props.students) {
+        return <></>
     }
-
-    const [students, setStudents] = useState([])
-
-     useEffect(() => {
-         getStudents()
-         .then(students => setStudents(students))
-     }, [])
 
     return (
         <div>
-            Here are the student names:
-            <div key={students.id}>
-                {students.map((student) => (
-                    <li key={student.id}><Link href={"/Elevside"}>{student.name}</Link></li>
-                ))}
-            </div>
+            List of students:
+            {props.students.map((ztudents) => (
+                <div key={ztudents.id}>
+                    <a href={`Student/${ztudents.id}`}><li key={ztudents.id}>{ztudents.name}</li></a>
+                </div>
+            ))}
         </div>
-    )}
+    )
+}

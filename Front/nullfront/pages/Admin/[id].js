@@ -1,24 +1,38 @@
 import { useRouter } from 'next/router'
-import AddClass from '../../Components/Create/AddClass'
+import { useState, useEffect } from 'react'
+import CreateClass from '../../Components/Create/CreateClass'
+
+import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
+
 
 const AdminView = () => {
     const router = useRouter()
     const { id } = router.query
 
+    const [admin, setAdmin] = useState({})
 
-  
+    useEffect(() => {
+        const endpoint = `https://localhost:7212/api/admins/${id}`
+
+        fetch(endpoint)
+        .then(response => response.json())
+        .then(data => setAdmin(data))
+        .catch(error => {
+            console.log(error)
+            throw error
+        })
+    }, [id])
+
     return (
         <div>
             <p>Admin ID: {id}</p>
-            <AddClass id={id} />
-            <div>
-            <h1>Her skal adminen sin oversikt over klasser og elever vises</h1>
-            <h1>slik "home" var i figma</h1>
-
+            <h1>Adminen sin oversikt over klasser</h1>
+            <ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses>
+            <h1>Her legger Admin til nye klasser</h1>
+            <CreateClass id={id} />
         </div>
 
-        </div>
     )
-  }
+}
 
-  export default AdminView;
+export default AdminView;

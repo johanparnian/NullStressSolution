@@ -1,114 +1,41 @@
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import '../styles/input_text.css';
+@import '../styles/grid.css';
+@import '../styles/buttons_askforhelp.css';
+@import '../styles/buttons_emoji.css';
+@import '../styles/buttons_normal.css';
+@import '../styles/input_text.css';
+@import '../styles/student_cards.css';
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+@media only screen and (max-width: 1000px) {
+  #white {
+    display: none;
   }
 }
 
-#container2 {
-  background-color: pink;
-  border-style: solid;
-  border-width: 3px;
-  width: 100px;
-  height: 100px;
-}*/
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-
-
 body {
-  background-color: aliceblue;
-  margin: 0px;
-  padding: 0px;
-
-  font-family: 'Roboto';
+  padding-top: 180px;
+  background-color: #1A485C !important;
+  /* Denne senker all content så det begynner under  */
 }
 
 p {
-  margin: 0px;
-  padding: 0px;
+  font-family: "Nunito";
+  color: white;
+  font-size: 14;
 }
 
-.input-field {
-  display: flex;
-  height: 100px;
-  width: 50px;
-}
-
-.emoji {
-  width: 100%;
-  height: 100px;
-  margin-top: 5px;
-}
-
-.emoji-container {
-  text-align: center;
-}
-
-img {
+h2 {
+  color: white;
+  font-family: "Nunito";
   user-select: none;
 }
-img:hover {
-  height: 103px;
-  width: 103px;
-  border: 0px;
-  border-style:solid;
-  border-color:black
-}
-img:active {
-  animation: rotate 1s infinite;
+
+h2 {
+  color: grey;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg)
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-
-
-
-
-.container_header {
-  width: 100%;
-  height: 20vmax;
-  padding: 0px;
-  padding-top: 0px;
-  background-color: lightblue;
-  margin: 0px;
-} 
-
-.header_title {
-  height: 10vmax;
-}
-
-h1 {
-  margin: 0;
-  text-align: center;
-  padding-top: 9vmax;
-  user-select: none;
+a {
+  font-family: "Nunito";
 }

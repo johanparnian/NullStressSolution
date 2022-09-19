@@ -21,16 +21,18 @@ export default function ShowInfoAboutAdminProfile() {
     }
 
     const [admin, setAdmin] = useState([])
-         useEffect(() => {
-            getAdminInfo()
+    useEffect(() => {
+        getAdminInfo()
             .then(admin => setAdmin(admin))
-     }, [])
+    }, [])
 
 
     return (
         <div>
-            <p>Her skal info om admin stå</p>
-            {/* Admin #1 heter <b>{admin.name}</b>. Fra skole: <b>{admin.school}</b>. Har klasse: <b>{admin.className}</b> */}
+            <p>{admin.name}</p>
+            <br></br>
+            <p>{admin.school}</p>
+            <p>{admin.className}</p>
         </div>
     )
 }

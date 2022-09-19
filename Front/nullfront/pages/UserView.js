@@ -3,11 +3,11 @@ import styles from '../styles/Home.module.css'
 import React from 'react'
 import Image from "next/image";
 
-import SendMood from '../Components/Create/SendMood';
-import HeaderMenu from '../Components/HeaderMenu';
+import SendMood from '../Components/Create/CreateMood';
+import CreateStudentAlert from '../Components/Create/SendStudentAlert';
 
 
-export default function StudentIndex() {
+export default function Userview() {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,10 +17,15 @@ export default function StudentIndex() {
       </Head>
 
       <main className={styles.main}>
-        {/* Lagt til midlertidig, for lettere navigering under produksjon. */}
-      <HeaderMenu />
-      <SendMood></SendMood>
-      
+
+        <div>
+        <SendMood></SendMood>
+        <CreateStudentAlert></CreateStudentAlert>
+        </div>
+
+
+
+
       </main>
 
       <footer></footer>

@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import StudentView from "../../pages/Admin/Classes/Student/[id]";
+import ShowMoods from "./ShowMoods";
 
-export default function ShowStudentsHomeScreen() {
+
+export default function ShowOneStudent() {
     const getStudents = async () => {
-        
-        const endpoint = "https://localhost:7212/api/students"
+
+        const endpoint = `https://localhost:7212/api/Students
+`
 
         const response = await fetch(endpoint).catch(error => {
             console.log(error)
             throw error
         })
 
-        if (response.ok){
+        if (response.ok) {
             return await response.json()
         }
 
@@ -23,17 +27,15 @@ export default function ShowStudentsHomeScreen() {
     const [students, setStudents] = useState([])
 
      useEffect(() => {
-         getStudents()
-         .then(students => setStudents(students))
+         getStudents().then(students => setStudents(students))
      }, [])
 
     return (
         <div>
-            Here are the students names:
+            List of students
             <div key={students.id}>
-                {students.map((student) => (
-                    <li key={student.id}>{student.name}</li>
-                ))}
+                
+                    <ShowMoods />                                
             </div>
         </div>
     )}

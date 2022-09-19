@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import Link from "next/link";
 
 export default function ShowAdmins() {
     const getAdmins = async () => {
@@ -33,7 +32,6 @@ export default function ShowAdmins() {
             List of admins:
             <div key={admins.id}>
                 {admins.map((admin) => (
-                    
                     <a href={`Admin/${admin.id}`}><li key={admin.id}>{admin.name}</li></a>
                     
                     ))}
