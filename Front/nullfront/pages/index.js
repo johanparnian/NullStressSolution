@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Show/Header'
 import AddStudentToClass from '../Components/Create/AddStudentToClass'
+import BarChart from '../Components/Show/BarChart'
 
 
 
@@ -24,6 +25,11 @@ export default function Index() {
         <Header />             
 
         <ShowStudents />
+
+        {/* <BarChart /> */}
+
+
+
         {/* <CreateAdmin /> */}
       </main>
       <footer>Hei fra footer</footer>
