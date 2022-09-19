@@ -51,52 +51,16 @@ export default function DeleteEditStudentList(propsprops) {
   //   getList().then((students) => setStudents(students));
   // }, []);
 
-  return (
-    <>
-    <div>
-<<<<<<< HEAD
-        List of students:
-        {props.students.map((ztudents) => (
-            <div key={ztudents.id}>
-                <a href={`Student/${ztudents.id}`}><li key={ztudents.id}>{ztudents.name}</li></a>
-            </div>
-=======
-      <p>Elever i klassen</p>
-      <div key={students.id}>
-        {students.map((student) => (
-          <p key={student.id}>
-
-            <img src="/user.png"
-              height={studentIconSize}
-            >
-            </img> &ensp;
-            {student.name}<br></br>
-
-
-            <img src="/telephone-call.png"
-              height={studentIconSize}
-              text-align="center">
-            </img> &ensp;
-            {student.phoneNumber}<br></br>
-
-
-            <img src="/link.png"
-              height={studentIconSize}
-              position="center">
-            </img> &ensp;
-            {student.link}
-
-            <DeleteAndEditStudent
-              name={student.name}
-              id={student.id}
-              updateStudentFromList={updateStudentFromList}
-              deleteStudentFromList={deleteStudentFromList}
-            />
-          </p>
->>>>>>> 6bc2db0b199d1141b8aad3d675afb377894a5952
-        ))}
-    </div>
-)
+//   return (
+//     <div>
+//         List of students:
+//         {props.students.map((ztudents) => (
+//             <div key={ztudents.id}>
+//                 <a href={`Student/${ztudents.id}`}><li key={ztudents.id}>{ztudents.name}</li></a>
+//             </div>
+//         ))}
+//     </div>
+// )
 
   // return (
   //   <div>
