@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import AddClass from '../../Components/Create/AddClass'
+import CreateClass from '../../Components/Create/CreateClass'
 
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
 

@@ -36,13 +36,11 @@ export default function ShowSchoolClasses(props) {
     return (
         <div>
             List of classes:
-            
-                {props.classes.map((clazz) => (
-                    <div key={clazz.id}>
+            {props.classes.map((clazz) => (
+                <div key={clazz.id}>
                     <a href={`Classes/${clazz.id}`}><li key={clazz.id}>{clazz.schoolClassName}</li></a>
-                    
-            </div>
-                    ))}
+                </div>
+            ))}
         </div>
     )
 }
