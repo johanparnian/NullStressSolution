@@ -7,45 +7,45 @@ const headerColorHexCode = 143847
 export default function Header() {
         return (
                 <div>
-                        <nav class="navbar navbar-expand fixed-top navbar-dark">
-                                <div class="container justify-content-center">
-                                        <div class="row">
+                        <nav className="navbar navbar-expand fixed-top navbar-dark">
+                                <div className="container justify-content-center">
+                                        <div className="row">
                                                 <div>
-                                                <a class="navbar-brand">
+                                                <a className="navbar-brand">
                                                                 <div className="title">Null Stress</div>
                                                                 <div className="questionmark">?</div>
                                                         </a>
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="1.png"
+                                                                src="/1.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="2.png"
+                                                                src="/2.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="3.png"
+                                                                src="/3.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="4.png"
+                                                                src="/4.png"
                                                                 height={headerImageSize}
                                                         />
                                                         <img
                                                                 draggable="false"
                                                                 alt="image"
-                                                                src="5.png"
+                                                                src="/5.png"
                                                                 height={headerImageSize}
                                                         />
-                                                        <ul class="navbar-nav mx-auto">
+                                                        <ul className="navbar-nav mx-auto">
                                                                 <Link className="nav-item" href="/"><a className="nav-link mx-5">Forside</a></Link>
                                                                 <Link className="nav-item" href="Kontrollpanel"><a className="nav-link mx-4">Kontrollpanel</a></Link>
 

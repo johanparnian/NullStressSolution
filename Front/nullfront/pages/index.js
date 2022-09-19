@@ -2,7 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Show/Header'
-import Main from '../Components/arkiv/Main'
+import AddStudentToClass from '../Components/Create/AddStudentToClass'
+
 
 
 //import ShowClasses from '../Components/Show/ShowClasses'
@@ -18,11 +19,9 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
-
       <main className={styles.main}>
 
-        <Header />
+        <Header />             
 
 
         {/* <ShowStudents /> */}

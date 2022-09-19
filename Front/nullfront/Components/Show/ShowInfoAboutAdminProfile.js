@@ -15,8 +15,7 @@ export default function ShowInfoAboutAdminProfile(props) {
             return await response.json();
         }
         else {
-            console.log("ERROR: Admin name get.")
-            console.log(response)
+            throw console.error("No such admin found!");
         }
     }
 
@@ -25,7 +24,6 @@ export default function ShowInfoAboutAdminProfile(props) {
         getAdminInfo()
             .then(admin => setAdmin(admin))
     }, [])
-
 
     return (
         <div>

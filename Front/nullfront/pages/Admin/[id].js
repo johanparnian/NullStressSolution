@@ -37,9 +37,9 @@ const AdminView = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
-                <Header />
-                <div class="container">
+        <main>
+            <Header />
+            <div className="container">
 
 
                     <div class="row">

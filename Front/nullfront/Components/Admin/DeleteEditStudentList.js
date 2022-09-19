@@ -54,26 +54,25 @@ export default function DeleteEditStudentList(props) {
         {students.map((student) => (
           <p key={student.id}>
 
-            <img src="user.png"
+            <img src="/user.png"
               height={studentIconSize}
             >
             </img> &ensp;
             {student.name}<br></br>
 
 
-            <img src="telephone-call.png"
+            <img src="/telephone-call.png"
               height={studentIconSize}
               text-align="center">
             </img> &ensp;
             {student.phoneNumber}<br></br>
 
 
-            <img src="link.png"
+            <img src="/link.png"
               height={studentIconSize}
               position="center">
             </img> &ensp;
             {student.link}
-            <p></p>
 
             <DeleteAndEditStudent
               name={student.name}

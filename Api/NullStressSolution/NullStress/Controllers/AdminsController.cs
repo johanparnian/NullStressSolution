@@ -32,22 +32,34 @@ namespace NullStress.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Admin>> GetAdmin(int id)
+        public async Task<ActionResult<IEnumerable<Admin>>> GetAdmin(int id)
         {
             if (_context.Admin == null)
             {
                 return NotFound();
             }
-            var admin = await _context.Admin.FindAsync(id);
+            
+            var admin = await _context.Admin
+                .Include(a => a.SchoolClasses)
+                .Select(x => new
+                {
+                    x.Id,
+                    x.Name,
+                    SchoolClasses = x.SchoolClasses.Select(y => new
+                    {
+                        y.Id,
+                        y.SchoolClassName
+                    })
+                })
+                .SingleAsync(a => a.Id == id);
 
             if (admin == null)
             {
                 return NotFound();
             }
 
-            return admin;
+            return Ok(admin);
         }
-
 
         [HttpPut("{id}/SchoolClass/{schoolClassName}")]
         public async Task<IActionResult> PutStudent(int id, string schoolClassName)
