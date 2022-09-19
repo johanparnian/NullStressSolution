@@ -18,25 +18,14 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      
+
       <main className={styles.main}>
 
         <Header />
 
-        
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <ShowStudents />
+        {/* <ShowStudents /> */}
         {/* <CreateAdmin /> */}
       </main>
       <footer>Hei fra footer</footer>

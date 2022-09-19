@@ -18,6 +18,7 @@ body {
   padding-top: 180px;
   background-color: #1A485C !important;
   /* Denne senker all content så det begynner under  */
+  color: white !important
 }
 
 p {

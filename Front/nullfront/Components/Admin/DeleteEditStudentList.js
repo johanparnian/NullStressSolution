@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const studentIconSize = 20;
 
-export default function DeleteEditStudentList() {
+export default function DeleteEditStudentList(props) {
   const [students, setStudents] = useState([]);
 
   function deleteStudentFromList(id) {
@@ -24,7 +24,11 @@ export default function DeleteEditStudentList() {
   }
 
   async function getList() {
-    const endpoint = "https://localhost:7212/api/students";
+    let endpoint = "https://localhost:7212/api/students";
+
+    // if (props.classId) {
+    //   endpoint = `https://localhost:7212/api/schoolclasses/${props.classId}`;
+    // }
 
     const response = await fetch(endpoint).catch((error) => {
       console.log(error);
@@ -43,6 +47,7 @@ export default function DeleteEditStudentList() {
   }, []);
 
   return (
+    <>
     <div>
       <p>Elever i klassen</p>
       <div key={students.id}>
@@ -80,5 +85,6 @@ export default function DeleteEditStudentList() {
         ))}
       </div>
     </div>
+    </>
   );
 }
