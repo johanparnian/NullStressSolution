@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import ShowStudents from '../Components/Show/ShowStudents'
 import Header from '../Components/Show/Header'
-import AddStudentToClass from '../Components/Create/AddStudentToClass'
+import ShowAdmins from '../Components/Show/ShowAdmins'
+import CreateAdmin from '../Components/Create/createadmin'
 
 
 
