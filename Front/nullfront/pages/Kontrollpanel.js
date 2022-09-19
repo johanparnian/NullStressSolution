@@ -32,8 +32,8 @@ export default function Kontrollpanel() {
 
                     <div className="row">
                         <div className="col-1" id="white"></div>
-                        {/* <div class="col"><DeleteEditStudentList></DeleteEditStudentList></div> */}
-                        {/* <div class="col"><CreateStudentAndSendSMS></CreateStudentAndSendSMS></div> */}
+                        <div className="col"><DeleteEditStudentList></DeleteEditStudentList></div>
+                        <div className="col"><CreateStudentAndSendSMS></CreateStudentAndSendSMS></div>
                         <div className="col-1" id="white"></div>
                     </div>
 
@@ -43,11 +43,7 @@ export default function Kontrollpanel() {
                         <div className="col-1" id="white"><h2></h2></div>
                     </div>
                 </div>
-
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                
-                {/* <ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile></ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile> */}
-
+                <ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile />
             </main>
         </div>
     )

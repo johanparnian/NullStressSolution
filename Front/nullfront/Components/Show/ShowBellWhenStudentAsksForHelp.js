@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import React from 'react'
 import ShowStudents from "./ShowStudents";
 
-export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile() {
+export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
 
     const getStudentInfo = async () => {
-        const endpoint = "https://localhost:7212/api/students/2"
+        const endpoint = "https://localhost:7212/api/students/1"
 
         const response = await fetch(endpoint)
 
@@ -80,6 +80,9 @@ export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile(
         )
         if (response.ok) {
           console.log("OK To remove help wanted flag")
+
+          
+          
         }
         else {
             return 
@@ -88,8 +91,6 @@ export default function ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile(
 
     return (
         <div>
-            <p>Here:</p>
-            <p>{student.name}</p>
             {RenderBellIcon()}
             <p></p>
         </div>
