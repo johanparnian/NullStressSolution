@@ -5,7 +5,6 @@ import Header from '../../../Components/Show/Header'
 import ShowStudents from '../../../Components/Show/ShowStudents'
 
 
-
 const ClassView = () => {
     const router = useRouter()
     const { id } = router.query
