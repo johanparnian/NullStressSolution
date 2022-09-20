@@ -52,10 +52,11 @@ export default function ShowStudents(props) {
 
     return (
         <div>
-          <div className="overskrift2">Rediger studenter</div>
+          <div className="overskrift2">Rediger elever</div>
             {props.students.map((ztudents) => (
+              <div className="svartramme">
                 <div key={ztudents.id}>
-                    <a href={`Student/${ztudents.id}`}><li key={ztudents.id}>{ztudents.name}</li></a>
+                    <a href={`Student/${ztudents.id}`}><p className="overskrift2" key={ztudents.id}>{ztudents.name}</p></a>
 
                     <div>
                         <input
@@ -65,9 +66,9 @@ export default function ShowStudents(props) {
                         <button type="submit" onClick={() => updateStudent(studentName, ztudents.id)}>Lagre</button>
                         &ensp;
                         <button src="user.png" id="deletebutton" onClick={() => AreYouSure(ztudents.id)}>Slett</button>
-                        <hr></hr>
                     </div>
                 </div>
+              </div>
             ))}
         </div>
     )

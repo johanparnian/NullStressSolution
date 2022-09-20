@@ -41,7 +41,7 @@ const ClassView = (props) => {
                 <div className="row">
                     <div className="col">
                         <ShowStudents students={schoolClasses.students} /></div>
-                        <div className="col-2"></div>
+                        <div className="col-3"></div>
                     <div className="col">
                         <div><AddStudentToClass id={id} /></div>
                     </div>
