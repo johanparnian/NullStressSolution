@@ -65,4 +65,5 @@ a {
 
 .footertext {
   color: #40819d;
+  user-select: none;
 }

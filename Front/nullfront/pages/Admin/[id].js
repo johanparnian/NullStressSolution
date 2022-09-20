@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import CreateClass from '../../Components/Create/CreateClass'
 import Head from 'next/head'
 import Header from '../../Components/Show/Header'
+import Footer from '../../Components/Show/Footer'
 import ShowInfoAboutAdminProfile from '../../Components/Show/ShowInfoAboutAdminProfile'
 import DeleteEditStudentList from '../../Components/Admin/DeleteEditStudentList'
 import CreateStudentAndSendSMS from '../../Components/arkiv/CreateStudentAndSendSMS'
@@ -40,15 +41,17 @@ const AdminView = () => {
 
         <main>
             <Header />
-            <p>Her er en test for de som skal synke</p>
+            <div className="overskrift1">
+                        Oversikt over klasser
+                    </div>
             <div className="container">
-        
-
                     <div class="row">
                         <div class="col-1" id="white"></div>
                         <div class="col">
+                            <div className='overskrift2'>
                             <div>{admin.name}</div>
                             <div>{admin.school}</div>
+                        </div>
                         </div>
                         <div class="col"><CreateClass id={id}/></div>
                         
@@ -60,27 +63,13 @@ const AdminView = () => {
                         <div class="col-1" id="white"></div>
                         <div class="col"><ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses></div>
                         
-                        <div class="col"></div>
+                        {/* <div class="col"></div> */}
                         <div class="col-1" id="white"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1" id="white"><h2></h2></div>
-                        <div class="col"><h2>Footer</h2></div>
-                        <div class="col-1" id="white"><h2></h2></div>
                     </div>
                 </div>
             </main>
+            <Footer></Footer>
         </div>
-        // <div>
-        //         <div>
-        //             <p>Admin ID: {id}</p>
-        //             <h1>Adminen sin oversikt over klasser</h1>
-        //             <ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses>
-        //             <h1>Her legger Admin til nye klasser</h1>
-        //             <CreateClass id={id} />
-        //         </div>
-        // </div> 
     )
 }
 

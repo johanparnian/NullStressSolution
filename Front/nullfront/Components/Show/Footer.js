@@ -8,11 +8,10 @@ export default function Footer() {
                         <nav className="navbar navbar-expand fixed-bottom navbar-dark">
                                 <div className="container justify-content-center">
                                     <div className="footertext">
-                                                    <b>Laget av Emilie, Solveig, Johan og Jens.</b> Anvendt teknologi: Next.js, godt humør, Tomas, ASP.NET, Anders, Twilio og Anna.
+                                                    <b>Laget av Emilie, Solveig, Johan og Jens -</b> Anvendt teknologi: Next.js, godt humør, Tomas, ASP.NET, Anders, Twilio og Anna
                                     </div>
                                 </div>
                         </nav>
-
                 </div>
         )
 }
