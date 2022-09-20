@@ -46,3 +46,23 @@ a {
   justify-content: center;
   
 }
+
+
+.overskrift1 {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+.overskrift2 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.footertext {
+  color: #40819d;
+}
