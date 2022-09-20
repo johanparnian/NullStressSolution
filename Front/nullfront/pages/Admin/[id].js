@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Header from '../../Components/Show/Header'
 import ShowInfoAboutAdminProfile from '../../Components/Show/ShowInfoAboutAdminProfile'
 import DeleteEditStudentList from '../../Components/Admin/DeleteEditStudentList'
-import CreateStudentAndSendSMS from '../../Components/Create/CreateStudentAndSendSMS'
+import CreateStudentAndSendSMS from '../../Components/arkiv/CreateStudentAndSendSMS'
 
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
 import ShowStudents from '../../Components/Show/ShowStudents'
@@ -50,7 +50,7 @@ const AdminView = () => {
                             <div>{admin.name}</div>
                             <div>{admin.school}</div>
                         </div>
-                        <div class="col">Legg til ny klasse<CreateClass id={id}/></div>
+                        <div class="col"><CreateClass id={id}/></div>
                         
 
                         <div class="col-1" id="white"></div>
@@ -60,7 +60,7 @@ const AdminView = () => {
                         <div class="col-1" id="white"></div>
                         <div class="col"><ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses></div>
                         
-                        <div class="col"><CreateClass id={id} /></div>
+                        <div class="col"></div>
                         <div class="col-1" id="white"></div>
                     </div>
 
