@@ -34,8 +34,7 @@ export default function AddStudentToClass(props){
 
         To.split(" ").join("")
         
-        const Message = `Hei ${name}! Du har fått en bruker til Null Stress. Link: ${link}`
-
+        const Message = `Hei ${name}! Du har fått en bruker til Null Stress. Link: http://localhost:3000/StudentPage/${id}`
         const sms = { To, From, Message }
 
         const endpoint = "https://localhost:7212/sms"
@@ -56,11 +55,11 @@ export default function AddStudentToClass(props){
         <div>
             <form>
                 <label>
-                    Add student:
+                    
                     <input value={name} onChange={event => setName(event.target.value)} type="Text"></input>
                     <input value={To} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)} type="Number" ></input>
                 </label>
-                <button type="submit" onClick={HandleAddStudent}>Add</button>
+                <button type="submit" onClick={HandleAddStudent}>Legg til og send SMS</button>
             </form>
         </div>
     )

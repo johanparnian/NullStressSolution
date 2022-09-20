@@ -59,22 +59,56 @@ namespace NullStress.Controllers
         //    return Ok(response);
         //}
 
+
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<Student>> GetStudent(int id)
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudent(int id)
         {
-          if (_context.Student == null)
-          {
-              return NotFound();
-          }
-            var student = await _context.Student.FindAsync(id);
+            if (_context.Student == null)
+            {
+                return NotFound();
+            }
+
+            var student = await _context.Student
+                .Include(a => a.Moods)
+                .Select(x => new
+                {
+                    x.Id,
+                    x.Name,
+                    Moods = x.Moods.Select(y => new
+                    {
+                        y.Id,
+                        y.Muud,
+                        y.Time
+                    })
+                })
+                .SingleAsync(a => a.Id == id);
 
             if (student == null)
             {
                 return NotFound();
             }
 
-            return student;
+            return Ok(student);
         }
+
+        // Johan kommenterte den ut for å se om vi trenger den
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Student>> GetStudent(int id)
+        //{
+        //  if (_context.Student == null)
+        //  {
+        //      return NotFound();
+        //  }
+        //    var student = await _context.Student.FindAsync(id);
+
+        //    if (student == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return student;
+    //}
 
 
         [HttpPut("{id}/mood/{moodId}")]
