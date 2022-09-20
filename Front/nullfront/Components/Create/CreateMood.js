@@ -1,9 +1,9 @@
-export default function CreateMood() {
+export default function CreateMood(props) {
 
-    async function HandleSendMood(event, moodId) {
+    async function HandleSendMood(id, moodId) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/students/1/mood/${moodId}`, {
+        const response = await fetch(`https://localhost:7212/api/students/${props.id}/mood/${moodId}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
