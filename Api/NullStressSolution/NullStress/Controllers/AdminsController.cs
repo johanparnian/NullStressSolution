@@ -45,6 +45,7 @@ namespace NullStress.Controllers
                 {
                     x.Id,
                     x.Name,
+                    x.School,
                     SchoolClasses = x.SchoolClasses.Select(y => new
                     {
                         y.Id,

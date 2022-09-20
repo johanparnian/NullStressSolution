@@ -185,7 +185,7 @@ namespace NullStress.Controllers
         {
             if (_context.Student == null)
             {
-                return NotFound();
+                return NotFound();  
             }
             var student = await _context.Student.FindAsync(id);
             if (student == null)
