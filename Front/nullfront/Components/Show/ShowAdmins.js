@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import Link from "next/link";
 
 export default function ShowAdmins() {
     const getAdmins = async () => {
@@ -29,12 +30,13 @@ export default function ShowAdmins() {
 
     return (
         <>
-            <p>Velg lærer</p>
+            <div className="overskrift2">Velg lærer</div>
             <div key={admins.id}>
+                <br></br>
                 {admins.map((admin) => (
                     <>
                     <br></br>
-                    <a href={`Admin/${admin.id}`} key={admin.id}>{admin.name}</a>
+                    <Link className="nav-item" href={`Admin/${admin.id}`}><a key={admin.id} className="nav-link mx-">{admin.name}</a></Link>
                     <br></br>
                     </>
                     ))}

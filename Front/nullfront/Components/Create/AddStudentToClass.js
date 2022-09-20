@@ -56,11 +56,11 @@ export default function AddStudentToClass(props){
         <div>
             <form>
                 <label>
-                    Add student:
+                    
                     <input value={name} onChange={event => setName(event.target.value)} type="Text"></input>
                     <input value={To} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)} type="Number" ></input>
                 </label>
-                <button type="submit" onClick={HandleAddStudent}>Add</button>
+                <button type="submit" onClick={HandleAddStudent}>Legg til og send SMS</button>
             </form>
         </div>
     )

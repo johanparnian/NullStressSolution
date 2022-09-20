@@ -13,7 +13,7 @@ export default function ShowMoods(props) {
             List of moods
             {props.moods.map((moodz) => (
                 <div key={moodz.id}>
-                    <li key={moodz.id}>{moodz.muud}</li>                                 
+                    <li key={moodz.id}>Humør:  {moodz.muud} ---- Dato: {moodz.time}</li>                                 
                 </div>
             )
             )}

@@ -44,7 +44,7 @@ export default function ShowStudents(props) {
         return (
             <>
                 <p>
-                    Error melding...
+                    Vises under lasting eller ved feil
                 </p>
             </>
         );
@@ -52,7 +52,6 @@ export default function ShowStudents(props) {
 
     return (
         <div>
-            List of students:
             {props.students.map((ztudents) => (
                 <div key={ztudents.id}>
                     <a href={`Student/${ztudents.id}`}><li key={ztudents.id}>{ztudents.name}</li></a>
