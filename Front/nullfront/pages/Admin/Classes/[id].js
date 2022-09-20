@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react'
 import AddStudentToClass from '../../../Components/Create/AddStudentToClass'
 import Header from '../../../Components/Show/Header'
 import ShowStudents from '../../../Components/Show/ShowStudents'
+import Footer from '../../../Components/Show/Footer'
 
 
-const ClassView = () => {
+const ClassView = (props) => {
     const router = useRouter()
     const { id } = router.query
 
@@ -15,28 +16,34 @@ const ClassView = () => {
         const endpoint = `https://localhost:7212/api/schoolclasses/${id}`
 
         fetch(endpoint)
-        .then(response => response.json())
-        .then(data => setSchoolClasses(data))
-        .catch(error => {
-            console.log(error)
-            throw error
-        })
+            .then(response => response.json())
+            .then(data => setSchoolClasses(data))
+            .catch(error => {
+                console.log(error)
+                throw error
+            })
     }, [id, schoolClasses]);
 
     return (
-        
-        <div>
+        <>
             <Header />
+            <div className='overskrift1'>
+                Studenter i klassen
+            </div>
             <p>SchoolClass ID: {id}</p>
-            <h1>Adminen sin oversikt over studenter</h1>
-
-
-            <ShowStudents students={schoolClasses.students}/>
-
-            <h1>Her legger Admin til nye studenter</h1>
-            <AddStudentToClass id={id} />
-        </div>
-
+            <div className="container">
+                <div className="col">
+                
+                
+                <ShowStudents students={schoolClasses.students} />
+                </div>
+                <div className='overskrift2'>Legg til studenter</div>
+                <div>
+                <AddStudentToClass id={id} />
+                </div>
+            </div>
+            <Footer />
+        </>
     )
 }
 
