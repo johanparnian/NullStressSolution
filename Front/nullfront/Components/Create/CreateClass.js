@@ -23,12 +23,11 @@ export default function CreateClass(props) {
     return (
         <div>
             <form>
-                <label>
-                    Create class:
-                    <input value={schoolClassName} onChange={event => setSchoolClassName(event.target.value)} type="Text"></input>
-                </label>
-                
-                <button type="submit" onClick={HandleCreateStudent}>Add</button>
+                    Ny skoleklasse
+                    &ensp;
+                    <input placeholder="Navn..." value={schoolClassName} onChange={event => setSchoolClassName(event.target.value)} type="Text"></input>
+                    &ensp;
+                <button type="submit" onClick={HandleCreateStudent}>Lagre</button>
             </form>
         </div>
     )

@@ -28,14 +28,18 @@ export default function ShowAdmins() {
     }, [])
 
     return (
-        <div>
-            List of admins:
+        <>
+            <p>Velg lærer</p>
             <div key={admins.id}>
                 {admins.map((admin) => (
-                    <a href={`Admin/${admin.id}`}><li key={admin.id}>{admin.name}</li></a>
-                    
+                    <>
+                    <br></br>
+                    <a href={`Admin/${admin.id}`} key={admin.id}>{admin.name}</a>
+                    <br></br>
+                    </>
                     ))}
+                    
             </div>
-        </div>
+        </>
     )
 }

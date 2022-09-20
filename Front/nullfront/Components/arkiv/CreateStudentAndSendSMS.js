@@ -16,11 +16,15 @@ export default function CreateStudentAndSendSMS() {
     async function HandleAddStudent(event) {
        const student = {name, phoneNumber, link}
 
-        
+    
 
        if (phoneNumber.length !== 11) {
         return alert("Feil format på telefonnummeret...")
        }
+
+    //    if (phoneNumber.includes("ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå")) {
+    //     return alert("asd")
+    //    }
         
         event.preventDefault()
         const response = await fetch("https://localhost:7212/api/students", {
@@ -72,7 +76,7 @@ export default function CreateStudentAndSendSMS() {
                 <p>Ny elev</p>
                 <input value={name} placeholder="Navn" onChange={event => setName(event.target.value)} type="Text"></input>
                 &ensp;
-                <input value={To} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)} type="Text"></input>
+                <input value={To} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)} type="Number" ></input>
                 &ensp;
             <button type="submit" onClick={HandleAddStudent}>Lagre og send SMS</button>
         </form>

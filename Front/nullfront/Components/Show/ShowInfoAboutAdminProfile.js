@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import React from 'react'
 
-export default function ShowInfoAboutAdminProfile() {
+export default function ShowInfoAboutAdminProfile(props) {
 
     const getAdminInfo = async () => {
-        const endpoint = "https://localhost:7212/api/admins/1"
+        const endpoint = `https://localhost:7212/api/admins/1`
 
         const response = await fetch(endpoint)
 
@@ -15,8 +15,7 @@ export default function ShowInfoAboutAdminProfile() {
             return await response.json();
         }
         else {
-            console.log("ERROR: Admin name get.")
-            console.log(response)
+            throw console.error("No such admin found!");
         }
     }
 
@@ -25,7 +24,6 @@ export default function ShowInfoAboutAdminProfile() {
         getAdminInfo()
             .then(admin => setAdmin(admin))
     }, [])
-
 
     return (
         <div>

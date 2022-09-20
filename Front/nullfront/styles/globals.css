@@ -17,7 +17,9 @@
 body {
   padding-top: 180px;
   background-color: #1A485C !important;
+  color: white !important;
   /* Denne senker all content så det begynner under  */
+  color: white !important
 }
 
 p {
@@ -38,4 +40,9 @@ h2 {
 
 a {
   font-family: "Nunito";
+}
+
+#mainview {
+  justify-content: center;
+  
 }
