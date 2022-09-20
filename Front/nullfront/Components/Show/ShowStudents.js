@@ -5,7 +5,7 @@ import React from 'react'
 export default function ShowStudents(props) {
   const [studentName, setStudentName] = useState('');
   const [needshelp, setNeedshelp] = useState(false);
-  const [bell, setBell] = useState("/bell_black.png");
+  // const [bell, setBell] = useState("/bell_black.png");
 
 
   function AreYouSure(id) {
@@ -35,7 +35,6 @@ export default function ShowStudents(props) {
         },
         body: JSON.stringify({
           name: studentName,
-          // needshelp: false
         }),
       }
     )
@@ -45,7 +44,6 @@ export default function ShowStudents(props) {
   }
 
   async function updateNeedhelp(needshelp, id) {
-
     const response = await fetch(
       `https://localhost:7212/api/students/false/${id}`,
       {
@@ -55,7 +53,6 @@ export default function ShowStudents(props) {
         },
         body: JSON.stringify({
           needshelp: needshelp
-          // needshelp: false
         }),
       }
     )
@@ -93,7 +90,7 @@ export default function ShowStudents(props) {
         <div key={ztudents.id}>
           <a href={`Student/${ztudents.id}`}><li key={ztudents.id}>{ztudents.name}</li></a>
           <p>før</p>
-            <img src={bell} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
+            <img src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
           <p>etter</p>
           <div>
             <input

@@ -25,7 +25,7 @@ const ClassView = (props) => {
                 console.log(error)
                 throw error
             })
-    }, [id, schoolClasses]);
+    }, [id]);
 
     return (
         <>
