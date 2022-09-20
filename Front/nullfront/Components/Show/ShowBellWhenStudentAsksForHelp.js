@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import React from 'react'
 import ShowStudents from "./ShowStudents";
 
-export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
+export default function ShowBellWhenStudentAsksForHelpoutAdminProfile(props) {
 
     const getStudentInfo = async () => {
-        const endpoint = "https://localhost:7212/api/students/1"
+        const endpoint = `https://localhost:7212/api/students/ac439b23-39f5-4809-5b45-08da9aeec92d`
 
         const response = await fetch(endpoint)
 
@@ -25,7 +25,6 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
 
             if (student.needshelp === true) {
                 console.log(student.needshelp)
-                RenderBellIcon()
             }
 
 
@@ -34,7 +33,7 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
     function RenderBellIcon() {
 
         if (student.needshelp === true) {
-            console.log("accessing true bell")
+            // console.log("accessing true bell")
 
             return (
                 <div>
@@ -45,7 +44,7 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
                    height="40"
                    width="40"
                    
-                   onClick={HandleRemoveHelpWantedFlag}
+                   onClick={e => HandleRemoveHelpWantedFlag(props.id)}
                ></img>
            </div>
             )
@@ -72,9 +71,8 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
     async function HandleRemoveHelpWantedFlag(event, props) {
         event.preventDefault()
     
-        const response = await fetch(`https://localhost:7212/api/students/${1}/removehelprequest`, {
-            //denne må oppdateres med riktig ID når studentview rendres for hver student!
-          method: "GET",
+        const response = await fetch(`https://localhost:7212/api/students/untrue/ac439b23-39f5-4809-5b45-08da9aeec92d`, {
+          method: "PUT",
           headers: { 'Content-Type': 'application/json' }
         }
         )
