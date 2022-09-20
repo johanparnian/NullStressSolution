@@ -5,11 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NullStress.Migrations
 {
-<<<<<<<< HEAD:Api/NullStressSolution/NullStress/Migrations/20220919094055_initialpostanders.cs
-    public partial class initialpostanders : Migration
-========
-    public partial class @new : Migration
->>>>>>>> 7e9d4121a59f6990830e09edd9aaa5b7b0da478c:Api/NullStressSolution/NullStress/Migrations/20220920060724_new.cs
+    public partial class postsyncmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
