@@ -29,7 +29,7 @@ export default function ShowAllStudents() {
 
     return (
         <div>
-            List of admins:
+            List of students:
             <div key={students.id}>
                 {students.map((students) => (
                     <a href={`Students/${students.id}`}><li key={students.id}>{students.name}</li></a>

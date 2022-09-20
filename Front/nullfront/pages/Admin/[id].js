@@ -70,8 +70,6 @@ const AdminView = () => {
                         <div class="col-1" id="white"><h2></h2></div>
                     </div>
                 </div>
-
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             </main>
         </div>
         // <div>
