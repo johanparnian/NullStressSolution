@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-
-
 export default function AddStudentToClass(props){
 
     const [name, setName] = useState("jens")
     const [phoneNumber, setPhoneNumber] = useState("phonenumber")
     const [link, setLink] = useState("_LINKPACEHOLDER_")
-
     let [To, setTo] = useState("+4790173862")
-    const [From, setFrom] = useState("+18145643389")
+    
+    const From = "+18145643389"
 
     async function HandleAddStudent(event){
 
@@ -24,13 +22,11 @@ export default function AddStudentToClass(props){
         })
 
         if (response.ok) {
-            console.log("ok")
-            console.log(response)
             HandleSendSMS()
             return response
         }
         else {
-            console.log("response error")
+            throw console.error("Response error...");
         }
     }
 
@@ -38,14 +34,9 @@ export default function AddStudentToClass(props){
 
         To.split(" ").join("")
         
-        const Message = `Hei ${name}! Du har fått en bruker på nullstress.no. Link: ${link}`
+        const Message = `Hei ${name}! Du har fått en bruker til Null Stress. Link: ${link}`
+
         const sms = { To, From, Message }
-
-        console.log(To)
-        console.log(From)
-        console.log(Message)
-
-        // event.preventDefault()
 
         const endpoint = "https://localhost:7212/sms"
         
@@ -72,12 +63,6 @@ export default function AddStudentToClass(props){
                 <button type="submit" onClick={HandleAddStudent}>Add</button>
             </form>
         </div>
-
-
-
-
-
-
     )
 
 
