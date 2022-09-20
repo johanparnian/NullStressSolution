@@ -1,14 +1,10 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import CreateClass from '../../Components/Create/CreateClass'
 import Head from 'next/head'
 import Header from '../../Components/Show/Header'
-import ShowInfoAboutAdminProfile from '../../Components/Show/ShowInfoAboutAdminProfile'
-import DeleteEditStudentList from '../../Components/Admin/DeleteEditStudentList'
-import CreateStudentAndSendSMS from '../../Components/arkiv/CreateStudentAndSendSMS'
+import CreateClass from '../Components/Create/CreateClass'
 
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
-import ShowStudents from '../../Components/Show/ShowStudents'
 
 
 const AdminView = () => {
