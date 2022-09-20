@@ -2,16 +2,19 @@ import { useState } from "react";
 
 export default function AddStudentToClass(props){
 
-    const [name, setName] = useState("jens")
-    const [phoneNumber, setPhoneNumber] = useState("phonenumber")
+    const [name, setName] = useState("")
+    const [phoneNumber, setPhoneNumber] = useState("")
     const [link, setLink] = useState("_LINKPACEHOLDER_")
-    let [To, setTo] = useState("+4790173862")
+    
+    // let [To, setTo] = useState("+4790173862")
+    let To = phoneNumber
     
     const From = "+18145643389"
 
     async function HandleAddStudent(event){
 
         if (phoneNumber.length !== 11) {
+            console.log(phoneNumber.length)
             return alert("Feil format på telefonnummeret...") }
 
         event.preventDefault()
@@ -34,7 +37,7 @@ export default function AddStudentToClass(props){
 
         To.split(" ").join("")
         
-        const Message = `Hei ${name}! Du har fått en bruker til Null Stress. Link: http://localhost:3000/StudentPage/${props.id}`
+        const Message = `Hei ${name}! Du har fått en bruker til Null Stress. Link: ://localhost:3000/StudentPage/${props.id}`
         const sms = { To, From, Message }
 
         const endpoint = "https://localhost:7212/sms"
@@ -57,16 +60,15 @@ export default function AddStudentToClass(props){
                       <br></br>
             <form>
                 <label>
-                    
-                    <input value={name} onChange={event => setName(event.target.value)} type="Text"></input>
-                    <input value={To} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)} type="Number" ></input>
+                    <input value={name} placeholder="Navn" onChange={event => setName(event.target.value)} type="Text"></input>
+
+                    <input value={phoneNumber} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)}></input>
+
                 </label>
                 <button type="submit" onClick={HandleAddStudent}>Legg til og send SMS</button>
             </form>
         </div>
     )
-
-
 }
 
    

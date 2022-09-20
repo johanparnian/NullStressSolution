@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import React from 'react'
 import ShowStudents from "./ShowStudents";
 
-export default function ShowBellWhenStudentAsksForHelpoutAdminProfile(props) {
+export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
 
     const getStudentInfo = async () => {
-        const endpoint = `https://localhost:7212/api/students/ac439b23-39f5-4809-5b45-08da9aeec92d`
+        const endpoint = "https://localhost:7212/api/students/1"
 
         const response = await fetch(endpoint)
 
@@ -32,6 +32,7 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile(props) {
 
             if (student.needshelp === true) {
                 console.log(student.needshelp)
+                RenderBellIcon()
             }
 
 
@@ -40,7 +41,7 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile(props) {
     function RenderBellIcon() {
 
         if (student.needshelp === true) {
-            // console.log("accessing true bell")
+            console.log("accessing true bell")
 
             return (
                 <div>
@@ -51,7 +52,7 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile(props) {
                    height="40"
                    width="40"
                    
-                   onClick={e => HandleRemoveHelpWantedFlag(props.id)}
+                   onClick={HandleRemoveHelpWantedFlag}
                ></img>
            </div>
             )
@@ -77,8 +78,9 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile(props) {
     async function HandleRemoveHelpWantedFlag(event, props) {
         event.preventDefault()
     
-        const response = await fetch(`https://localhost:7212/api/students/untrue/ac439b23-39f5-4809-5b45-08da9aeec92d`, {
-          method: "PUT",
+        const response = await fetch(`https://localhost:7212/api/students/${1}/removehelprequest`, {
+            //denne må oppdateres med riktig ID når studentview rendres for hver student!
+          method: "GET",
           headers: { 'Content-Type': 'application/json' }
         }
         )
