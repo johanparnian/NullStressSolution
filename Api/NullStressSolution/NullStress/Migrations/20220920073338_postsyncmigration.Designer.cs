@@ -12,13 +12,8 @@ using NullStress.Data;
 namespace NullStress.Migrations
 {
     [DbContext(typeof(NullStressContext))]
-<<<<<<<< HEAD:Api/NullStressSolution/NullStress/Migrations/20220919094055_initialpostanders.Designer.cs
-    [Migration("20220919094055_initialpostanders")]
-    partial class initialpostanders
-========
-    [Migration("20220920060724_new")]
-    partial class @new
->>>>>>>> 7e9d4121a59f6990830e09edd9aaa5b7b0da478c:Api/NullStressSolution/NullStress/Migrations/20220920060724_new.Designer.cs
+    [Migration("20220920073338_postsyncmigration")]
+    partial class postsyncmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
