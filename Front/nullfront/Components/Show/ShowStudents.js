@@ -99,7 +99,6 @@ export default function ShowStudents(props) {
               placeholder="Rediger navn..."
               onChange={(event) => setStudentName(event.target.value)}
             />
-            &ensp;
             <button type="submit" onClick={() => updateStudent(studentName, ztudents.id)}>Lagre</button>
             &ensp;
             <button src="user.png" id="deletebutton" onClick={() => AreYouSure(ztudents.id)}>Slett</button>
