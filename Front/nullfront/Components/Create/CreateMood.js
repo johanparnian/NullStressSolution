@@ -1,9 +1,9 @@
-export default function CreateMood() {
+export default function CreateMood(props) {
 
-    async function HandleSendMood(event, moodId) {
+    async function HandleSendMood(id, moodId) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/students/1/mood/${moodId}`, {
+        const response = await fetch(`https://localhost:7212/api/students/${props.id}/mood/${moodId}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
@@ -71,7 +71,7 @@ export default function CreateMood() {
                     src="/4.png"
                     height="100"
                     width="100"
-                    class="button-82-pushable"
+                    className="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 4)}
                 ></img>
             </div>

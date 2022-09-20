@@ -1,9 +1,9 @@
-export default function SendStudentAlert() {
+export default function SendStudentAlert(hjelp) {
 
   async function HandleSendStudentAlert(event, props) {
     event.preventDefault()
 
-    const response = await fetch(`https://localhost:7212/api/students/${1}/wantshelp`, {
+    const response = await fetch(`https://localhost:7212/api/students/${hjelp.id}/wantshelp`, {
       // const response = await fetch(`https://localhost:7212/api/students/${props.id}/wantshelp`, {
         //denne må oppdateres med riktig ID når studentview rendres for hver student!
       method: "GET",

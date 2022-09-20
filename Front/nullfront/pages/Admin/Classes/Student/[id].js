@@ -21,7 +21,7 @@ const MoodView = () => {
             console.log(error)
             throw error
         })
-    }, [id, students]);
+    }, [id]);
 
     return (
         
@@ -33,7 +33,6 @@ const MoodView = () => {
             <ShowMoods moods={students.moods}/>
             
         </div>
-
     )
 }
 
