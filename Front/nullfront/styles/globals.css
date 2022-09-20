@@ -41,3 +41,8 @@ h2 {
 a {
   font-family: "Nunito";
 }
+
+#mainview {
+  justify-content: center;
+  
+}

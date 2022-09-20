@@ -4,7 +4,7 @@ import Header from '../Components/Show/Header'
 
 import ShowInfoAboutAdminProfile from '../Components/Show/ShowInfoAboutAdminProfile'
 import DeleteEditStudentList from '../Components/Admin/DeleteEditStudentList'
-import CreateStudentAndSendSMS from '../Components/Create/CreateStudentAndSendSMS'
+import CreateStudentAndSendSMS from '../Components/arkiv/CreateStudentAndSendSMS'
 
 import ShowInfoAbShowBellWhenStudentAsksForHelpoutAdminProfile from '../Components/Show/ShowBellWhenStudentAsksForHelp'
 

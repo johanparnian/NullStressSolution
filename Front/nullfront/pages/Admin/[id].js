@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Header from '../../Components/Show/Header'
 import ShowInfoAboutAdminProfile from '../../Components/Show/ShowInfoAboutAdminProfile'
 import DeleteEditStudentList from '../../Components/Admin/DeleteEditStudentList'
-import CreateStudentAndSendSMS from '../../Components/Create/CreateStudentAndSendSMS'
+import CreateStudentAndSendSMS from '../../Components/arkiv/CreateStudentAndSendSMS'
 
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
 import ShowStudents from '../../Components/Show/ShowStudents'
