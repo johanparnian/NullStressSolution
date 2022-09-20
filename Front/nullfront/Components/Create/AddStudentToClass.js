@@ -3,9 +3,11 @@ import { useState } from "react";
 export default function AddStudentToClass(props){
 
     const [name, setName] = useState("")
-    const [phoneNumber, setPhoneNumber] = useState("+4790173862")
+    const [phoneNumber, setPhoneNumber] = useState("")
     const [link, setLink] = useState("_LINKPACEHOLDER_")
-    let [To, setTo] = useState("+4790173862")
+    
+    // let [To, setTo] = useState("+4790173862")
+    let To = phoneNumber
     
     const From = "+18145643389"
 
