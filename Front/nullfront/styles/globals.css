@@ -52,7 +52,7 @@ a {
   font-size: 35px;
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  
   user-select: none;
 }
 
@@ -61,9 +61,31 @@ a {
   display: flex;
   justify-content: center;
   user-select: none;
+  color:rgb(255, 255, 255);
+  padding-top:80px;
+  padding-bottom: 20px;
 }
 
 .footertext {
   color: #40819d;
   user-select: none;
 }
+
+.linker {
+  display: flex;
+  font-size: 30px;
+  margin: auto;
+  justify-content: center;
+}
+
+a:hover {
+  color:cadetblue !important;
+}
+a:visited {
+  color:lightblue
+}
+
+a:link {
+
+}
+

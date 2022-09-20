@@ -19,19 +19,11 @@ export default function CreateAdmin(props) {
         }
 
     return (
-            <form>
-                <div>
-                    <label>
-                        <div className="overskrift2">Legg til ny</div>
-                            <p>Navn</p> 
-                            <input type="text" value={Name} onChange={event => setName(event.target.value)}></input>
-                    </label>
-                    <br></br>
-                    <label>
-                            <p>Skole</p>
-                            <input type="text" value={School} onChange={event => setSchool(event.target.value)}></input>
-                    </label>
-                            <button type="submit" onClick={HandleCreateAdmin}>Legg til ny lærer</button>
-                </div>
-            </form>
+        <>
+            <div className="overskrift2">Legg til ny lærer</div>
+            <input type="text" placeholder="Navn" value={Name} onChange={event => setName(event.target.value)}></input>
+            <input type="text" placeholder="Skole" value={School} onChange={event => setSchool(event.target.value)}></input>
+            <br></br>
+            <button type="submit" onClick={HandleCreateAdmin}>Legg til</button>
+        </>
     )}

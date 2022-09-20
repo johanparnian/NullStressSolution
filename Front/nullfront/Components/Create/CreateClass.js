@@ -23,10 +23,10 @@ export default function CreateClass(props) {
     return (
         <div>
             <form>
-                    Ny skoleklasse
+                    <div className="overskrift2">Ny skoleklasse</div>
                     &ensp;
                     <input placeholder="Navn..." value={schoolClassName} onChange={event => setSchoolClassName(event.target.value)} type="Text"></input>
-                    &ensp;
+                    
                 <button type="submit" onClick={HandleCreateStudent}>Lagre</button>
             </form>
         </div>

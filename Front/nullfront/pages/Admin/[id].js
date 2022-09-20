@@ -49,11 +49,10 @@ const AdminView = () => {
                         <div class="col-1" id="white"></div>
                         <div class="col">
                             <div className='overskrift2'>
-                            <div>{admin.name}</div>
-                            <div>{admin.school}</div>
+                                <p>{admin.name} - {admin.school}</p>
                         </div>
                         </div>
-                        <div class="col"><CreateClass id={id}/></div>
+
                         
 
                         <div class="col-1" id="white"></div>
@@ -62,6 +61,7 @@ const AdminView = () => {
                     <div class="row">
                         <div class="col-1" id="white"></div>
                         <div class="col"><ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses></div>
+                        <div class="col"><CreateClass id={id}/></div>
                         
                         {/* <div class="col"></div> */}
                         <div class="col-1" id="white"></div>

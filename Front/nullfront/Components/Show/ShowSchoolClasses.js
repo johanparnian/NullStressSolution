@@ -9,15 +9,19 @@ export default function ShowSchoolClasses(props) {
         return <></>
     }
     return (
+<>
         <div>
             <div className="overskrift2">Dine klasser</div> 
             {props.classes.map((clazz) => (
                 <>
                 <div key={clazz.id}>
+                    <div className="linker">
                     <Link className="nav-link" a href={`Classes/${clazz.id}`} key={clazz.id}>{clazz.schoolClassName}</Link>
+                    </div>
                 </div>
                 </>
             ))}
         </div>
+        </>
     )
 }
