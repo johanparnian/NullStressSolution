@@ -53,6 +53,8 @@ export default function AddStudentToClass(props){
 
     return(
         <div>
+                      <div className="overskrift2">Legg til ny elev</div>
+                      <br></br>
             <form>
                 <label>
                     

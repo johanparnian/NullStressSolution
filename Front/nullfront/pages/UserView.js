@@ -40,30 +40,30 @@ const AdminView = () => {
             <div className="container">
         
 
-                    <div class="row">
-                        <div class="col-1" id="white"></div>
-                        <div class="col">
+                    <div className="row">
+                        <div className="col-1" id="white"></div>
+                        <div className="col">
                             <div>{admin.name}</div>
                             <div>{admin.school}</div>
                         </div>
-                        <div class="col"><CreateClass id={id}/></div>
+                        <div clasNames="col"><CreateClass id={id}/></div>
                         
 
-                        <div class="col-1" id="white"></div>
+                        <div className="col-1" id="white"></div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-1" id="white"></div>
-                        <div class="col"><ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses></div>
+                    <div className="row">
+                        <div className="col-1" id="white"></div>
+                        <div className="col"><ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses></div>
                         
-                        <div class="col"></div>
-                        <div class="col-1" id="white"></div>
+                        <div className="col"></div>
+                        <div className="col-1" id="white"></div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-1" id="white"><h2></h2></div>
-                        <div class="col"><h2>Footer</h2></div>
-                        <div class="col-1" id="white"><h2></h2></div>
+                    <div className="row">
+                        <div className="col-1" id="white"><h2></h2></div>
+                        <div className="col"><h2>Footer</h2></div>
+                        <div className="col-1" id="white"><h2></h2></div>
                     </div>
                 </div>
             </main>

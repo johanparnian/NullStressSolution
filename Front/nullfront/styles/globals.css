@@ -15,10 +15,10 @@
 }
 
 body {
-  padding-top: 180px;
+  padding-top: 50px;
+  padding-bottom: 100px !important;
   background-color: #1A485C !important;
   color: white !important;
-  /* Denne senker all content så det begynner under  */
   color: white !important
 }
 
@@ -82,10 +82,9 @@ a:hover {
   color:cadetblue !important;
 }
 a:visited {
-  color:lightblue
+  color:lightblue;
 }
 
 a:link {
-
+  color:lightblue;
 }
-
