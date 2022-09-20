@@ -33,7 +33,6 @@ const MoodView = () => {
             <ShowMoods moods={students.moods}/>
             
         </div>
-
     )
 }
 

@@ -2,8 +2,6 @@ import Link from "next/link";
 
 const headerImageSize = 60;
 
-const headerColorHexCode = 143847
-
 export default function Header() {
         return (
                 <div>
