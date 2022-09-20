@@ -5,6 +5,7 @@
         public int Id { get; set; }
         public string Name { get; set; }
 
+
         //Hvordan si at denne ikke kan være null, uten warning?
         public string PhoneNumber { get; set; } = "";
         public string Link { get; set; } = "";
