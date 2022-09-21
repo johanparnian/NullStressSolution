@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-
 import ShowAdmins from "../Components/Show/ShowAdmins";
 import CreateAdmin from "../Components/Create/createadmin";
 import Header from "../Components/Show/Header";

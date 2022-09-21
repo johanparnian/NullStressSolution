@@ -3,6 +3,7 @@ import React from 'react'
 import Link from "next/link";
 
 export default function ShowSchoolClasses(props) {
+    
     console.log(props.classes)
 
     if (!props.classes) {
