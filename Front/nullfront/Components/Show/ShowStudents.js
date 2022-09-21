@@ -90,7 +90,7 @@ export default function ShowStudents(props) {
         
         <div key={ztudents.id}>
         <div className="svartramme">
-          <a href={`Student/${ztudents.id}`}><p className="overskrift2" key={ztudents.id}>{ztudents.name}</p></a>
+          <a href={`Student/${ztudents.id}`}><p className="overskrift2" key={ztudents.id}>{ztudents.name}{ztudents.id}</p></a>
           <p>før</p>
             <img src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
           <p>etter</p>

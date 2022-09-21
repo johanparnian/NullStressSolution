@@ -26,12 +26,12 @@ export default function SendStudentAlert(hjelp) {
           <span className="button-82-shadow"></span>
           <span className="button-82-edge"></span>
           <span className="button-82-front text">
-            Jeg trenger noen å snakke med!
+            Jeg vil gjerne ta en prat...
           </span>
         </button>
       </div>
       <div className="snakkebutton">
-        Knappen gir direkte beskjed til læreren din
+        
       </div>
     </>
   )
