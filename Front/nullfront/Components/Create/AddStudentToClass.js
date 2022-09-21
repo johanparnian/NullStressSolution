@@ -38,7 +38,7 @@ export default function AddStudentToClass(props) {
 
         To.split(" ").join("")
 
-        const Message = `Hei ${name}! Du har fått en bruker til Null Stress. Link: ://localhost:3000/StudentPage/${props.id}`
+        const Message = `Hei ${name}! Velkommen som bruker av Null Stress! Din link er: localhost:3000/StudentPage/`
         const sms = { To, From, Message }
 
         const endpoint = "https://localhost:7212/sms"

@@ -116,7 +116,7 @@ namespace NullStress.Controllers
                 PhoneNumber = phoneNumber,
                 Link = link
             }); ;
-            //
+            
             try
             {
                 await _context.SaveChangesAsync();
@@ -133,7 +133,7 @@ namespace NullStress.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok();
         }
 
         [HttpPost]
