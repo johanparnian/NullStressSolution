@@ -5,7 +5,7 @@ import React from 'react'
 export default function ShowStudents(props) {
   const [studentName, setStudentName] = useState('');
   const [needshelp, setNeedshelp] = useState(false);
-  // const [bell, setBell] = useState("/bell_black.png");
+  const [bell, setBell] = useState("/bell_black.png");
 
 
   function AreYouSure(id) {
@@ -35,6 +35,7 @@ export default function ShowStudents(props) {
         },
         body: JSON.stringify({
           name: studentName,
+          // needshelp: false
         }),
       }
     )
@@ -44,6 +45,7 @@ export default function ShowStudents(props) {
   }
 
   async function updateNeedhelp(needshelp, id) {
+
     const response = await fetch(
       `https://localhost:7212/api/students/false/${id}`,
       {
@@ -53,6 +55,7 @@ export default function ShowStudents(props) {
         },
         body: JSON.stringify({
           needshelp: needshelp
+          // needshelp: false
         }),
       }
     )
@@ -82,17 +85,15 @@ export default function ShowStudents(props) {
     );
   }
 
+
+
   return (
-    <div>
-      <div className="overskrift2">Rediger elever</div>
+    <div className="svartramme">
       {props.students.map((ztudents) => (
-        <>
-        
         <div key={ztudents.id}>
-        <div className="svartramme">
-          <a href={`Student/${ztudents.id}`}><p className="overskrift2" key={ztudents.id}>{ztudents.name}{ztudents.id}</p></a>
+          <a href={`Student/${ztudents.id}`}><p className="overskrift4" key={ztudents.id}>{ztudents.name}</p></a>
           <p>før</p>
-            <img src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
+            <img src={bell} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
           <p>etter</p>
           <div>
             <input
@@ -102,10 +103,9 @@ export default function ShowStudents(props) {
             <button type="submit" onClick={() => updateStudent(studentName, ztudents.id)}>Lagre</button>
             &ensp;
             <button src="user.png" id="deletebutton" onClick={() => AreYouSure(ztudents.id)}>Slett</button>
-            </div>
           </div>
+          <b>Elevens ID:</b> {ztudents.id}
         </div>
-        </>
       ))}
     </div>
   )
