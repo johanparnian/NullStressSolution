@@ -23,7 +23,7 @@ export default function AdminOverview() {
 
             <div className="container">
             <div className="col"><ShowAdmins></ShowAdmins></div>
-            <div className="col"><CreateAdmin></CreateAdmin></div>
+            <div className="col-5" id="centerme"><CreateAdmin></CreateAdmin></div>
             </div>
             <Footer></Footer>
         </>

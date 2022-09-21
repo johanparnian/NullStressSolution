@@ -99,3 +99,8 @@ a:link {
   padding-right: 10px;
   padding-bottom: 20px;
 }
+
+#centerme {
+  justify-content: center;
+  margin: auto;
+}
