@@ -5,7 +5,6 @@ import React from 'react'
 export default function ShowStudents(props) {
   const [studentName, setStudentName] = useState('');
   const [needshelp, setNeedshelp] = useState(false);
-  const [bell, setBell] = useState("/bell_black.png");
 
   const { mutate } = props
 
@@ -37,7 +36,6 @@ export default function ShowStudents(props) {
         },
         body: JSON.stringify({
           name: studentName,
-          // needshelp: false
         }),
       }
     )
@@ -58,7 +56,6 @@ export default function ShowStudents(props) {
         },
         body: JSON.stringify({
           needshelp: needshelp
-          // needshelp: false
         }),
       }
     )
