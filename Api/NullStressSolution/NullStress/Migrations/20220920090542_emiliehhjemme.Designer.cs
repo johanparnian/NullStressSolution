@@ -12,14 +12,14 @@ using NullStress.Data;
 namespace NullStress.Migrations
 {
     [DbContext(typeof(NullStressContext))]
-    [Migration("20220920073338_postsyncmigration")]
-    partial class postsyncmigration
+    [Migration("20220920090542_emiliehhjemme")]
+    partial class emiliehhjemme
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.9")
+                .HasAnnotation("ProductVersion", "6.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -112,20 +112,15 @@ namespace NullStress.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Link")
-                        .IsRequired()
+                    b.Property<string>("ClassName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Needshelp")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("TemporaryMood")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

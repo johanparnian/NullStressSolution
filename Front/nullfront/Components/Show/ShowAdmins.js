@@ -6,7 +6,7 @@ export default function ShowAdmins(props) {
 
     return (
         <>
-            <div className="overskrift2">Velg lærer</div>
+            <div className="overskrift3">Velg lærer</div>
             <div key={admins.id}>
                 <br></br>
                 {admins.map((admin) => (

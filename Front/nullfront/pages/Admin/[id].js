@@ -48,14 +48,14 @@ const AdminView = () => {
                     <div className="row">
                         <div className="col-1" id="white"></div>
                         <div className="col">
-                            <div className='overskrift2'>
+                            <div className='overskrift3'>
                                 <p>{admin.name} - {admin.school}</p>
                         </div>
                         </div>
 
                         
 
-                        <div clasNames="col-1" id="white"></div>
+                        <div className="col-1" id="white"></div>
                     </div>
 
                     <div className="row">

@@ -49,7 +49,8 @@ namespace NullStress.Controllers
                     Students = x.Students.Select(y => new
                     {
                         y.Id,
-                        y.Name
+                        y.Name,
+                        y.ImageUrl
                     })
                 })
                 .SingleAsync(a => a.Id == id);

@@ -30,21 +30,23 @@ const ClassView = (props) => {
     return (
         <>
             <Header />
-            <div className='overskrift1'>
-                Studenter i klassen
-            </div>
+            <div className='overskrift1'>Studenter i klassen</div>
+            
             <p>SchoolClass ID: {id}</p>
 
-            <div className="overskrift2">Administrasjon av klassen</div>
+            <div className="overskrift3">Administrasjon av klassen</div>
 
             <div className='container'>
                 <div className="row">
+                    <div className='row1'></div>
                     <div className="col">
-                        <ShowStudents students={schoolClasses.students} /></div>
+                        <ShowStudents students={schoolClasses.students} />
+                    </div>
                         <div className="col-3"></div>
                     <div className="col">
                         <div><AddStudentToClass id={id} /></div>
                     </div>
+                    
                 </div>
             </div>
             <Footer />
