@@ -41,18 +41,22 @@ const ClassView = (props) => {
             
             <p>SchoolClass ID: {id}</p>
 
-            <div className="overskrift3">Lærerpanel</div>
+            <div className="overskrift3"><p>Lærerpanel</p></div>
 
             <div className='container'>
                 <div className="row">
-                    <div className='row1'></div>
+                    <div className='row'></div>
+                    <div className="col-1"></div>
                     <div className="col">
                         <ShowStudents mutate={actuallySetIsDirty} students={schoolClasses.students} />
                     </div>
-                        <div className="col-3"></div>
+                        <div className="col-1"></div>
+                        
                     <div className="col">
+                        
                         <div><AddStudentToClass mutate={actuallySetIsDirty} id={id} /></div>
                     </div>
+                    <div className="col-1"></div>
                     
                 </div>
             </div>
