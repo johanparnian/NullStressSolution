@@ -75,10 +75,12 @@ namespace NullStress.Controllers
         {
             var Admin = await _context.FindAsync<Admin>(id);
 
-            Admin.SchoolClasses.Add(new SchoolClass
+            var schoolClass = new SchoolClass
             {
                 SchoolClassName = schoolClassName
-            });
+            };
+
+            Admin.SchoolClasses.Add(schoolClass);
 
             try
             {
@@ -96,7 +98,11 @@ namespace NullStress.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(new
+            {
+                Id = schoolClass.Id,
+                schoolClassName = schoolClass.SchoolClassName
+            });
         }
 
 
