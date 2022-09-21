@@ -6,7 +6,7 @@
         public int? Muud { get; set; } 
         public DateTime Time { get; set; } = DateTime.Now;
 
-        public int StudentId { get; set; }
+        public Guid StudentId { get; set; }
         public Student Student { get; set; }
     }
 }

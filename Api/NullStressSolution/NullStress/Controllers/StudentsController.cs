@@ -62,7 +62,7 @@ namespace NullStress.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<IEnumerable<Student>>> GetStudent(int id)
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudent(Guid id)
         {
             if (_context.Student == null)
             {
@@ -75,6 +75,7 @@ namespace NullStress.Controllers
                 {
                     x.Id,
                     x.Name,
+                    x.ImageUrl,
                     Moods = x.Moods.Select(y => new
                     {
                         y.Id,
@@ -112,7 +113,7 @@ namespace NullStress.Controllers
 
 
         [HttpPut("{id}/mood/{moodId}")]
-        public async Task<IActionResult> PutStudent(int id, int moodId)
+        public async Task<IActionResult> PutStudent(Guid id, int moodId)
         {
             var student = await _context.FindAsync<Student>(id);
                          
@@ -141,7 +142,7 @@ namespace NullStress.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PuStudent(int id, Student student)
+        public async Task<IActionResult> PuStudent(Guid id, Student student)
         {
             Student updatedStudent = await _context.FindAsync<Student>(id);
 
@@ -165,19 +166,13 @@ namespace NullStress.Controllers
 
             return NoContent();
         }
-
-        //FLAGS STUDENT FOR WANTING HELP.
-        [HttpGet("{id}/wantshelp")]
-        public async Task<ActionResult<Student>> GetStudentWantForHelp(int id)
+        
+        [HttpPut("false/{id}")]
+        public async Task<IActionResult> RevertAlert(Guid id)
         {
-            if (_context.Student == null)
-            {
-                return NotFound();
-            }
-
             Student updatedStudent = await _context.FindAsync<Student>(id);
 
-            updatedStudent.Needshelp = true;
+            updatedStudent.ImageUrl = "/bell_black.png";
 
             try
             {
@@ -198,6 +193,69 @@ namespace NullStress.Controllers
             return NoContent();
         }
 
+        //FLAGS STUDENT FOR WANTING HELP.
+        [HttpGet("{id}/wantshelp")]
+        public async Task<ActionResult<Student>> GetStudentWantForHelp(Guid id)
+        {
+            if (_context.Student == null)
+            {
+                return NotFound();
+            }
+
+            Student updatedStudent = await _context.FindAsync<Student>(id);
+
+            updatedStudent.ImageUrl = "/bell_red.png";
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!StudentExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+        
+        //[HttpGet("imagerevert/{id}")]
+        //public async Task<ActionResult<Student>> ImageRevert(Guid id)
+        //{
+        //    if (_context.Student == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    Student updatedStudent = await _context.FindAsync<Student>(id);
+
+        //    updatedStudent.ImageUrl = "/bell_black.png";
+
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!StudentExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
+
+        //    return NoContent();
+        //}
+
 
         [HttpPost]
         public async Task<ActionResult<Student>> PostStudent(Student student)
@@ -215,7 +273,7 @@ namespace NullStress.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStudent(int id)
+        public async Task<IActionResult> DeleteStudent(Guid id)
         {
             if (_context.Student == null)
             {
@@ -233,7 +291,7 @@ namespace NullStress.Controllers
             return NoContent();
         }
 
-        private bool StudentExists(int id)
+        private bool StudentExists(Guid id)
         {
             return (_context.Student?.Any(e => e.Id == id)).GetValueOrDefault();
         }

@@ -9,6 +9,9 @@ import Footer from '../../../Components/Show/Footer'
 const ClassView = (props) => {
     const router = useRouter()
     const { id } = router.query
+    const { className } = router.query
+
+
 
     const [schoolClasses, setSchoolClasses] = useState({})
 
@@ -22,24 +25,26 @@ const ClassView = (props) => {
                 console.log(error)
                 throw error
             })
-    }, [id, schoolClasses]);
+    }, [id]);
 
     return (
         <>
             <Header />
-            <div className='overskrift1'>
-                Studenter i klassen
-            </div>
+            <div className='overskrift1'>Studenter i klassen</div>
+            
             <p>SchoolClass ID: {id}</p>
-            <div className="container">
-                <div className="col">
-                
-                
-                <ShowStudents students={schoolClasses.students} />
-                </div>
-                <div className='overskrift2'>Legg til studenter</div>
-                <div>
-                <AddStudentToClass id={id} />
+
+            <div className="overskrift2">Administrasjon av klassen</div>
+
+            <div className='container'>
+                <div className="row">
+                    <div className="col">
+                        <ShowStudents students={schoolClasses.students} />
+                    </div>
+                        <div className="col-3"></div>
+                    <div className="col">
+                        <div><AddStudentToClass id={id} /></div>
+                    </div>
                 </div>
             </div>
             <Footer />

@@ -35,9 +35,9 @@ export default function ShowAdmins() {
                 <br></br>
                 {admins.map((admin) => (
                     <>
-                    <br></br>
-                    <Link className="nav-item" href={`Admin/${admin.id}`}><a key={admin.id} className="nav-link mx-">{admin.name}</a></Link>
-                    <br></br>
+                    <div className="linker">
+                        <Link href={`Admin/${admin.id}`}><a key={admin.id}>{admin.name}</a></Link>
+                    </div>
                     </>
                     ))}
                     

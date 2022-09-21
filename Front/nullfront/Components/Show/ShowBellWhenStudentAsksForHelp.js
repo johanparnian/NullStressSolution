@@ -11,6 +11,7 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
 
         if (response.ok) {
             console.log("student GET worked!")
+            RenderBellIcon()
             return await response.json();
         }
         else {
@@ -18,7 +19,13 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
         }
     }
 
+
+
+
+
+
     const [student, setStudent] = useState("")
+
     useEffect(() => {
         getStudentInfo()
             .then(student => setStudent(student))
@@ -65,7 +72,6 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
             )
 
         }
-        
     }
 
 

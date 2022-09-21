@@ -71,7 +71,7 @@ export default function CreateMood(props) {
                     src="/4.png"
                     height="100"
                     width="100"
-                    class="button-82-pushable"
+                    className="button-82-pushable"
                     onClick={(e) => HandleSendMood(e, 4)}
                 ></img>
             </div>

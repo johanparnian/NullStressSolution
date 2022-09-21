@@ -12,8 +12,8 @@ using NullStress.Data;
 namespace NullStress.Migrations
 {
     [DbContext(typeof(NullStressContext))]
-    [Migration("20220920073338_postsyncmigration")]
-    partial class postsyncmigration
+    [Migration("20220920191141_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -74,8 +74,8 @@ namespace NullStress.Migrations
                     b.Property<int?>("Muud")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("StudentId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("datetime2");
@@ -106,11 +106,13 @@ namespace NullStress.Migrations
 
             modelBuilder.Entity("NullStress.Models.Student", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Link")
                         .IsRequired()
@@ -137,8 +139,8 @@ namespace NullStress.Migrations
                     b.Property<int>("SchoolClassesId")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentsId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("StudentsId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("SchoolClassesId", "StudentsId");
 

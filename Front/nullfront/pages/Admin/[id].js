@@ -45,26 +45,25 @@ const AdminView = () => {
                         Oversikt over klasser
                     </div>
             <div className="container">
-                    <div class="row">
-                        <div class="col-1" id="white"></div>
-                        <div class="col">
+                    <div className="row">
+                        <div className="col-1" id="white"></div>
+                        <div className="col">
                             <div className='overskrift2'>
-                            <div>{admin.name}</div>
-                            <div>{admin.school}</div>
+                                <p>{admin.name} - {admin.school}</p>
                         </div>
                         </div>
-                        <div class="col"><CreateClass id={id}/></div>
+
                         
 
-                        <div class="col-1" id="white"></div>
+                        <div className="col-1" id="white"></div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-1" id="white"></div>
-                        <div class="col"><ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses></div>
+                    <div className="row">
+                        <div className="col-1" id="white"></div>
+                        <div className="col"><ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses></div>
+                        <div className="col"><CreateClass id={id}/></div>
                         
-                        {/* <div class="col"></div> */}
-                        <div class="col-1" id="white"></div>
+                        <div className="col-1" id="white"></div>
                     </div>
                 </div>
             </main>
