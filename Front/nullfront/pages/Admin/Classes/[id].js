@@ -41,7 +41,7 @@ const ClassView = (props) => {
             
             <p>SchoolClass ID: {id}</p>
 
-            <div className="overskrift3">Lærerpanel</div>
+            <div className="overskrift3"><p>Lærerpanel</p></div>
 
             <div className='container'>
                 <div className="row">

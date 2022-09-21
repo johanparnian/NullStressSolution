@@ -76,7 +76,7 @@ export default function ShowStudents(props) {
 
   return (
     <div>
-      <div className="overskrift2">Elever</div>
+      <div className="overskrift2"><p>Elever</p></div>
       <br></br>
       {props.students.map((ztudents) => (
         <div className="svartramme" key={ztudents.id}>

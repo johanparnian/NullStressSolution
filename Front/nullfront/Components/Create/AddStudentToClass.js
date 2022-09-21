@@ -60,7 +60,7 @@ export default function AddStudentToClass(props) {
 
     return (
         <div>
-            <div className="overskrift2">Legg til elev</div>
+            <div className="overskrift2"><p>Legg til elev</p></div>
             <br></br>
             <div className="svartramme">
             <form>
