@@ -34,7 +34,7 @@ const ClassView = (props) => {
             
             <p>SchoolClass ID: {id}</p>
 
-            <div className="overskrift3">Administrasjon av klassen</div>
+            <div className="overskrift3">Lærerpanel</div>
 
             <div className='container'>
                 <div className="row">
