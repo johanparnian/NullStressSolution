@@ -80,9 +80,7 @@ export default function ShowStudents(props) {
       {props.students.map((ztudents) => (
         <div key={ztudents.id}>
           <a href={`Student/${ztudents.id}`}><p className="overskrift4" key={ztudents.id}>{ztudents.name}</p></a>
-          <p>før</p>
-            <img src={bell} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
-          <p>etter</p>
+            <img height="100" src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
           <div>
             <input
               placeholder="Rediger navn..."
