@@ -11,7 +11,10 @@ export default function ShowSchoolClasses(props) {
     }
     return (
         <>
+                            <div className="svartramme">
+
                 <div className="overskrift2">Dine klasser</div>
+                
                 {props.classes.map((clazz) => (
                     <>
                         <div key={clazz.id}>
@@ -21,6 +24,7 @@ export default function ShowSchoolClasses(props) {
                         </div>
                     </>
                 ))}
+                </div>
         </>
     )
 }
