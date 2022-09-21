@@ -55,7 +55,7 @@ const AdminView = () => {
 
                         
 
-                        <div clasNames="col-1" id="white"></div>
+                        <div className="col-1" id="white"></div>
                     </div>
 
                     <div className="row">
