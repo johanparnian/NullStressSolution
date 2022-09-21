@@ -59,7 +59,7 @@ export default function AdminOverview() {
             </div>
 
             <div className="container">
-            <div className="col"><ShowAdmins admins={admins} /></div>
+            <div className="col-4" id="centerme"><ShowAdmins admins={admins} /></div>
             <div className="col-4" id="centerme"><CreateAdmin onCreateAdmin={HandleCreateAdmin} /></div>
             </div>
             <Footer></Footer>

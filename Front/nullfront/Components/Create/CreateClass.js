@@ -12,6 +12,8 @@ export default function CreateClass(props) {
 
     return (
         <div>
+                                <div className="svartramme">
+
             <form>
                     <div className="overskrift2">Ny skoleklasse</div>
                     &ensp;
@@ -19,6 +21,7 @@ export default function CreateClass(props) {
                     
                 <button type="submit" onClick={handleCreateClass}>Lagre</button>
             </form>
+            </div>
         </div>
     )
 
