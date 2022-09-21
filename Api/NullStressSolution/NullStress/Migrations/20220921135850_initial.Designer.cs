@@ -12,7 +12,7 @@ using NullStress.Data;
 namespace NullStress.Migrations
 {
     [DbContext(typeof(NullStressContext))]
-    [Migration("20220921064756_initial")]
+    [Migration("20220921135850_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,8 +77,9 @@ namespace NullStress.Migrations
                     b.Property<Guid>("StudentId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("Time")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
