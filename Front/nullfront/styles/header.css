@@ -4,11 +4,12 @@
 }
 
 .nav-link {
-    border-radius: 5px;
+    border-radius: 100px;
+    /* font-size: 20px !important; */
 }
 
 .nav-link:hover {
-    background-color: #1A485C;
+    background-color: #ffffff;
 }
 
 .title {
