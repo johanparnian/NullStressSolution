@@ -5,7 +5,7 @@ import React from 'react'
 export default function ShowStudents(props) {
   const [studentName, setStudentName] = useState('');
   const [needshelp, setNeedshelp] = useState(false);
-  // const [bell, setBell] = useState("/bell_black.png");
+  const [bell, setBell] = useState("/bell_black.png");
 
   const { mutate } = props
 
@@ -37,6 +37,7 @@ export default function ShowStudents(props) {
         },
         body: JSON.stringify({
           name: studentName,
+          // needshelp: false
         }),
       }
     )
@@ -47,6 +48,7 @@ export default function ShowStudents(props) {
   }
 
   async function updateNeedhelp(needshelp, id) {
+
     const response = await fetch(
       `https://localhost:7212/api/students/false/${id}`,
       {
@@ -56,6 +58,7 @@ export default function ShowStudents(props) {
         },
         body: JSON.stringify({
           needshelp: needshelp
+          // needshelp: false
         }),
       }
     )
@@ -77,24 +80,22 @@ export default function ShowStudents(props) {
   return (
     <div>
       <div className="overskrift2">Rediger elever</div>
-      {props.students.map((student) => (
-        <div key={student.id}>
-          <div className="svartramme">
-            <a href={`Student/${student.id}`}><p className="overskrift2" key={student.id}>{student.name}</p></a>
-            <p>før</p>
-              <img height="100" src={student.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, student.id)}  />
-            <p>etter</p>
-            <div>
-              <input
-                placeholder="Rediger navn..."
-                value={studentName}
-                onChange={(event) => setStudentName(event.target.value)}
-              />
-              <button type="submit" onClick={() => updateStudent(studentName, student.id)}>Lagre</button>
-              &ensp;
-              <button src="user.png" id="deletebutton" onClick={() => AreYouSure(student.id)}>Slett</button>
-            </div>
+      {props.students.map((ztudents) => (
+        <div key={ztudents.id}>
+          <a href={`Student/${ztudents.id}`}><p className="overskrift4" key={ztudents.id}>{ztudents.name}</p></a>
+          <p>før</p>
+            <img src={bell} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
+          <p>etter</p>
+          <div>
+            <input
+              placeholder="Rediger navn..."
+              onChange={(event) => setStudentName(event.target.value)}
+            />
+            <button type="submit" onClick={() => updateStudent(studentName, ztudents.id)}>Lagre</button>
+            &ensp;
+            <button src="user.png" id="deletebutton" onClick={() => AreYouSure(ztudents.id)}>Slett</button>
           </div>
+          <b>Elevens ID:</b> {ztudents.id}
         </div>
       ))}
     </div>

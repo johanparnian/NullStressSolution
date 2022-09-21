@@ -20,7 +20,7 @@ export default function CreateMood(props) {
 
     return (
         <div className="emoji-knapper">
-            <h2>Hvordan har du det i dag?</h2>
+            <div className="overskrift3">Hvordan har du det i dag?</div>
             <div className="snakkebutton">
             Trykk på det som stemmer best for deg!
 

@@ -27,6 +27,7 @@ const StudentFront = () => {
   return (
 <>
 <div>
+  <br></br>
         <SendMood id = {student.id} ></SendMood>
         <CreateStudentAlert id = {student.id}></CreateStudentAlert>
 </div>
