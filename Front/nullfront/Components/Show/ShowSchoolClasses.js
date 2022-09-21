@@ -10,7 +10,6 @@ export default function ShowSchoolClasses(props) {
     }
     return (
         <>
-            <div>
                 <div className="overskrift2">Dine klasser</div>
                 {props.classes.map((clazz) => (
                     <>
@@ -21,7 +20,6 @@ export default function ShowSchoolClasses(props) {
                         </div>
                     </>
                 ))}
-            </div>
         </>
     )
 }
