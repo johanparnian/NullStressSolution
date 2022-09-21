@@ -56,7 +56,7 @@ const ClassView = (props) => {
                         
                         <div><AddStudentToClass mutate={actuallySetIsDirty} id={id} /></div>
                     </div>
-                    <div className="col-1"></div>
+                    <div className="col-2"></div>
                     
                 </div>
             </div>
