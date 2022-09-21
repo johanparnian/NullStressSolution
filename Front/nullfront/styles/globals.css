@@ -139,6 +139,10 @@ a:link {
   cursor: pointer;
 }
 
+.overskrift5:hover {
+  color:#40819d !important;
+}
+
 .title {
   user-select: none;
 }
