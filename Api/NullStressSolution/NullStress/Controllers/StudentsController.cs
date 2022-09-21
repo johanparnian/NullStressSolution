@@ -119,7 +119,8 @@ namespace NullStress.Controllers
                          
             student.Moods.Add(new Mood
             {
-                Muud = moodId
+                Muud = moodId,
+                Time = DateTime.Now.ToString("g")
             });
 
             try
