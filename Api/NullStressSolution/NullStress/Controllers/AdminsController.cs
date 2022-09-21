@@ -41,6 +41,8 @@ namespace NullStress.Controllers
             
             var admin = await _context.Admin
                 .Include(a => a.SchoolClasses)
+                .ThenInclude(b => b.Students)
+                .ThenInclude(c => c.Moods)
                 .Select(x => new
                 {
                     x.Id,
@@ -49,7 +51,13 @@ namespace NullStress.Controllers
                     SchoolClasses = x.SchoolClasses.Select(y => new
                     {
                         y.Id,
-                        y.SchoolClassName
+                        y.SchoolClassName,
+                        Student = y.Students.Select(z => new
+                        {
+                            z.Id,
+                            z.Name,
+                            Moods = z.Moods
+                        })
                     })
                 })
                 .SingleAsync(a => a.Id == id);

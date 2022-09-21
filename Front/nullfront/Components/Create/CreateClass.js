@@ -3,21 +3,11 @@ import { useState } from "react";
 export default function CreateClass(props) {
     const [schoolClassName, setSchoolClassName] = useState("")
 
-    async function HandleCreateStudent(event) {
-        event.preventDefault()
+    const { createClass } = props
 
-        const response = await fetch(`https://localhost:7212/api/admins/${props.id}/SchoolClass/${schoolClassName}`, {
-            method: "PUT",
-            headers: { 'Content-Type': 'application/json' },
-        })
-
-        if (response.ok) {
-            console.log("ok")
-            return response
-        }
-        else {
-            console.log("response error")
-        }
+    const handleCreateClass = async e => {
+        await createClass(e, schoolClassName)
+        setSchoolClassName("")
     }
 
     return (
@@ -27,7 +17,7 @@ export default function CreateClass(props) {
                     &ensp;
                     <input placeholder="Navn..." value={schoolClassName} onChange={event => setSchoolClassName(event.target.value)} type="Text"></input>
                     
-                <button type="submit" onClick={HandleCreateStudent}>Lagre</button>
+                <button type="submit" onClick={handleCreateClass}>Lagre</button>
             </form>
         </div>
     )

@@ -23,32 +23,41 @@ namespace NullStress.Controllers
     public class SmsController : ControllerBase
     {
         private readonly ITwilioRestClient _client;
+        private readonly NullStressContext _context;
 
-        public SmsController(ITwilioRestClient client)
+        public SmsController(ITwilioRestClient client, NullStressContext context)
         {
             _client = client;
-            
+            _context = context;
         }
 
         [HttpPost]
         public IActionResult SendSms(SmsMessage model)
         {
+
+            var lastStudentAdded = _context.Student
+                .Select(x => new
+                {
+                    x.Id,
+                }).ToList().Last().ToString();
+
+            lastStudentAdded = lastStudentAdded.Trim('{');
+            lastStudentAdded = lastStudentAdded.Trim(' ');
+            lastStudentAdded = lastStudentAdded.Trim('}');
+            lastStudentAdded = lastStudentAdded.Trim('=');
+            lastStudentAdded = lastStudentAdded.Remove(0, 5);
+
+
+            var themessage = model.Message + "hei!";
+
             var message = MessageResource.Create(
                 to: new PhoneNumber(model.To),
                 from: new PhoneNumber(model.From),
-                body: model.Message,
+                body: model.Message + lastStudentAdded,
                 client: _client
                 );
 
             return Ok("Success");
-            //GET to "https://localhost:7212/sms"
-            //Sample Query:
-
-            //{
-            //            "to": "+4790173862",
-            //            "from": "+18145643389",
-            //            "message": "ping"
-            //          }
         }
 
     }

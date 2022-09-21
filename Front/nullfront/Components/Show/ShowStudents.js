@@ -82,13 +82,15 @@ export default function ShowStudents(props) {
     );
   }
 
-
-
   return (
     <div>
+      <div className="overskrift2">Rediger elever</div>
       {props.students.map((ztudents) => (
+        <>
+        
         <div key={ztudents.id}>
-          <a href={`Student/${ztudents.id}`}><li key={ztudents.id}>{ztudents.name}</li></a>
+        <div className="svartramme">
+          <a href={`Student/${ztudents.id}`}><p className="overskrift2" key={ztudents.id}>{ztudents.name}</p></a>
           <p>før</p>
             <img src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
           <p>etter</p>
@@ -97,13 +99,13 @@ export default function ShowStudents(props) {
               placeholder="Rediger navn..."
               onChange={(event) => setStudentName(event.target.value)}
             />
-            &ensp;
             <button type="submit" onClick={() => updateStudent(studentName, ztudents.id)}>Lagre</button>
             &ensp;
             <button src="user.png" id="deletebutton" onClick={() => AreYouSure(ztudents.id)}>Slett</button>
-            <hr></hr>
+            </div>
           </div>
         </div>
+        </>
       ))}
     </div>
   )

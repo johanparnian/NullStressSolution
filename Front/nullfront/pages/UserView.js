@@ -46,7 +46,7 @@ const AdminView = () => {
                             <div>{admin.name}</div>
                             <div>{admin.school}</div>
                         </div>
-                        <div clasNames="col"><CreateClass id={id}/></div>
+                        <div className="col"><CreateClass id={id}/></div>
                         
 
                         <div className="col-1" id="white"></div>

@@ -4,12 +4,7 @@ import CreateClass from '../../Components/Create/CreateClass'
 import Head from 'next/head'
 import Header from '../../Components/Show/Header'
 import Footer from '../../Components/Show/Footer'
-import ShowInfoAboutAdminProfile from '../../Components/Show/ShowInfoAboutAdminProfile'
-import DeleteEditStudentList from '../../Components/Admin/DeleteEditStudentList'
-import CreateStudentAndSendSMS from '../../Components/arkiv/CreateStudentAndSendSMS'
-
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
-import ShowStudents from '../../Components/Show/ShowStudents'
 
 
 const AdminView = () => {
@@ -17,6 +12,25 @@ const AdminView = () => {
     const { id } = router.query
 
     const [admin, setAdmin] = useState({})
+
+    async function HandleCreateClass(event, clazz) {
+        event.preventDefault()
+
+        const response = await fetch(`https://localhost:7212/api/admins/${id}/SchoolClass/${clazz}`, {
+            method: "PUT",
+            headers: { 'Content-Type': 'application/json' },
+        })
+
+        if (response.ok) {
+            const addedClass = await response.json()
+            setAdmin({
+                ...admin,
+                schoolClasses: [...admin.schoolClasses, addedClass]
+            })
+        }
+  
+    }
+
 
     useEffect(() => {
         const endpoint = `https://localhost:7212/api/admins/${id}`
@@ -48,20 +62,20 @@ const AdminView = () => {
                     <div className="row">
                         <div className="col-1" id="white"></div>
                         <div className="col">
-                            <div className='overskrift2'>
+                            <div className='overskrift3'>
                                 <p>{admin.name} - {admin.school}</p>
                         </div>
                         </div>
 
                         
 
-                        <div clasNames="col-1" id="white"></div>
+                        <div className="col-1" id="white"></div>
                     </div>
 
                     <div className="row">
                         <div className="col-1" id="white"></div>
                         <div className="col"><ShowSchoolClasses classes={admin.schoolClasses}></ShowSchoolClasses></div>
-                        <div className="col"><CreateClass id={id}/></div>
+                        <div className="col"><CreateClass createClass={HandleCreateClass}/></div>
                         
                         <div className="col-1" id="white"></div>
                     </div>

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NullStress.Data;
 
@@ -11,9 +12,10 @@ using NullStress.Data;
 namespace NullStress.Migrations
 {
     [DbContext(typeof(NullStressContext))]
-    partial class NullStressContextModelSnapshot : ModelSnapshot
+    [Migration("20220920090542_emiliehhjemme")]
+    partial class emiliehhjemme
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,7 +36,7 @@ namespace NullStress.Migrations
 
                     b.HasIndex("SchoolClassesId");
 
-                    b.ToTable("AdminSchoolClass", (string)null);
+                    b.ToTable("AdminSchoolClass");
                 });
 
             modelBuilder.Entity("NullStress.Models.Admin", b =>
@@ -58,7 +60,7 @@ namespace NullStress.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Admin", (string)null);
+                    b.ToTable("Admin");
                 });
 
             modelBuilder.Entity("NullStress.Models.Mood", b =>
@@ -72,8 +74,8 @@ namespace NullStress.Migrations
                     b.Property<int?>("Muud")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("datetime2");
@@ -82,7 +84,7 @@ namespace NullStress.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Mood", (string)null);
+                    b.ToTable("Mood");
                 });
 
             modelBuilder.Entity("NullStress.Models.SchoolClass", b =>
@@ -99,18 +101,16 @@ namespace NullStress.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SchoolClass", (string)null);
+                    b.ToTable("SchoolClass");
                 });
 
             modelBuilder.Entity("NullStress.Models.Student", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClassName")
                         .HasColumnType("nvarchar(max)");
@@ -124,7 +124,7 @@ namespace NullStress.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Student", (string)null);
+                    b.ToTable("Student");
                 });
 
             modelBuilder.Entity("SchoolClassStudent", b =>
@@ -132,14 +132,14 @@ namespace NullStress.Migrations
                     b.Property<int>("SchoolClassesId")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentsId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentsId")
+                        .HasColumnType("int");
 
                     b.HasKey("SchoolClassesId", "StudentsId");
 
                     b.HasIndex("StudentsId");
 
-                    b.ToTable("SchoolClassStudent", (string)null);
+                    b.ToTable("SchoolClassStudent");
                 });
 
             modelBuilder.Entity("AdminSchoolClass", b =>

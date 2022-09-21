@@ -3,6 +3,7 @@ import React from 'react'
 import Link from "next/link";
 
 export default function ShowSchoolClasses(props) {
+    
     console.log(props.classes)
 
     if (!props.classes) {
@@ -10,7 +11,6 @@ export default function ShowSchoolClasses(props) {
     }
     return (
         <>
-            <div>
                 <div className="overskrift2">Dine klasser</div>
                 {props.classes.map((clazz) => (
                     <>
@@ -21,7 +21,6 @@ export default function ShowSchoolClasses(props) {
                         </div>
                     </>
                 ))}
-            </div>
         </>
     )
 }
