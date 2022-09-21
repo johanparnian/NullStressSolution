@@ -5,8 +5,10 @@ export default function ShowAdmins(props) {
     const { admins } = props
 
     return (
-        <>
+      
+        <><br></br><br></br>
             <div className="overskrift3">Velg lærer</div>
+            <div className='svartramme'>
             <div key={admins.id}>
                 <br></br>
                 {admins.map((admin) => (
@@ -16,8 +18,9 @@ export default function ShowAdmins(props) {
                     </div>
                     </>
                     ))}
-                    
+                    </div>
             </div>
         </>
+        
     )
 }

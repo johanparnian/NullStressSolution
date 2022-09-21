@@ -63,7 +63,9 @@ const AdminView = () => {
                         <div className="col-1" id="white"></div>
                         <div className="col">
                             <div className='overskrift3'>
-                                <p>{admin.name} - {admin.school}</p>
+                                <p><br></br>{admin.name} - {admin.school}</p>
+                                <div className='paddingtop'></div>
+                                
                         </div>
                         </div>
 
