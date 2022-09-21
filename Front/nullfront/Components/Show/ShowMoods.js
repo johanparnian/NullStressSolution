@@ -22,23 +22,24 @@ export default function ShowMoods(props) {
     // }
     return (
         <div>
+            {/* {imagelink = "/1.png"} */}
             List of moods
             {props.moods.map((moodz) => (
                 <div key={moodz.id}>
+                    
                     <li key={moodz.id}>Humør: 
-                    {(() => {if (moodz.muud == 1) {
-                        return <><img src="/1.png"/> </>
-                    } else if (moodz.muud == 2)  {
-                        return <><img src="/2.png"/> </>
-                    } else if (moodz.muud == 3) {
-                        return <><img src="/3.png"/> </>
-                    } else if (moodz.muud == 4) {
-                        return <><img src="/4.png"/> </>
-                    } else if (moodz.muud == 5) {
-                        return <><img src="/5.png"/> </>
-                    }} ) }
+                    {/* {(() => 
+                    {if (moodz.muud === '1') {
+                       return (<img src="/1.png"/>)
+                    } else {
+                        return (<img src="/2.png"/>)
+                    }
+                    } ) } */}
                     {/* <img src={imagelink}></img> */}
-                    {moodz.muud} ---- Dato: {moodz.time}</li>    
+                    {(() => {
+                            if (moodz.muud === 1) {return (<p>Yo nr 1!</p>)}
+                            else {return (<p>Ingenting å se her</p>)}
+                        })} ---- Dato: {moodz.time}</li>    
                     {/* <li key={moodz.id}>Humør: {moodz.muud} ---- Dato: {moodz.time}</li>                                  */}
                 </div>
             )
