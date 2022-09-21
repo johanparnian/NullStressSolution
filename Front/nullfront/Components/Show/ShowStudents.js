@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import Link from "next/link";
 
 
 export default function ShowStudents(props) {
@@ -84,7 +85,8 @@ export default function ShowStudents(props) {
 
           <div className="bjellenavn">
           <img height="40" src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  /> &nbsp;&nbsp;&nbsp;
-          <a href={`Student/${ztudents.id}`}><p className="overskrift4" key={ztudents.id}>{ztudents.name}</p></a>
+          <Link className="nav-link" href={`Student/${ztudents.id}`}><p className="overskrift5" key={ztudents.id}>{ztudents.name}</p></Link>
+
           </div>
 
           <div>
