@@ -12,8 +12,12 @@ const ClassView = (props) => {
     const { className } = router.query
 
 
-
+    const [isDirty, setIsDirty] = useState(false)
     const [schoolClasses, setSchoolClasses] = useState({})
+
+    const actuallySetIsDirty = () => {
+        setIsDirty(true)
+    }
 
     useEffect(() => {
         const endpoint = `https://localhost:7212/api/schoolclasses/${id}`
@@ -21,11 +25,14 @@ const ClassView = (props) => {
         fetch(endpoint)
             .then(response => response.json())
             .then(data => setSchoolClasses(data))
+            .then(() => {
+                setIsDirty(false)
+            })
             .catch(error => {
                 console.log(error)
                 throw error
             })
-    }, [id]);
+    }, [id, isDirty]);
 
     return (
         <>
@@ -40,11 +47,11 @@ const ClassView = (props) => {
                 <div className="row">
                     <div className='row1'></div>
                     <div className="col">
-                        <ShowStudents students={schoolClasses.students} />
+                        <ShowStudents mutate={actuallySetIsDirty} students={schoolClasses.students} />
                     </div>
                         <div className="col-3"></div>
                     <div className="col">
-                        <div><AddStudentToClass id={id} /></div>
+                        <div><AddStudentToClass mutate={actuallySetIsDirty} id={id} /></div>
                     </div>
                     
                 </div>

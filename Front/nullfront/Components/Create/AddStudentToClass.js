@@ -2,6 +2,8 @@ import { useState } from "react";
 
 export default function AddStudentToClass(props) {
 
+    const { mutate } = props
+
     const [name, setName] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
     const [link, setLink] = useState("_LINKPACEHOLDER_")
@@ -27,7 +29,6 @@ export default function AddStudentToClass(props) {
 
         if (response.ok) {
             HandleSendSMS()
-            return response
         }
         else {
             throw console.error("Response error...");
@@ -50,7 +51,9 @@ export default function AddStudentToClass(props) {
         })
         if (response.ok) {
             console.log("sms response ok!")
-            return response
+            setName("")
+            setPhoneNumber("")
+            mutate()
         }
         else console.log("error in SMS get")
     }

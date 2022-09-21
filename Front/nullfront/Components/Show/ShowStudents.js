@@ -7,6 +7,8 @@ export default function ShowStudents(props) {
   const [needshelp, setNeedshelp] = useState(false);
   // const [bell, setBell] = useState("/bell_black.png");
 
+  const { mutate } = props
+
 
   function AreYouSure(id) {
     if (confirm('Er du helt sikker på at du vil slette eleven?')) {
@@ -21,7 +23,7 @@ export default function ShowStudents(props) {
       { method: "DELETE" }
     );
     if (response.ok) {
-      return response;
+      mutate()
     }
   }
 
@@ -39,7 +41,8 @@ export default function ShowStudents(props) {
       }
     )
     if (response.ok) {
-      return response;
+      setStudentName("")
+      mutate()
     }
   }
 
@@ -57,20 +60,9 @@ export default function ShowStudents(props) {
       }
     )
     if (response.ok) {
-      return response;
+      mutate()
     }
   }
-
-  if (!props.students || props.students.length < 0) {
-    return (
-      <>
-        <p>
-          Vises under lasting eller ved feil
-        </p>
-      </>
-    );
-  }
-
 
   if (!props.students || props.students.length < 0) {
     return (
@@ -85,27 +77,25 @@ export default function ShowStudents(props) {
   return (
     <div>
       <div className="overskrift2">Rediger elever</div>
-      {props.students.map((ztudents) => (
-        <>
-        
-        <div key={ztudents.id}>
-        <div className="svartramme">
-          <a href={`Student/${ztudents.id}`}><p className="overskrift2" key={ztudents.id}>{ztudents.name}</p></a>
-          <p>før</p>
-            <img src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
-          <p>etter</p>
-          <div>
-            <input
-              placeholder="Rediger navn..."
-              onChange={(event) => setStudentName(event.target.value)}
-            />
-            <button type="submit" onClick={() => updateStudent(studentName, ztudents.id)}>Lagre</button>
-            &ensp;
-            <button src="user.png" id="deletebutton" onClick={() => AreYouSure(ztudents.id)}>Slett</button>
+      {props.students.map((student) => (
+        <div key={student.id}>
+          <div className="svartramme">
+            <a href={`Student/${student.id}`}><p className="overskrift2" key={student.id}>{student.name}</p></a>
+            <p>før</p>
+              <img height="100" src={student.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, student.id)}  />
+            <p>etter</p>
+            <div>
+              <input
+                placeholder="Rediger navn..."
+                value={studentName}
+                onChange={(event) => setStudentName(event.target.value)}
+              />
+              <button type="submit" onClick={() => updateStudent(studentName, student.id)}>Lagre</button>
+              &ensp;
+              <button src="user.png" id="deletebutton" onClick={() => AreYouSure(student.id)}>Slett</button>
             </div>
           </div>
         </div>
-        </>
       ))}
     </div>
   )
