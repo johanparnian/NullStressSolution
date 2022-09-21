@@ -41,16 +41,14 @@ export default function ShowMoods(props) {
         }
     }
 
-    
     return (
-        <div>
+        <div id="centerme">
             List of moods
             {props.moods.map((moodz) => (
                 <div key={moodz.id}>
-                    <li hidden="hidden" key={moodz.id}>{verdi = moodz.muud}
-                        ---- </li>
+                    <li hidden="hidden" key={moodz.id}>{verdi = moodz.muud} </li>
                     {Teller()}
-                    <img height="50" src={button} /><>Dato: {tid = moodz.time}{nytid}</>
+                    <img height="50" src={button} /><>&nbsp;&nbsp; {moodz.time}</>
                 </div>
             )
             )}
