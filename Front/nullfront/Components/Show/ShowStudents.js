@@ -76,23 +76,30 @@ export default function ShowStudents(props) {
 
   return (
     <div>
-      <div className="overskrift2">Rediger elever</div>
+      <div className="overskrift2">Elever</div>
+      <br></br>
       {props.students.map((ztudents) => (
-        <div key={ztudents.id}>
+        <div className="svartramme" key={ztudents.id}>
+
+
+          <div className="bjellenavn">
+          <img height="40" src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  /> &nbsp;&nbsp;&nbsp;
           <a href={`Student/${ztudents.id}`}><p className="overskrift4" key={ztudents.id}>{ztudents.name}</p></a>
-            <img height="100" src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  />
+          </div>
+
           <div>
             <input
               placeholder="Rediger navn..."
               onChange={(event) => setStudentName(event.target.value)}
             />
-            <button type="submit" onClick={() => updateStudent(studentName, ztudents.id)}>Lagre</button>
-            &ensp;
-            <button src="user.png" id="deletebutton" onClick={() => AreYouSure(ztudents.id)}>Slett</button>
+            <button type="submit" onClick={() => updateStudent(studentName, ztudents.id)}>Lagre nytt navn</button>
+            &ensp;&ensp;
+            <button src="user.png" id="deletebutton" onClick={() => AreYouSure(ztudents.id)}>Slett elev</button>
           </div>
-          <b>Elevens ID:</b> {ztudents.id}
+          <b>ID / Link:</b> {ztudents.id}
         </div>
       ))}
     </div>
   )
 }
+

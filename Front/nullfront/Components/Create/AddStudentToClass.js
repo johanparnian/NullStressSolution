@@ -60,17 +60,19 @@ export default function AddStudentToClass(props) {
 
     return (
         <div>
-            <div className="overskrift2">Legg til ny elev</div>
+            <div className="overskrift2">Legg til elev</div>
             <br></br>
+            <div className="svartramme">
             <form>
                 <label>
                     <input value={name} placeholder="Navn" onChange={event => setName(event.target.value)} type="Text"></input>
-
                     <input value={phoneNumber} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)}></input>
 
                 </label>
                 <button type="submit" onClick={HandleAddStudent}>Legg til og send SMS</button>
+                
             </form>
+            </div>
         </div>
     )
 }
