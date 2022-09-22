@@ -2,6 +2,8 @@ import config from '@/lib/config'
 
 export default function SendStudentAlert(hjelp) {
 
+  const [alert, setAlert] = useState(0)
+
   async function HandleSendStudentAlert(event, props) {
     event.preventDefault()
 
@@ -10,11 +12,22 @@ export default function SendStudentAlert(hjelp) {
       headers: { 'Content-Type': 'application/json' }
     }
     )
+    setAlert(1)
     if (response.ok) {
       console.log("OK:)")
     }
     else console.log("nooo!")
   }
+
+  if (counter === 1) {
+    return (
+        <>
+            <div style={{textAlign: "center"}}>
+                Læreren din vil kontakte deg for en samtale...
+            </div>
+        </>
+    )
+}
 
   return (
     <>
