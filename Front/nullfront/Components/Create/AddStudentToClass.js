@@ -9,7 +9,6 @@ export default function AddStudentToClass(props) {
     const [phoneNumber, setPhoneNumber] = useState("")
     const [link, setLink] = useState("_LINKPACEHOLDER_")
 
-    // let [To, setTo] = useState("+4790173862")
     let To = phoneNumber
 
     const From = "+18145643389"
