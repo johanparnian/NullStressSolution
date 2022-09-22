@@ -24,6 +24,7 @@ export default function AdminOverview() {
         }
 
         else {
+            <></>
             console.log(response)
         }
     }
