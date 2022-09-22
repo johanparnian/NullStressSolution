@@ -4,7 +4,7 @@ import AddStudentToClass from '../../../Components/Create/AddStudentToClass'
 import Header from '../../../Components/Show/Header'
 import ShowStudents from '../../../Components/Show/ShowStudents'
 import Footer from '../../../Components/Show/Footer'
-
+import config from '@/lib/config'
 
 const ClassView = (props) => {
     const router = useRouter()
@@ -20,7 +20,7 @@ const ClassView = (props) => {
     }
 
     useEffect(() => {
-        const endpoint = `https://localhost:7212/api/schoolclasses/${id}`
+        const endpoint = `${config.apiBaseUrl}schoolclasses/${id}`
 
         fetch(endpoint)
             .then(response => response.json())
@@ -41,7 +41,7 @@ const ClassView = (props) => {
             
             <p>SchoolClass ID: {id}</p>
 
-            <div className="overskrift3">Lærerpanel</div>
+            <div className="overskrift3"><p>Lærerpanel</p></div>
 
             <div className='container'>
                 <div className="row">
@@ -56,7 +56,7 @@ const ClassView = (props) => {
                         
                         <div><AddStudentToClass mutate={actuallySetIsDirty} id={id} /></div>
                     </div>
-                    <div className="col-1"></div>
+                    <div className="col-2"></div>
                     
                 </div>
             </div>

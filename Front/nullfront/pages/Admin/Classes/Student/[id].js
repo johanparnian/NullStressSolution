@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Header from '../../../../Components/Show/Header'
 import ShowMoods from '../../../../Components/Show/ShowMoods'
 
+import config from '@/lib/config'
 
 
 const MoodView = () => {
@@ -12,7 +13,7 @@ const MoodView = () => {
     const [students, setStudents] = useState({})
 
     useEffect(() => {
-        const endpoint = `https://localhost:7212/api/students/${id}`
+        const endpoint = `${config.apiBaseUrl}students/${id}`
 
         fetch(endpoint)
         .then(response => response.json())

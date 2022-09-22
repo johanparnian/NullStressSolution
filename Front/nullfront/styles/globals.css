@@ -111,7 +111,6 @@ a:link {
 
 .overskrift3 {
   font-size: 35px;
-  font-weight: 500;
   display: flex;
   justify-content: center;
   user-select: none;
@@ -128,6 +127,20 @@ a:link {
   user-select: none;
   color:rgb(255, 255, 255);
   padding-top:20px;
+}
+
+.overskrift5 {
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  color:rgb(255, 255, 255);
+  padding-top:20px;
+  cursor: pointer;
+}
+
+.overskrift5:hover {
+  color:#40819d !important;
 }
 
 .title {

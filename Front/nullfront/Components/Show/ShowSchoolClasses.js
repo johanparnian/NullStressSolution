@@ -13,7 +13,7 @@ export default function ShowSchoolClasses(props) {
         <>
                             <div className="svartramme">
 
-                <div className="overskrift2">Dine klasser</div>
+                <div className="overskrift2"><p>Dine klasser</p></div>
                 <br></br><br></br>
                 {props.classes.map((clazz) => (
                     <>

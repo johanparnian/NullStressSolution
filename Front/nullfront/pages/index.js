@@ -3,13 +3,16 @@ import ShowAdmins from "../Components/Show/ShowAdmins";
 import CreateAdmin from "../Components/Create/createadmin";
 import Header from "../Components/Show/Header";
 import Footer from "../Components/Show/Footer";
+import config from '@/lib/config'
 
 
 export default function AdminOverview() {
     const [admins, setAdmins] = useState([])
 
+    console.log(config)
+
     const getAdmins = async () => {
-        const endpoint = "https://localhost:7212/api/admins"
+        const endpoint = `${config.apiBaseUrl}admins`
 
         const response = await fetch(endpoint).catch(error => {
             console.log(error)
@@ -27,7 +30,7 @@ export default function AdminOverview() {
 
     const HandleCreateAdmin = async (event, admin) => {
         event.preventDefault()
-        const response = await fetch ('https://localhost:7212/api/admins', { 
+        const response = await fetch (`${config.apiBaseUrl}admins`, { 
             method: "POST",
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(admin)

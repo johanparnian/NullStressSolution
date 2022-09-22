@@ -16,7 +16,7 @@ export default function CreateAdmin(props) {
     return (
         <>
 
-            <div className="overskrift3">Legg til ny lærer</div>
+            <div className="overskrift3"><p>Legg til ny lærer</p></div>
             <div className="svartramme">
             <input type="text" placeholder="Navn" value={Name} onChange={event => setName(event.target.value)}></input>
             <input type="text" placeholder="Skole" value={School} onChange={event => setSchool(event.target.value)}></input>

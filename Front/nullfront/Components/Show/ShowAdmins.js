@@ -7,7 +7,7 @@ export default function ShowAdmins(props) {
     return (
       
         <><br></br><br></br>
-            <div className="overskrift3">Velg lærer</div>
+            <div className="overskrift3"><p>Velg lærer</p></div>
             <div className='svartramme'>
             <div key={admins.id}>
                 <br></br>

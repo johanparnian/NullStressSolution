@@ -1,5 +1,6 @@
 import DeleteAndEditStudent from "./DeleteAndEditStudent";
 import { useEffect, useState } from "react";
+import config from '@/lib/config'
 
 const studentIconSize = 20;
 
@@ -31,11 +32,11 @@ export default function DeleteEditStudentList(propsprops) {
   }
 
   if (props.classId) {
-    endpoint = `https://localhost:7212/api/schoolclasses/${props.classId}`;
+    endpoint = `${config.apiBaseUrl}schoolclasses/${props.classId}`;
   }
 
   async function getList() {
-    const endpoint = "https://localhost:7212/api/students";
+    const endpoint = `${config.apiBaseUrl}students`;
 
     const response = await fetch(endpoint).catch((error) => {
       console.log(error);
