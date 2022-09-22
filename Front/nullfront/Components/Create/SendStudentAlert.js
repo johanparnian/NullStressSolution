@@ -19,7 +19,7 @@ export default function SendStudentAlert(hjelp) {
     else console.log("nooo!")
   }
 
-  if (Alert === 1) {
+  if (alert === 1) {
     return (
       <>
         <div style={{ textAlign: "center" }}>
