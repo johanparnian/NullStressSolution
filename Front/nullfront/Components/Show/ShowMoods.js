@@ -63,11 +63,26 @@ let snitt;
                                 </div>
                 
                                 )
-                                )}Gjennomsnitt score i skala 1-5<br></br>
-                                <br></br>
+                                )}
+                                <div hidden="hidden">
                                 {snitt = teller / divider}
+                                <br></br>
+                                </div>
+                                <br></br>
 
+                                Gjennomsnitt score i skala 1-5<br></br>
+                                <br></br>
+
+                                 {snitt.toFixed(2)}
+                                <br></br>
+                                <br></br>
+
+                                1 er dårligst humør
+                                <br></br>
+                                5 er best humør
                         </div>
+
+
                     </div>
                     <div className="col3"></div>
 
@@ -79,7 +94,6 @@ let snitt;
             </div>
 <div hidden="hidden">
                     snitt: {snitt = teller/divider}
-               snitt {snitt.toFixed(2)}
     </div>
                 
         </div>

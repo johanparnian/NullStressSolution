@@ -46,9 +46,8 @@ export default function HeaderU() {
                                                                 height={headerImageSize}
                                                         />
                                                         <ul className="navbar-nav mx-auto">
-                                            
-                                                                {/* <Link className="nav-item" href="/"><a className="nav-link mx-4">Hjem</a></Link> */}
-                                                                <br></br>&nbsp; &nbsp;&nbsp;
+
+                                                                <Link className="nav-item" href="/"><a className="nav-link mx-4">Hjem</a></Link>
                                                         </ul>
                                                 </div>
                                         </div>
