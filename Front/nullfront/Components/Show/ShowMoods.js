@@ -31,17 +31,50 @@ export default function ShowMoods(props) {
         }
     }
 
+    let teller = 0;
+
+let divider = 0;
+
+let snitt;
+
     return (
+
+       
+
         <div id="centerme">
+
             List of moods
+
             {props.moods.map((moodz) => (
+
                 <div key={moodz.id}>
-                    <li hidden="hidden" key={moodz.id}>{verdi = moodz.muud} </li>
+
+                    <li hidden="hidden" key={moodz.id}>{verdi = moodz.muud} {teller = teller + moodz.muud} {divider = divider +1} </li>
+
                     {Teller()}
+
+                   
+
                     <img height="50" src={button} /><>&nbsp;&nbsp; {moodz.time}</>
+
                 </div>
-            )
-            )}
+
+               
+
+                )
+
+                )}
+
+<div hidden="hidden">
+
+                    snitt: {snitt = teller/divider}
+
+    </div>
+
+               snitt {snitt.toFixed(2)}
+
+               
+
         </div>
     )
 }
