@@ -12,8 +12,8 @@ using NullStress.Data;
 namespace NullStress.Migrations
 {
     [DbContext(typeof(NullStressContext))]
-    [Migration("20220922084012_initial2")]
-    partial class initial2
+    [Migration("20220922092229_ny")]
+    partial class ny
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
