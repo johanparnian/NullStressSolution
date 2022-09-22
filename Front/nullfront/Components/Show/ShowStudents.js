@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import config from '@/lib/config'
+import Link from "next/link";
 
 
 export default function ShowStudents(props) {
@@ -18,7 +20,7 @@ export default function ShowStudents(props) {
 
   async function deleteStudent(id) {
     const response = await fetch(
-      `https://localhost:7212/api/students` + "/" + id,
+      `${config.apiBaseUrl}students` + "/" + id,
       { method: "DELETE" }
     );
     if (response.ok) {
@@ -28,7 +30,7 @@ export default function ShowStudents(props) {
 
   async function updateStudent(studentName, id) {
     const response = await fetch(
-      `https://localhost:7212/api/students/${id}`,
+      `${config.apiBaseUrl}students/${id}`,
       {
         method: "PUT",
         headers: {
@@ -48,7 +50,7 @@ export default function ShowStudents(props) {
   async function updateNeedhelp(needshelp, id) {
 
     const response = await fetch(
-      `https://localhost:7212/api/students/false/${id}`,
+      `${config.apiBaseUrl}students/false/${id}`,
       {
         method: "PUT",
         headers: {
@@ -84,7 +86,8 @@ export default function ShowStudents(props) {
 
           <div className="bjellenavn">
           <img height="40" src={ztudents.imageUrl} type="submit" onClick={() => updateNeedhelp(needshelp, ztudents.id)}  /> &nbsp;&nbsp;&nbsp;
-          <a href={`Student/${ztudents.id}`}><p className="overskrift4" key={ztudents.id}>{ztudents.name}</p></a>
+          <Link className="nav-link" href={`Student/${ztudents.id}`}><p className="overskrift5" key={ztudents.id}>{ztudents.name}</p></Link>
+
           </div>
 
           <div>

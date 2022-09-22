@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import React from 'react'
 import Image from "next/image";
+import config from '@/lib/config'
 
 import SendMood from '../../Components/Create/CreateMood';
 import CreateStudentAlert from '../../Components/Create/SendStudentAlert';
@@ -14,7 +15,7 @@ const StudentFront = () => {
   const [student, setStudent] = useState({})
 
   useEffect(() => {
-      const endpoint = `https://localhost:7212/api/students/${id}`
+      const endpoint = `${config.apiBaseUrl}students/${id}`
 
       fetch(endpoint)
           .then(response => response.json())
