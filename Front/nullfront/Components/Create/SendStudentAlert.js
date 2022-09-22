@@ -1,6 +1,4 @@
 import config from '@/lib/config'
-import { useState } from 'react'
-
 
 export default function SendStudentAlert(hjelp) {
 
@@ -14,25 +12,13 @@ export default function SendStudentAlert(hjelp) {
       headers: { 'Content-Type': 'application/json' }
     }
     )
-    setAlert(1)
     if (response.ok) {
       console.log("OK:)")
     }
     else console.log("nooo!")
   }
 
-  if (alert === 1) {
-    return (
-        <>
-            <div style={{textAlign: "center"}}>
-                Læreren din vil kontakte deg for en samtale...
-            </div>
-        </>
-    )
-}
-else{
-
-  return (
+   return (
     <>
       <div className="snakkebutton">
         <button 
@@ -51,5 +37,4 @@ else{
       </div>
     </>
   )
-}
 }
