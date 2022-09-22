@@ -33,6 +33,12 @@ namespace NullStress
 
             var app = builder.Build();
 
+            using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<NullStressContext>();
+                context.Database.Migrate();
+            }
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -54,9 +60,6 @@ namespace NullStress
             app.MapControllers();
 
             app.Run();
-
-
-
         }
     }
 }
