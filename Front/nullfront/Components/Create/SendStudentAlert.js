@@ -1,4 +1,6 @@
 import config from '@/lib/config'
+import { useState } from 'react'
+
 
 export default function SendStudentAlert(hjelp) {
 
@@ -6,7 +8,7 @@ export default function SendStudentAlert(hjelp) {
 
   async function HandleSendStudentAlert(event, props) {
     event.preventDefault()
-
+    
     const response = await fetch(`${config.apiBaseUrl}students/${hjelp.id}/wantshelp`, {
       method: "GET",
       headers: { 'Content-Type': 'application/json' }
