@@ -30,51 +30,58 @@ export default function ShowMoods(props) {
             button = "/5.png"
         }
     }
-
-    let teller = 0;
-
+let teller = 0;
 let divider = 0;
-
 let snitt;
-
     return (
+        
+        <div className="container">
+            <div className="overskrift3">Humørregistreringer for eleven</div>
 
-       
+            <br></br><br></br><br></br>
 
-        <div id="centerme">
+            <div className="row">
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
 
-            List of moods
+                <div className="col-1" id="white"></div>
+                <div className="col">
 
-            {props.moods.map((moodz) => (
 
-                <div key={moodz.id}>
 
-                    <li hidden="hidden" key={moodz.id}>{verdi = moodz.muud} {teller = teller + moodz.muud} {divider = divider +1} </li>
+                    <div className="svartramme">
 
-                    {Teller()}
+                        <div className="center">
 
-                   
+                            {props.moods.map((moodz) => (
+                                <div key={moodz.id}>
+                                    <li hidden="hidden" key={moodz.id}>{verdi = moodz.muud} {teller = teller + moodz.muud} {divider = divider +1} {teller = teller + moodz.muud} {divider = divider + 1} </li>
+                                    {Teller()}
+                    
+                                    <img height="50" src={button} /><>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {moodz.time}</>
+                                </div>
+                
+                                )
+                                )}Gjennomsnitt score i skala 1-5<br></br>
+                                <br></br>
+                                {snitt = teller / divider}
 
-                    <img height="50" src={button} /><>&nbsp;&nbsp; {moodz.time}</>
+                        </div>
+                    </div>
+                    <div className="col3"></div>
 
                 </div>
-
-               
-
-                )
-
-                )}
-
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+            </div>
 <div hidden="hidden">
-
                     snitt: {snitt = teller/divider}
-
-    </div>
-
                snitt {snitt.toFixed(2)}
-
-               
-
+    </div>
+                
         </div>
     )
 }
