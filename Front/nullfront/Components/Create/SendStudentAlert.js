@@ -28,6 +28,7 @@ export default function SendStudentAlert(hjelp) {
         </>
     )
 }
+else{
 
   return (
     <>
@@ -48,4 +49,5 @@ export default function SendStudentAlert(hjelp) {
       </div>
     </>
   )
+}
 }
