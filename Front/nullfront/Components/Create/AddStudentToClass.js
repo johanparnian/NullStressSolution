@@ -42,7 +42,7 @@ export default function AddStudentToClass(props) {
         const Message = `Hei ${name}! Velkommen som bruker av Null Stress! Din link er: localhost:3000/StudentPage/`
         const sms = { To, From, Message }
 
-        const endpoint = `${config.apiBaseUrl}/sms`
+        const endpoint = `https://localhost:7212/api/sms`
 
         const response = await fetch(endpoint, {
             method: "POST",
