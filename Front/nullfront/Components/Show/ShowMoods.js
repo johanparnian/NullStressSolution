@@ -8,17 +8,7 @@ export default function ShowMoods(props) {
     if (!props.moods) {
         return <></>
     }
-    // else if (props.moods == 1) {
-    //     imagelink = "/1.png"
-    // } else if (props.moods == 2)  {
-    //     imagelink = "/2.png"
-    // } else if (props.moods == 3) {
-    //     imagelink = "/3.png"
-    // } else if (props.moods == 4) {
-    //     imagelink = "/4.png"
-    // } else if (props.moods == 5) {
-    //     imagelink = "/5.png"
-    // }
+
     let verdi = 0
     let button = ""
 

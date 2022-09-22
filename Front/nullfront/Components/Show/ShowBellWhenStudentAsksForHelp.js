@@ -80,7 +80,6 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
         event.preventDefault()
     
         const response = await fetch(`${config.apiBaseUrl}students/${1}/removehelprequest`, {
-            //denne må oppdateres med riktig ID når studentview rendres for hver student!
           method: "GET",
           headers: { 'Content-Type': 'application/json' }
         }

@@ -6,8 +6,6 @@ export default function SendStudentAlert(hjelp) {
     event.preventDefault()
 
     const response = await fetch(`${config.apiBaseUrl}students/${hjelp.id}/wantshelp`, {
-      // const response = await fetch(`${config.apiBaseUrl}students/${props.id}/wantshelp`, {
-        //denne må oppdateres med riktig ID når studentview rendres for hver student!
       method: "GET",
       headers: { 'Content-Type': 'application/json' }
     }
