@@ -19,7 +19,7 @@ using Twilio.Types;
 namespace NullStress.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/sms")]
     public class SmsController : ControllerBase
     {
         private readonly ITwilioRestClient _client;
