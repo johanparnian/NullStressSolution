@@ -1,11 +1,12 @@
 import { useState } from "react";
+import config from '@/lib/config'
 
 export default function DeleteAndEditStudent(props) {
   const [name, setName] = useState(props.name);
 
   async function updateStudent(name) {
     const response = await fetch(
-      `https://localhost:7212/api/students/${props.id}`,
+      `${config.apiBaseUrl}students/${props.id}`,
       {
         method: "PUT",
         headers: {
@@ -24,7 +25,7 @@ export default function DeleteAndEditStudent(props) {
 
   async function deleteStudent() {
     const response = await fetch(
-      `https://localhost:7212/api/students` + "/" + props.id,
+      `${config.apiBaseUrl}students` + "/" + props.id,
       { method: "DELETE" }
     );
     if (response.ok) {

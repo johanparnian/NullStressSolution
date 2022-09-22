@@ -66,7 +66,7 @@ export default function SendSMS() {
 // //     const student = {phoneNumber}
     
 // //      event.preventDefault()
-// //      const response = await fetch("https://localhost:7212/api/students", {
+// //      const response = await fetch("${config.apiBaseUrl}students", {
 // //          method: "POST", 
 // //          body: JSON.stringify(student),
 // //          headers: {

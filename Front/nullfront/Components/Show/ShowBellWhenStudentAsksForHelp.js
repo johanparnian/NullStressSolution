@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import React from 'react'
 import ShowStudents from "./ShowStudents";
+import config from '@/lib/config'
 
 export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
 
     const getStudentInfo = async () => {
-        const endpoint = "https://localhost:7212/api/students/1"
+        const endpoint = `${config.apiBaseUrl}students/1`
 
         const response = await fetch(endpoint)
 
@@ -78,7 +79,7 @@ export default function ShowBellWhenStudentAsksForHelpoutAdminProfile() {
     async function HandleRemoveHelpWantedFlag(event, props) {
         event.preventDefault()
     
-        const response = await fetch(`https://localhost:7212/api/students/${1}/removehelprequest`, {
+        const response = await fetch(`${config.apiBaseUrl}students/${1}/removehelprequest`, {
             //denne må oppdateres med riktig ID når studentview rendres for hver student!
           method: "GET",
           headers: { 'Content-Type': 'application/json' }

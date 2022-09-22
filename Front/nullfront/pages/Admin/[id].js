@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Header from '../../Components/Show/Header'
 import Footer from '../../Components/Show/Footer'
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
+import config from '@/lib/config'
 
 
 const AdminView = () => {
@@ -16,7 +17,7 @@ const AdminView = () => {
     async function HandleCreateClass(event, clazz) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/admins/${id}/SchoolClass/${clazz}`, {
+        const response = await fetch(`${config.apiBaseUrl}admins/${id}/SchoolClass/${clazz}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
@@ -33,7 +34,7 @@ const AdminView = () => {
 
 
     useEffect(() => {
-        const endpoint = `https://localhost:7212/api/admins/${id}`
+        const endpoint = `${config.apiBaseUrl}admins/${id}`
 
         fetch(endpoint)
             .then(response => response.json())

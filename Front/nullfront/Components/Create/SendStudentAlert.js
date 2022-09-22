@@ -1,10 +1,12 @@
+import config from '@/lib/config'
+
 export default function SendStudentAlert(hjelp) {
 
   async function HandleSendStudentAlert(event, props) {
     event.preventDefault()
 
-    const response = await fetch(`https://localhost:7212/api/students/${hjelp.id}/wantshelp`, {
-      // const response = await fetch(`https://localhost:7212/api/students/${props.id}/wantshelp`, {
+    const response = await fetch(`${config.apiBaseUrl}students/${hjelp.id}/wantshelp`, {
+      // const response = await fetch(`${config.apiBaseUrl}students/${props.id}/wantshelp`, {
         //denne må oppdateres med riktig ID når studentview rendres for hver student!
       method: "GET",
       headers: { 'Content-Type': 'application/json' }

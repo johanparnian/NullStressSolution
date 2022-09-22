@@ -6,6 +6,7 @@ import CreateClass from '../Components/Create/CreateClass'
 
 import ShowSchoolClasses from '../../Components/Show/ShowSchoolClasses'
 
+import config from '@/lib/config'
 
 const AdminView = () => {
     const router = useRouter()
@@ -14,7 +15,7 @@ const AdminView = () => {
     const [admin, setAdmin] = useState({})
 
     useEffect(() => {
-        const endpoint = `https://localhost:7212/api/admins/${id}`
+        const endpoint = `${config.apiBaseUrl}admins/${id}`
 
         fetch(endpoint)
             .then(response => response.json())

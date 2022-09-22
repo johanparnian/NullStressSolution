@@ -11,7 +11,7 @@
 
 //     async function getStatistics(){
 
-//         const endpoint = "https://localhost:7212/api/moods/"
+//         const endpoint = "${config.apiBaseUrl}moods/"
 
 //         const response = await fetch(endpoint).catch(error => {
 //             console.log(error)

@@ -1,9 +1,12 @@
+
+import config from '@/lib/config'
+
 export default function CreateMood(props) {
 
     async function HandleSendMood(id, moodId) {
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/students/${props.id}/mood/${moodId}`, {
+        const response = await fetch(`${config.apiBaseUrl}students/${props.id}/mood/${moodId}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })

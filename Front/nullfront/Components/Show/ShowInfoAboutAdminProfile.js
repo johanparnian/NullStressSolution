@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import React from 'react'
+import config from '@/lib/config'
 
 export default function ShowInfoAboutAdminProfile(props) {
 
     const getAdminInfo = async () => {
-        const endpoint = `https://localhost:7212/api/admins/1`
+        const endpoint = `${config.apiBaseUrl}admins/1`
 
         const response = await fetch(endpoint)
 

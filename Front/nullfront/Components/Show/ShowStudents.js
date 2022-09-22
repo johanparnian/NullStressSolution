@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import config from '@/lib/config'
 
 
 export default function ShowStudents(props) {
@@ -18,7 +19,7 @@ export default function ShowStudents(props) {
 
   async function deleteStudent(id) {
     const response = await fetch(
-      `https://localhost:7212/api/students` + "/" + id,
+      `${config.apiBaseUrl}students` + "/" + id,
       { method: "DELETE" }
     );
     if (response.ok) {
@@ -28,7 +29,7 @@ export default function ShowStudents(props) {
 
   async function updateStudent(studentName, id) {
     const response = await fetch(
-      `https://localhost:7212/api/students/${id}`,
+      `${config.apiBaseUrl}students/${id}`,
       {
         method: "PUT",
         headers: {
@@ -48,7 +49,7 @@ export default function ShowStudents(props) {
   async function updateNeedhelp(needshelp, id) {
 
     const response = await fetch(
-      `https://localhost:7212/api/students/false/${id}`,
+      `${config.apiBaseUrl}students/false/${id}`,
       {
         method: "PUT",
         headers: {
