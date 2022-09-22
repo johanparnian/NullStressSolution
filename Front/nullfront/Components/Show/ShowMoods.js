@@ -31,17 +31,52 @@ export default function ShowMoods(props) {
         }
     }
 
+
+    let teller = 0;
+    let divider = 1;
+    // let snitt = teller / divider;
+    let snitt = 0;
+    
+
     return (
-        <div id="centerme">
-            List of moods
-            {props.moods.map((moodz) => (
-                <div key={moodz.id}>
-                    <li hidden="hidden" key={moodz.id}>{verdi = moodz.muud} </li>
-                    {Teller()}
-                    <img height="50" src={button} /><>&nbsp;&nbsp; {moodz.time}</>
+        <div className="container">
+            <div className="overskrift3">Humørregistreringer for eleven</div>
+
+            <br></br><br></br><br></br>
+
+            <div className="row">
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+
+                <div className="col-1" id="white"></div>
+                <div className="col">
+
+
+
+                    <div className="svartramme">
+
+                        <div className="center">
+
+                            {props.moods.map((moodz) => (
+                                <div key={moodz.id}>
+                                    <li hidden="hidden" key={moodz.id}>{verdi = moodz.muud} {teller = teller + moodz.muud} {divider = divider + 1} </li>
+                                    {Teller()}
+                                    <img height="50" src={button} /><>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {moodz.time}</>
+                                </div>
+                            )
+                            )}{snitt = teller / divider}
+
+                        </div>
+                    </div>
+                    <div className="col3"></div>
+
                 </div>
-            )
-            )}
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+                <div className="col-1" id="white"></div>
+            </div>
         </div>
     )
 }
