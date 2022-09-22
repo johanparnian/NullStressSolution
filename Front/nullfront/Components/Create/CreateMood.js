@@ -1,7 +1,9 @@
-
+import { useState } from 'react'
 import config from '@/lib/config'
 
 export default function CreateMood(props) {
+
+    const [counter, setCounter] = useState(0)
 
     async function HandleSendMood(id, moodId) {
         event.preventDefault()
@@ -10,7 +12,7 @@ export default function CreateMood(props) {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
-        
+        setCounter(1)
 
         if (response.ok) {
             console.log("ok")
@@ -21,75 +23,89 @@ export default function CreateMood(props) {
         }
     }
 
-    return (
-        <div className="emoji-knapper">
-            <div className="overskrift3">Hvordan har du det i dag?</div>
-            <div className="snakkebutton">
-            Trykk på det som stemmer best for deg!
 
-            </div>
-            
-            <div className="emoji">
-                
-                <img
-                    draggable="false"
-                    alt="image"
-                    src="/1.png"
-                    height="100"
-                    width="100"
-                    className="button-82-pushable"
-                    onClick={(e) => HandleSendMood(e, 1)}
+    if (counter === 1) {
+        return (
+            <>
+                <div style={{textAlign: "center"}}>
+                    Takk for tilbakemelding!
+                </div>
+            </>
+        )
+    }
 
-                ></img>
-            </div>
+    else {
 
-            <div className="emoji">
-                <img
-                    draggable="false"
-                    alt="image"
-                    src="/2.png"
-                    height="100"
-                    width="100"
-                    className="button-82-pushable"
-                    onClick={(e) => HandleSendMood(e, 2)}
-                ></img>
-            </div>
+        return (
+            <div className="emoji-knapper">
+                <div className="overskrift3">Hvordan har du det i dag?</div>
+                <div className="snakkebutton">
+                    Trykk på det som stemmer best for deg!
 
-            <div className="emoji">
-                <img
-                    draggable="false"
-                    alt="image"
-                    src="/3.png"
-                    height="100"
-                    width="100"
-                    className="button-82-pushable"
-                    onClick={(e) => HandleSendMood(e, 3)}
-                ></img>
-            </div>
+                </div>
 
-            <div className="emoji">
-                <img
-                    draggable="false"
-                    alt="image"
-                    src="/4.png"
-                    height="100"
-                    width="100"
-                    className="button-82-pushable"
-                    onClick={(e) => HandleSendMood(e, 4)}
-                ></img>
-            </div>
+                <div className="emoji">
 
-            <div className="emoji">
-                <img
-                    draggable="false"
-                    alt="image"
-                    src="/5.png"
-                    height="100"
-                    width="100"
-                    className="button-82-pushable"
-                    onClick={(e) => HandleSendMood(e, 5)}
-                ></img>
+                    <img
+                        draggable="false"
+                        alt="image"
+                        src="/1.png"
+                        height="100"
+                        width="100"
+                        className="button-82-pushable"
+                        onClick={(e) => HandleSendMood(e, 1)}
+
+                    ></img>
+                </div>
+
+                <div className="emoji">
+                    <img
+                        draggable="false"
+                        alt="image"
+                        src="/2.png"
+                        height="100"
+                        width="100"
+                        className="button-82-pushable"
+                        onClick={(e) => HandleSendMood(e, 2)}
+                    ></img>
+                </div>
+
+                <div className="emoji">
+                    <img
+                        draggable="false"
+                        alt="image"
+                        src="/3.png"
+                        height="100"
+                        width="100"
+                        className="button-82-pushable"
+                        onClick={(e) => HandleSendMood(e, 3)}
+                    ></img>
+                </div>
+
+                <div className="emoji">
+                    <img
+                        draggable="false"
+                        alt="image"
+                        src="/4.png"
+                        height="100"
+                        width="100"
+                        className="button-82-pushable"
+                        onClick={(e) => HandleSendMood(e, 4)}
+                    ></img>
+                </div>
+
+                <div className="emoji">
+                    <img
+                        draggable="false"
+                        alt="image"
+                        src="/5.png"
+                        height="100"
+                        width="100"
+                        className="button-82-pushable"
+                        onClick={(e) => HandleSendMood(e, 5)}
+                    ></img>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
