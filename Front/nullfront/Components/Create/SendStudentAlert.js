@@ -1,4 +1,5 @@
 import config from '@/lib/config'
+import { useState } from 'react'
 
 export default function SendStudentAlert(hjelp) {
 
@@ -6,7 +7,7 @@ export default function SendStudentAlert(hjelp) {
 
   async function HandleSendStudentAlert(event, props) {
     event.preventDefault()
-    
+    setAlert(1)
     const response = await fetch(`${config.apiBaseUrl}students/${hjelp.id}/wantshelp`, {
       method: "GET",
       headers: { 'Content-Type': 'application/json' }
@@ -18,23 +19,35 @@ export default function SendStudentAlert(hjelp) {
     else console.log("nooo!")
   }
 
-   return (
-    <>
-      <div className="snakkebutton">
-        <button 
-          className="button-82-pushable" 
-          role="button"
-          onClick={HandleSendStudentAlert}>
-          <span className="button-82-shadow"></span>
-          <span className="button-82-edge"></span>
-          <span className="button-82-front text">
-            Jeg vil gjerne ta en prat...
-          </span>
-        </button>
-      </div>
-      <div className="snakkebutton">
-        
-      </div>
-    </>
-  )
+  if (Alert === 1) {
+    return (
+      <>
+        <div style={{ textAlign: "center" }}>
+          Læreren din vil kontakte deg...
+        </div>
+      </>
+    )
+  }
+  else {
+
+    return (
+      <>
+        <div className="snakkebutton">
+          <button
+            className="button-82-pushable"
+            role="button"
+            onClick={HandleSendStudentAlert}>
+            <span className="button-82-shadow"></span>
+            <span className="button-82-edge"></span>
+            <span className="button-82-front text">
+              Jeg vil gjerne ta en prat...
+            </span>
+          </button>
+        </div>
+        <div className="snakkebutton">
+
+        </div>
+      </>
+    )
+  }
 }
