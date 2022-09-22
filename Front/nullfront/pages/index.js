@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import ShowAdmins from "../Components/Show/ShowAdmins";
 import CreateAdmin from "../Components/Create/createadmin";
-import Header from "../Components/Show/Header";
 import Footer from "../Components/Show/Footer";
 import config from '@/lib/config'
+import HeaderU from "../Components/Show/Header copy";
 
 
 export default function AdminOverview() {
@@ -50,7 +50,7 @@ export default function AdminOverview() {
 
     return (
         <>
-            <Header></Header>
+            <HeaderU></HeaderU>
 
             <div className="container">
                 <div>

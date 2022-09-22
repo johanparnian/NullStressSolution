@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 const headerImageSize = 60;
 
-export default function Header() {
+export default function HeaderU() {
         const router = useRouter()
         return (
                 <div>
@@ -46,14 +46,9 @@ export default function Header() {
                                                                 height={headerImageSize}
                                                         />
                                                         <ul className="navbar-nav mx-auto">
-                                                          <div >
-
-                                                                <a style={{ color: "lightblue" }} className="nav-link mx-4" type="button" onClick={() => router.back()}>
-                                                                        Tilbake                                                                
-                                                                        </a>
-                                                          </div>
-                                                                <Link className="nav-item" href="/"><a className="nav-link mx-4">Hjem</a></Link>
-
+                                            
+                                                                {/* <Link className="nav-item" href="/"><a className="nav-link mx-4">Hjem</a></Link> */}
+                                                                <br></br>&nbsp; &nbsp;&nbsp;
                                                         </ul>
                                                 </div>
                                         </div>
