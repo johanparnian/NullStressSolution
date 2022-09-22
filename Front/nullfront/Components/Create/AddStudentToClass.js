@@ -42,7 +42,7 @@ export default function AddStudentToClass(props) {
 
         To.split(" ").join("")
 
-        const Message = `Hei ${name}! Velkommen som bruker av Null Stress! Din link er: null-stress-solution-nullfront-m3jd.vercel.app/StudentPage/`
+        const Message = `Hei ${name}! Velkommen som bruker av Null Stress! Din link er: https://null-stress-solution-nullfront-m3jd.vercel.app/StudentPage/`
         const sms = { To, From, Message }
 
         const endpoint = `${config.apiBaseUrl}sms`
