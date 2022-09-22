@@ -9,15 +9,18 @@ export default function AddStudentToClass(props) {
     const [phoneNumber, setPhoneNumber] = useState("")
     const [link, setLink] = useState("_LINKPACEHOLDER_")
 
+
     let To = phoneNumber
 
     const From = "+18145643389"
 
     async function HandleAddStudent(event) {
 
-        if (phoneNumber.length !== 11) {
+        if (phoneNumber.length !== 8) {
             console.log(phoneNumber.length)
+            event.preventDefault()
             return alert("Feil format på telefonnummeret...")
+            
         }
 
         event.preventDefault()
@@ -66,7 +69,7 @@ export default function AddStudentToClass(props) {
             <form>
                 <label>
                     <input value={name} placeholder="Navn" onChange={event => setName(event.target.value)} type="Text"></input>
-                    <input value={phoneNumber} placeholder="+47 81549300" onChange={event => setPhoneNumber(event.target.value)}></input>
+                    <input value={phoneNumber} placeholder="81549300" onChange={event => setPhoneNumber(event.target.value)}></input>
 
                 </label>
                 <button type="submit" onClick={HandleAddStudent}>Legg til og send SMS</button>
