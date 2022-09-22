@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import config from '@/lib/config'
 
 export default function CreateStudentAndSendSMS() {
 
@@ -27,7 +28,7 @@ export default function CreateStudentAndSendSMS() {
     //    }
         
         event.preventDefault()
-        const response = await fetch("https://localhost:7212/api/students", {
+        const response = await fetch(`${config.apiBaseUrl}students`, {
             method: "POST", 
             headers: {"content-Type" : "application/json"},
             body: JSON.stringify(student),           
@@ -57,7 +58,7 @@ export default function CreateStudentAndSendSMS() {
 
         // event.preventDefault()
 
-        const endpoint = "https://localhost:7212/sms"
+        const endpoint = `${config.apiBaseUrl}sms`
         
         const response = await fetch(endpoint, {
             method: "POST",

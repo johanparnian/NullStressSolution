@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import config from '@/lib/config'
 
 export default function ShowAllStudents() {
     const getStudents = async () => {
 
-        const endpoint = "https://localhost:7212/api/students"
+        const endpoint = `${config.apiBaseUrl}students`
 
         const response = await fetch(endpoint).catch(error => {
             console.log(error)

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import config from '@/lib/config'
 
 export default function ShowStudentMoodStatistics() {
 
     const getStudentInfo = async () => {
-        const endpoint = "https://localhost:7212/api/Students/1"
+        const endpoint = `${config.apiBaseUrl}Students/1`
         const response = await fetch(endpoint)
 
         if (response.ok) {

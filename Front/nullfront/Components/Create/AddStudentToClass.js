@@ -1,4 +1,5 @@
 import { useState } from "react";
+import config from '@/lib/config'
 
 export default function AddStudentToClass(props) {
 
@@ -22,7 +23,7 @@ export default function AddStudentToClass(props) {
 
         event.preventDefault()
 
-        const response = await fetch(`https://localhost:7212/api/schoolclasses/${props.id}/students/${name}/${phoneNumber}/${link}`, {
+        const response = await fetch(`${config.apiBaseUrl}schoolclasses/${props.id}/students/${name}/${phoneNumber}/${link}`, {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
         })
@@ -42,7 +43,7 @@ export default function AddStudentToClass(props) {
         const Message = `Hei ${name}! Velkommen som bruker av Null Stress! Din link er: localhost:3000/StudentPage/`
         const sms = { To, From, Message }
 
-        const endpoint = "https://localhost:7212/sms"
+        const endpoint = `${config.apiBaseUrl}/sms`
 
         const response = await fetch(endpoint, {
             method: "POST",
