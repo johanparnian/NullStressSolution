@@ -51,7 +51,7 @@ namespace NullStress.Controllers
             var themessage = model.Message + "hei!";
 
             var message = MessageResource.Create(
-                to: new PhoneNumber(model.To),
+                to: new PhoneNumber("+47"+model.To),
                 from: new PhoneNumber(model.From),
                 body: model.Message + lastStudentAdded,
                 client: _client
