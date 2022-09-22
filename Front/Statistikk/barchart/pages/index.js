@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import BarChar from '../Components/Barchar'
-import '../styles/Home.module.css'
+import '../styles/Home.Module.css'
 
 
 export default function Home() {
